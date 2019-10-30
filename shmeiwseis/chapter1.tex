@@ -262,4 +262,238 @@ $ \abs{a+b} \leq \abs{a} + \abs{b} $
  \]
  
 \end{rem}
+
+\section{Μέγιστο και Ελάχιστο}
+
+\begin{dfn}
+    Έστω $ A \subseteq \mathbb{R} $. Λέμε ότι το $A$ έχει μέγιστο 
+    (αντίστοιχα ελάχιστο) στοιχείο, αν υπάρχει $ x_{0} \in A $ τέτοιο 
+    ώστε $ x \leq x_{0}, \; \forall x \in A $ (αντίστοιχα $ x_{0} \leq 
+    x, \; \forall x \in A$).
+\end{dfn}
+
+\begin{rem}
+\item {}
+    \begin{itemize}
+        \item Το μέγιστο του συνόλου $A$, συμβολίζεται: $ \max A $
+        \item Το ελάχιστο του συνόλου $A$, συμβολίζεται $ \min A $
+    \end{itemize}
+\end{rem}
+
+\begin{example}
+    Έστω $ A = [0,3] = \{ x \in \mathbb{R} \; : \; 0 \leq x \leq 3 \} $. 
+    Το $ x_{0}= 3 $ είναι μέγιστο του $A$, γιατί $ 3 \in A $ και 
+    $ a \leq 3, \; \forall a \in A $. Ομοίως $ x_{0}= 0 $ είναι ελάχιστο 
+    του $A$.
+\end{example}
+
+\begin{example}
+    Να δείξετε ότι το σύνολο $ A = (0,3) $ δεν έχει μέγιστο στοιχείο.
+\end{example}
+
+\begin{proof}
+\item {}
+    $ A = (0,3) = \{ x \in \mathbb{R} \; : \; 0 < x < 3 \} $. 
+Έστω ότι $ x_{0} = \max A $. Έχουμε  $ x_{0} \in A \Rightarrow  x_{0} 
+< 3$. Άρα  $ (x_{0}, 3) \neq \emptyset \Rightarrow (x_{0},3) \cap A \neq 
+\emptyset \Rightarrow \exists a \in (x_{0},3) \cap A $. Δηλαδή $ 
+\exists a \in A$ τέτοιο ώστε $ a > x_{0} $. Άτοπο, γιατί $ x_{0}= \max A $.
+\end{proof}
+
+\begin{prop}
+    Αν $ A \subseteq \mathbb{R} $ έχει μέγιστο στοιχείο, τότε αυτό είναι 
+    μοναδικό.
+\end{prop}
+
+\begin{proof}
+    Έστω ότι το $A$ έχει δυο μέγιστα στοιχεία,  $ x_{0}, {x_{0}}' $,  με 
+    $ x_{0} \neq {x_{0}}'$. 
+
+    Τότε 
+
+    \begin{itemize}
+        \item $ a \leq x_{0}, \; \forall a \in A \xRightarrow{{x_{0}}' 
+            \in A } {x_{0}}'  \leq x_{0} $ \tikzmark{a}
+        \item $ a \leq {x_{0}}', \; \forall a \in A \xRightarrow{x_{0} 
+            \in A } x_{0} \leq {x_{0}}' $ \tikzmark{b}
+            \mybrace{a}{b}[$ x_{0} = {x_{0}}' $, άτοπο.] 
+    \end{itemize}
+\end{proof}
+
+\begin{prop}
+    Αν $ A \subseteq \mathbb{R} $ έχει ελάχιστο στοιχείο, τότε αυτό είναι 
+    μοναδικό.
+\end{prop}
+
+\begin{proof}
+   Ομοίως 
+\end{proof}
+
+ \begin{dfn}
+     Έστω $ A \subseteq \mathbb{R}, \; A \neq \emptyset $. Λέμε ότι το 
+     $A$ είναι άνω φραγμένο (αντίστοιχα κάτω φραγμένο), αν $ 
+     \exists x_{0} \in \mathbb{R}$ τέτοιο ώστε $ a \leq x_{0}, \; 
+     \forall a \in A$ (αντίστοιχα $ x_{0} \leq a, \; \forall a \in A $).
+ \end{dfn}
+
+ \begin{example}
+ \item {}
+     \begin{enumerate}[i)]
+         \item Το  σύνολο $ A = (0,3) $  έχει άνω φράγματα τους $ 3, 4, 144, 
+             \ldots$ και κάτω φράγματα τους $ 0, -1, -2, -128, \ldots $ 
+
+         \item Το σύνολο $ B = (0,+\infty) $ δεν είναι άνω φραγμένο.
+     \end{enumerate}
+ \end{example}
+
+ \begin{rem}
+     Το  $ 3 $ είναι το ελάχιστο από τα άνω φράγματα του $A$, ενώ το $ 0
+     $ είναι το μέγιστο από τα κάτω φράγματα του $A$. 
+ \end{rem}
+
+ \begin{prop}
+     Έστω $ A \subseteq \mathbb{R}, A \neq \emtpy $ και έστω 
+     $ -A = \{ x \in \mathbb{R} \; : \; x = -a, \; a \in A \} = \{ 
+     -a \; : \; a \in A\} $. Αν $M$ είναι άνω φράγμα 
+     του $A$, τότε το $ -M $ είναι κάτω φράγμα του συνόλου $ -A $.
+ \end{prop}
+
+ \begin{proof}
+   Έστω $M$ α.φ. του $A$. Τότε 
+   \begin{align*}
+       a &\leq M, \; \forall a \in A \Rightarrow  \\
+       -a &\geq -M, \; \forall a \in A \xRightarrow{x= -a, a \in A} \\
+       x &\geq -M, \; \forall x \in -A
+   \end{align*}
+ οπότε $ -M $  κ.φ. του $ -A $.
+ \end{proof}
+
+ \begin{dfn}
+     Έστω $ A \subseteq \mathbb{R}, \; A \neq \emptyset $. Λέμε ότι το $A$ 
+     είναι φραγμένο, αν είναι άνω και κάτω φραγμένο. 
+ \end{dfn}
+
+ \begin{prop}
+     Ένα σύνολο $ A \subseteq \mathbb{R}, \; A \neq \emptyset $ είναι 
+     φραγμένο αν και μόνο αν $ \exists M>0 \; : \; \abs{a} \leq M, \; 
+     \forall a \in A$.
+ \end{prop}
+
+ \begin{proof}
+ \item {}
+    \begin{description}
+        \item [$ (\Rightarrow) $] Έστω $A$ φραγμένο. Τότε 
+            $ \exists m',M' \in \mathbb{R} \; : \; m' \leq a \leq M', \; 
+            \forall a \in A $.
+       
+            Επιλέγω $ M = \max \{ \abs{m'}, \abs{M'} \} $. Τότε $ M >0 $ και 
+            \begin{gather*}
+                -M \leq - \abs{m'} \leq m' \leq a \leq M' \leq \abs{M'} 
+                \leq M, \quad \forall a \in A \\
+                -M \leq a \leq M, \quad \forall a \in A \\
+                \abs{a} \leq M, \quad \forall a \in A
+            \end{gather*}
+
+        \item [(Β΄ τρόπος)]
+            Επιλέγω $ M > \max \{ \abs{m'}, \abs{M'} \} $. Τότε $ M >0 $ και 
+\begin{gather*}
+    \abs{m'} < M \Leftrightarrow - M < m' < M \\
+    \abs{M'} < M \Leftrightarrow -M < M' < M 
+\end{gather*}
+ οπότε: 
+ \begin{gather*}
+     -M < m' \leq a \leq M' < M, \quad a \in A \\
+     \abs{a} \leq M, \quad a \in A
+ \end{gather*}
+        
+
+        \item [$ (\Leftarrow) $]
+            Έστω ότι $ \exists M>0 \; : \; \abs{a} \leq M, \; \forall a \in 
+            A \Leftrightarrow -M \leq a \leq M, \; \forall a \in A$. 
+            
+            Τότε προφανώς έχουμε ότι $-M $ και $ M $, 
+            είναι αντίστοιχα άνω και κάτω φράγματα του $A$, και άρα $A$ 
+            φραγμένο.
+    \end{description} 
+ \end{proof}
+
+ \section{Supremum και Infimum}
+
+ \begin{dfn}
+     Έστω $ A \subseteq \mathbb{R}, A \neq \emptyset $ και $A$ άνω 
+     φραγμένο. Αν υπάρχει άνω φράγμα $s$ του $A$ τέτοιο ώστε 
+\[
+    s \leq M, \quad \text{για κάθε M άνω φράγμα του A}, 
+ \] 
+ τότε το $s$ ονομάζεται supremum του $A$ και συμβολίζεται $ s=sup A $.
+ \end{dfn}
+
+ \begin{rem}
+     Αν το $A$ δεν είναι άνω φραγμένο, τότε γράφουμε ότι $ \sup A = + \infty $.
+ \end{rem}
+
+ \begin{example}
+     Έστω $ A = (0,3) $. Θα δείξουμε ότι $ \sup A = 3 $. Πράγματι, 
+     το $ 3 $ προφανώς είναι α.φ. του $A$. Θα δείξουμε ότι είναι το
+     ελάχιστο από τα άνω φράγματα του $A$. Έστω ότι δεν είναι, δηλαδή 
+     $ \exists M $ α.φ. του $A$, ώστε $ M < 3 \Rightarrow (M,3) \neq 
+     \emptyset \Rightarrow (M,3) \cap A \neq \emptyset \Rightarrow \exists 
+     a \in (M,3) \cap A $. Τότε, έχουμε ότι $ a \in A $ και $ a > M $, 
+     άτοπο, γιατί $M$ είναι ά.φ. του $A$. Ομοίως αποδεικνύουμε ότι $ 
+     \inf A = 0$.
+ \end{example}
+
+ \section{Αξίωμα Πληρότητας}
+
+ Κάθε μη κενό και άνω φραγμένο υποσύνολο των πραγματικών αριθμών έχει 
+ supremum, δηλαδή έχει ελάχιστο άνω φράγμα.
+
+ \begin{prop}
+     Έστω ότι για τον $a \in \mathbb{R}$ ισχύει ότι 
+     \[
+        0 \leq a < \varepsilon, \quad \forall \varepsilon >0 \Rightarrow a =0 
+      \] 
+ \end{prop}
+
+      \begin{proof}
+      \item {}
+         Έστω ότι $ 0 \leq a < \varepsilon, \quad \varepsilon >0 $ και 
+         $ a \neq 0 \xRightarrow{a \geq 0} a > 0$. Τότε για $ \varepsilon = 
+         a > 0$, έχουμε ότι $ 0 \leq a < a $, άτοπο.
+      \end{proof}
+
+      \begin{prop}[Αρχιμήδεια Ιδιότητα]
+      \item {}
+          \begin{enumerate}[i)]
+              \item Το $ \mathbb{N} $ δεν είναι άνω φραγμένο.
+              \item $ \forall y > 0, \; \exists n \in \mathbb{N} \; ; \; 
+                  n > y$
+              \item $ \forall \varepsilon >0, \; \exists n \in \mathbb{N} \; 
+                  : \; \frac{1}{n} < \varepsilon$
+          \end{enumerate}
+      \end{prop}
+
+      \begin{proof}
+      \item {}
+          \begin{enumerate}[i)]
+              \item Έστω ότι το $ \mathbb{N} $ είναι άνω φραγμένο. Λόγω ότι 
+                  είναι και μη κενό ($ 1 \in \mathbb{N} $), από το αξίωμα 
+                  Πληρότητας, έχουμε ότι υπάρχει το $ \sup \mathbb{N} $. 
+                 Τότε από τη χαρακτηριστική ιδιότητα του supremum, έχουμε 
+                 ότι για $ \varepsilon = 1 >0, \; \exists n \in \mathbb{N} 
+                 \; : \; \sup \mathbb{N}-1 < n \Leftrightarrow n+1 > \sup
+                 \mathbb{N} $, άτοπο.
+
+             \item Έστω ότι δεν ισχύει η πρόταση. Τότε  $ \exists y >0, \; 
+                 \forall n \in \mathbb{N} \; : \; n \leq y$. Δηλαδή
+                 το  $y$  είναι ά.φ. του $\mathbb{N}$, άτοπο.
+
+             \item Έστω ότι δεν ισχύει η πρόταση. Τότε $ \exists 
+                 \varepsilon >0 , \; \forall n \in \mathbb{N} \; : \; 
+                 \frac{1}{n} \geq \varepsilon  \Leftrightarrow \ n \leq 
+                 \frac{1}{\varepsilon} $, δηλαδή $ \frac{1}{\varepsilon} $ 
+                 α.φ. του $ \mathbb{N} $, άτοπο. 
+          \end{enumerate}
+      \end{proof}
+
 \end{document}
