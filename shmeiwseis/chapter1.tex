@@ -440,7 +440,7 @@
     Έστω $ A \subseteq \mathbb{R}, A \neq \emptyset $ και $A$ κάτω 
     φραγμένο. Αν υπάρχει κάτω φράγμα $s$ του $A$ τέτοιο ώστε 
     \[
-       s \geq m, \quad \text{για κάθε m κάτω φράγμα του A}, 
+        s \geq m, \quad \text{για κάθε m κάτω φράγμα του A}, 
     \] 
     τότε το $s$ ονομάζεται infimum του $A$ και συμβολίζεται $ s=\inf A $.
 \end{dfn}
@@ -542,7 +542,7 @@ supremum, δηλαδή έχει ελάχιστο άνω φράγμα.
 \end{prop}
 
 \begin{proof}
-   Ομοίως 
+    Ομοίως 
 \end{proof}
 
 \section{Χαρακτηριστική Ιδιότητα του Supremum}
@@ -554,10 +554,10 @@ supremum, δηλαδή έχει ελάχιστο άνω φράγμα.
 
 \begin{proof}
 \item {}
-Αρκεί να δείξω ότι $ \sup B $ είναι α.φ. του $A$. Πράγματι:
+    Αρκεί να δείξω ότι $ \sup B $ είναι α.φ. του $A$. Πράγματι:
 
-Έστω $ x \in A \overset{A \subseteq B}{\Rightarrow } x \in B \Rightarrow 
-x \leq \sup B, \forall x \in A$. Άρα το $ \sup B $ είναι α.φ. του $A$.
+    Έστω $ x \in A \overset{A \subseteq B}{\Rightarrow } x \in B \Rightarrow 
+    x \leq \sup B, \forall x \in A$. Άρα το $ \sup B $ είναι α.φ. του $A$.
 \end{proof}
 
 \begin{prop}
@@ -583,37 +583,39 @@ x \leq \sup B, \forall x \in A$. Άρα το $ \sup B $ είναι α.φ. του
             \end{align*}
             δηλαδή, το  $ \lambda M $ είναι α.φ. του $ \lambda A $.
 
-Άρα το $ \lambda A $ είναι άνω φραγμένο και μη-κενό, γιατί $ A \neq \emptyset $, άρα
-υπάρχει το $ \sup (\lambda A) $.
+            Άρα το $ \lambda A $ είναι άνω φραγμένο και μη-κενό, γιατί $ A \neq 
+            \emptyset $, άρα υπάρχει το $ \sup (\lambda A) $.
 
-Έστω $ s= \sup A $, το οποίο επίσης υπάρχει, γιατί $ A \neq \emptyset $ και $A$ άνω 
-φραγμένο. 
+            Έστω $ s= \sup A $, το οποίο επίσης υπάρχει, γιατί $ A \neq \emptyset $ 
+            και $A$ άνω φραγμένο. 
 
-\begin{itemize}
-    \item Αποδεικνύουμε ότι $ \lambda s $ είναι α.φ. του $ \lambda A $. Πράγματι
-        \begin{align*}
-        a \leq s, \; \forall a \in A & \Rightarrow \lambda a \leq \lambda s, \; \forall a \in A \\
-                                     & \Rightarrow x \leq \lambda s, \; \forall x \in \lambda A
-        \end{align*}
-        άρα το $ \lambda s $ είναι α.φ. του $ \lambda A $.
+            \begin{itemize}
+                \item Αποδεικνύουμε ότι $ \lambda s $ είναι α.φ. του $ \lambda A $. 
+                    Πράγματι
+                    \begin{align*}
+                        a \leq s, \; \forall a \in A 
+                        & \Rightarrow \lambda a \leq \lambda s, \; \forall a \in A \\
+                        & \Rightarrow x \leq \lambda s, \; \forall x \in \lambda A
+                    \end{align*}
+                    άρα το $ \lambda s $ είναι α.φ. του $ \lambda A $.
 
-    \item Αποδεικνύουμε ότι $ \lambda s $ είναι το ελάχιστο άνω φράγμα του $ \lambda A$.
-        Πράγματι 
+                \item Αποδεικνύουμε ότι $ \lambda s $ είναι το ελάχιστο άνω φράγμα 
+                    του $ \lambda A$.  Πράγματι 
 
-        Έστω $M$ άνω φράγμα του $ \lambda A $ με $ M < \lambda s \overset{\lambda >0}
-        {\Rightarrow} \frac{M}{\lambda} < s  $, άτοπο, γιατί $ \frac{ M}{\lambda} $ 
-        α.φ. του $A$ και $ s= \sup A $.
+                    Έστω $M$ άνω φράγμα του $ \lambda A $ με $ M < \lambda s 
+                    \overset{\lambda >0} {\Rightarrow} \frac{M}{\lambda} < s  $, 
+                    άτοπο, γιατί $ \frac{ M}{\lambda} $ α.φ. του $A$ και $ s= \sup A $.
 
-        Πράγματι, αφού $ M $ ά.φ. του $ \lambda A $, τότε
-        \begin{align*}
-            x \leq M, \; \forall x \in \lambda A 
+                    Πράγματι, αφού $ M $ ά.φ. του $ \lambda A $, τότε
+                    \begin{align*}
+                        x \leq M, \; \forall x \in \lambda A 
             &\Rightarrow \lambda a \leq M, \; \forall a \in A \\
             &\Rightarrow a \leq \frac{M}{\lambda}, \; \forall a \in A
-         \end{align*} 
-         άρα $ \frac{M}{\lambda} $ είναι α.φ. του Α.
-\end{itemize}
+                    \end{align*} 
+                    άρα $ \frac{M}{\lambda} $ είναι α.φ. του Α.
+            \end{itemize}
 
-\item Ομοίως
+        \item Ομοίως
     \end{enumerate}
 \end{proof}
 
@@ -624,34 +626,36 @@ x \leq \sup B, \forall x \in A$. Άρα το $ \sup B $ είναι α.φ. του
 
 \begin{proof}
     Έστω $ x \in A \cup B \Rightarrow \begin{cases} x \in A \overset{A \; \text{α.φ.}}{
-    \Rightarrow} \exists M_{A} \in \mathbb{R} \; : \; x \leq M_{A} \\
-x \in B \overset{B \; \text{α.φ.}}{ \Rightarrow} \exists M_{B} \in \mathbb{R} \; 
-: \; x \leq M_{B}  \\
-\end{cases} $  
-Άρα $ A \cup B $ είναι άνω φραγμένο.
+        \Rightarrow} \exists M_{A} \in \mathbb{R} \; : \; x \leq M_{A} \\
+        x \in B \overset{B \; \text{α.φ.}}{ \Rightarrow} \exists M_{B} \in \mathbb{R} 
+        \; : \; x \leq M_{B}  \\
+    \end{cases} $  
+    Άρα $ A \cup B $ είναι άνω φραγμένο.
 
-Επίσης $ A \cup B \neq emtpy $, γιατί $ A, B \neq \emptyset $. 
+    Επίσης $ A \cup B \neq emtpy $, γιατί $ A, B \neq \emptyset $. 
 
-Άρα υπάρχει το $ \sup (A \cup B) $.
+    Άρα υπάρχει το $ \sup (A \cup B) $.
 
-$ A,B $ μη-κενά και άνω φραγμένα, άρα υπάρχουν τα $ \sup A, \sup B $ και έστω χ.β.γ. 
-ότι $ \sup A \leq \sup B $. Τότε:
+    $ A,B $ μη-κενά και άνω φραγμένα, άρα υπάρχουν τα $ \sup A, \sup B $ 
+    και έστω χ.β.γ.  ότι $ \sup A \leq \sup B $. Τότε:
+    \begin{gather*}
+        a \leq \sup A \leq \sup B, \; \forall a \in A \\
+        b \leq \sup B, \; \forall b \in B 
+    \end{gather*}
+    άρα $ x \leq \sup B, \; \forall x \in A \cup B  $, δηλαδή το $ \sup B $ 
+    είναι α.φ. του $ A \cup B $, άρα $ \inlineequation[eq:1steq]{\sup (A \cup B) 
+    \leq \sup B} $.
 
-\begin{gather*}
-    a \leq \sup A \leq \sup B, \; \forall a \in A \\
-    b \leq \sup B, \; \forall b \in B 
-\end{gather*}
-άρα $ x \leq \sup B, \; \forall x \in A \cup B  $, δηλαδή το $ \sup B $ είναι α.φ. του 
-$ A \cup B $, άρα $ \inlineequation[eq:1steq]{\sup (A \cup B) \leq \sup B} $.
-
-Όμως $ B \subseteq A \cup B \Rightarrow \inlineequation[eq:2ndeq]{\sup B \leq \sup (A \cup B)} $, από την 
-πρόταση~\ref{prop:leqsup}. Οπότε από τις σχέσεις~\eqref{eq:1steq} και \eqref{eq:2ndeq}, έχουμε ότι $
-\sup (A \cup B) = \sup B = \max \{ \sup A, \sup B \} $.
+    Όμως $ B \subseteq A \cup B \Rightarrow \inlineequation[eq:2ndeq]{\sup B \leq 
+    \sup (A \cup B)} $, από την πρόταση~\ref{prop:leqsup}. 
+    Οπότε από τις σχέσεις~\eqref{eq:1steq} και \eqref{eq:2ndeq}, έχουμε ότι $
+    \sup (A \cup B) = \sup B = \max \{ \sup A, \sup B \} $.
 \end{proof}
 
 \begin{prop}
-    Έστω $ A, B $, μη-κενά και κάτω φραγμένα υποσύνολα του $ \mathbb{R} $. Τότε υπάρχει 
-    το $ \inf (A \cup B) $ και $ \inf (A \cup B) = \min \{ \inf A, \inf B \} $.
+    Έστω $ A, B $, μη-κενά και κάτω φραγμένα υποσύνολα του $ \mathbb{R} $. 
+    Τότε υπάρχει το $ \inf (A \cup B) $ και $ \inf (A \cup B) = \min \{ \inf A, 
+    \inf B \} $.
 \end{prop}
 
 \begin{proof}
@@ -679,7 +683,7 @@ $ A \cup B $, άρα $ \inlineequation[eq:1steq]{\sup (A \cup B) \leq \sup B} $.
     \overset{\ref{lem:ineqreal2}}{\Rightarrow} a <2,\; \forall a \in A $, 
     άρα το 2 είναι άνω φράγμα του $A$. Άρα υπάρχει το supremum του Α, έστω 
     $ x = \sup A $. 
-    
+
     Θα δείξουμε ότι $ x > 0 $ και $ x^{2} = 2 $
 
     Πράγματι, $ 1 \in A \Rightarrow 1 \leq x $, γιατί $x$ α.φ. του $A$, οπότε $ x >0 $.
@@ -689,9 +693,9 @@ $ A \cup B $, άρα $ \inlineequation[eq:1steq]{\sup (A \cup B) \leq \sup B} $.
     \begin{itemize}
         \item Έστω $ x^{2} > 2 $. Επιλέγω $ \varepsilon = \frac{1}{2} \min \{ x, 
             \frac{x^{2}-2}{2x}\} $.
-            
+
             Καταρχάς $ \varepsilon > 0 $, γιατί $ x>0 $ και $ x^{2} -2 >0 $. 
-            
+
             Επίσης από ορισμό του $ \varepsilon $ έχουμε ότι  $\varepsilon < x $ και 
             $ \varepsilon < \frac{x^{2}-2}{2x}$. 
 
@@ -726,9 +730,9 @@ $ A \cup B $, άρα $ \inlineequation[eq:1steq]{\sup (A \cup B) \leq \sup B} $.
 \begin{cor}\label{cor:ineqs}
     Έστω $ x,y >0 $ και $ n \in \mathbb{N} $. Τότε
     \begin{enumerate}[i)]
-    \item $ x \leq y \Leftrightarrow x^{\frac{1}{n}} \leq y^{\frac{1}{n}} $
-    \item $ x <y \Leftrightarrow x^{\frac{1}{n}} < y^{\frac{1}{n}} $
-    \item $ x =y \Leftrightarrow x^{\frac{1}{n}} = y^{\frac{1}{n}} $
+        \item $ x \leq y \Leftrightarrow x^{\frac{1}{n}} \leq y^{\frac{1}{n}} $
+        \item $ x <y \Leftrightarrow x^{\frac{1}{n}} < y^{\frac{1}{n}} $
+        \item $ x =y \Leftrightarrow x^{\frac{1}{n}} = y^{\frac{1}{n}} $
     \end{enumerate}
 \end{cor}
 
@@ -738,7 +742,7 @@ $ A \cup B $, άρα $ \inlineequation[eq:1steq]{\sup (A \cup B) \leq \sup B} $.
     = x^{\frac{1}{n}} $ και $ \tilde{y} =y^{\frac{1}{n}} $, οπότε από το 
     λήμμα~\ref{lem:ineqs} έχουμε $ \tilde{x} \leq \tilde{y}  \Leftrightarrow 
     \tilde{x} ^{n} \leq \tilde{y} ^{n} $,
-οπότε $ x^{\frac{1}{n}} \leq y^{\frac{1}{n}} \Leftrightarrow x \leq y $.
+    οπότε $ x^{\frac{1}{n}} \leq y^{\frac{1}{n}} \Leftrightarrow x \leq y $.
 \end{proof}
 
 \begin{lem}\label{lem:ineqq}
@@ -753,7 +757,7 @@ $ A \cup B $, άρα $ \inlineequation[eq:1steq]{\sup (A \cup B) \leq \sup B} $.
 
     \[ x<y \overset{\text{Πορ.}~\ref{cor:ineqs}}{\Rightarrow} x^{\frac{1}{m}} 
         < y^{\frac{1}{m}} \overset{\text{Λημ.}~\ref{lem:ineqs}}{\Rightarrow} 
-        x^{\frac{n}{m}} < y^{\frac{n}{m}} \Rightarrow x^{q} < y^{q}  \] 
+    x^{\frac{n}{m}} < y^{\frac{n}{m}} \Rightarrow x^{q} < y^{q}  \] 
 \end{proof}
 
 \begin{lem}
@@ -777,10 +781,26 @@ $ A \cup B $, άρα $ \inlineequation[eq:1steq]{\sup (A \cup B) \leq \sup B} $.
     \end{enumerate}
 \end{proof}
 
+
+\section{Ακέραιο Μέρος}
+
 \begin{prop}[Ύπαρξη Ακεραίου Μέρους]
     Έστω $ x \in \mathbb{R} $. Τότε υπάρχει μοναδικός ακέραιος αριθμός 
-    $ m \in \mathbb{Z} $ τέτοιος ώστε $\inlineequation[eq:akermer]{m \leq x \leq m +1}$.
+    $ m \in \mathbb{Z} $ τέτοιος ώστε $\inlineequation[eq:akermer]{m \leq x < m +1}$.
 \end{prop}
+
+\begin{proof}
+    Έστω $ x \in \mathbb{R} $. Επειδή $ \mathbb{N} $ όχι άνω φραγμένο, τότε από την 
+    Αρχιμήδεια Ιδιότητα, $ \exists n \in \mathbb{N} $ με $ n > x $. Έστω $ S = \{ 
+    n \in \mathbb{N} \; : \; n > x\} \Rightarrow S \neq \emptyset $ (υπάρχει το $n$). 
+    Άρα το $S$ έχει ελάχιστο στοιχείο, έστω $ n_{0} $. Άρα $ n_{0}-1 \leq x \leq 
+    n_{0} \Rightarrow m \leq n \leq m+1$, δηλαδή $ m= n_{0}-1 = [x] $.
+
+    Αποδεικνύουμε την μοναδικότητα:
+
+    Έστω $ m' $ με $ m' \leq x \leq m'+1 $ και έστω $ m' \leq m $. Τότε 
+    $ m' +1 \leq m \leq x $, άτοπο.
+\end{proof}
 
 \begin{dfn}
     Έστω $ x \in \mathbb{R} $. Ο μοναδικός ακέραιος που ικανοποιεί την 
@@ -796,9 +816,227 @@ $ A \cup B $, άρα $ \inlineequation[eq:1steq]{\sup (A \cup B) \leq \sup B} $.
     \end{enumerate}
 \end{example}
 
+\section{Ρητοί και Άρρητοι}
+
+\begin{lem}
+\item {}
+    \begin{enumerate}[i)]
+        \item $n$ άρτιος $ \Leftrightarrow n^{2} $ άρτιος.
+        \item $ n $ περιττός $ \Leftrightarrow n^{2} $ περιττός.
+    \end{enumerate}
+\end{lem}
+
+\begin{proof}
+\item {}
+    \begin{enumerate}[i)]
+        \item 
+            \begin{description}
+                \item [($ \Rightarrow $ )] 
+                    Έστω $ n $ άρτιος $ \Rightarrow n =2k, \; k \in \mathbb{Z} 
+                    \Rightarrow n^{2} = (2k)^{2} = 4k^{2} = 2\cdot (2k)^{2} $ άρτιος. 
+                \item [($ \Leftarrow $)] Έστω $ n^{2} $ άρτιος και $n$ περιττός. Τότε 
+                    $ n \cdot n = n^{2} $ περιττός. Άτοπο.
+            \end{description}
+
+        \item Ομοίως
+    \end{enumerate}
+\end{proof}
+
+\begin{rem}
+    Στις αποδείξεις τους παραπάνω λήμματος, χρησιμοποιήσαμε ότι 
+    \begin{enumerate}[i)]
+        \item άρτιος $ \cdot $ άρτιος = άρτιος
+        \item περιττός $ \cdot $ περιτός = περιττός
+        \item άρτιος $ \cdot $ περιττός = άρτιος
+    \end{enumerate}
+\end{rem}
+
+\begin{thm}
+    Ο $ \sqrt{2} $ είναι άρρητος.
+\end{thm}
+
+\begin{proof}
+    Έστω $ \sqrt{2} $ όχι άρρητος. Άρα $ \sqrt{2} $ ρητός, δηλαδή $ \exists m,n 
+    \in \mathbb{Z} $, με $ (m,n)=1 $, δηλαδή $ m,n $ πρώτοι μεταξύ τους
+    τ.ω. $ \sqrt{2} = \frac{m}{n} \Rightarrow 2 = \frac{m^{2}}{n^{2}} \Rightarrow 
+    m^{2} = 2n^{2} \Rightarrow m^{2}$ είναι άρτιος $ \Rightarrow m $ άρτιος 
+    $ \Rightarrow m = 2k, \; k \in \mathbb{Z}$. 
+
+    Άρα $ (2k)^{2} = 2n^{2} \Rightarrow 4k^{2}=2n^{2} \Rightarrow n^{2} = 2k^{2} 
+    \Rightarrow n^{2} $ άρτιος $ \Rightarrow n $ άρτιος. Άτοπο, γιατί $ (m,n)=1 $.
+\end{proof}
+
+\begin{example}
+    Υπάρχει αριθμός $ a \in \mathbb{R} $ τέτοιος ώστε $ a^{2} $ άρρητος και $ a^{4} $ 
+    ρητός; 
+\end{example}
+
+\begin{proof}
+    Ναί, ο $ a= \sqrt[4]{2} $. Πράγματι, $ a^{2} = \sqrt{2} $ άρρητος, και $ 
+    a^{4} = 2$ ρητός.
+\end{proof}
+
+\begin{example}
+    Υπάρχουν αριθμοί, $ a,b $ άρρητοι, ώστε $ a+b, a\cdot b $ να είναι ρητοί;
+\end{example}
+
+\begin{proof}
+    Ναι οι $ a= \sqrt{2} $ και $ b= - \sqrt{2} $, οι οποίοι είναι και οι δύο άρρητοι 
+    και $ a+b= \sqrt{2} - \sqrt{2} = 0 $ ρητός, και $ a\cdot b = \sqrt{2} \cdot (- 
+    \sqrt{2}) = -2 $, επίσης ρητός.
+\end{proof}
+
+\begin{example}
+    Ο $ \sqrt{3} $ είναι άρρητος.
+\end{example}
+
+\begin{proof}
+    Έστω $ \sqrt{3} $ όχι άρρητος. Άρα $ \sqrt{3} $ ρητός, δηλαδή $ \exists m,n 
+    \in \mathbb{Z} $, με $ (m,n)=1 $, δηλαδή $ m,n $ πρώτοι μεταξύ τους
+    τ.ω. $ \sqrt{3} = \frac{m}{n} \Rightarrow 3 = \frac{m^{2}}{n^{2}} \Rightarrow 
+    m^{2} = 3n^{2} \Rightarrow 3 \mid m^{2} \Rightarrow 3 \mid m  \Rightarrow m 
+    \Rightarrow m = 3k, \; k \in \mathbb{Z}$. 
+
+    Άρα $ (3k)^{2} = 3n^{2} \Rightarrow 9k^{2}=3n^{2} \Rightarrow n^{2} = 3k^{2} 
+    \Rightarrow 3 \mid n^{2} \Rightarrow  3 \mid n$,  ατοπο, γιατί $ (m,n)=1 $.
+\end{proof}
+
+\begin{lem}
+    $ 3 \mid m^{2} \Rightarrow 3 \mid m $
+\end{lem}
+ 
+\begin{proof}
+    Έστω ότι $ 3 \nmid m \Rightarrow m = 3n +1 $ ή $ m = 3n+2 $. 
+    Αν $ m=3n+1 \Rightarrow m^{2} = (3n+1)^{2} = \ldots 3(3n^{2}+2n)+1 \Rightarrow 
+    3 \nmid m^{2}$, άτοπο και αν $ m =3n+2 \Rightarrow m^{2}=(3n+2)^{2} = \ldots = 
+    3(3n^{2}+4n+1)+1 \Rightarrow 3 \nmid m^{2}$ άτοπο.
+\end{proof}
+
+\begin{rem}
+    Ομοίως αποδεικνύονται και ότι οι $ \sqrt{5}$ και  $ \sqrt{6} $ είναι άρρητοι, 
+    και γενικότερα ισχύει η επόμενη πρόταση.
+\end{rem}
+
+\begin{prop}
+    $ \sqrt{n} $ άρρητος $ \Leftrightarrow n $ όχι τετράγωνο κάποιου φυσικού αριθμού.
+\end{prop}
+
+\begin{example}
+    Να δείξετε ότι ο αριθμός $ \sqrt[3]{2} $ είναι άρρητος.
+\end{example}
+
+\begin{proof}
+    Έστω $ \sqrt[3]{2} $ όχι άρρητος. Άρα $ \sqrt[3]{2} $ ρητός, δηλαδή $ \exists m,n 
+    \in \mathbb{Z} $, με $ (m,n)=1 $, δηλαδή $ m,n $ πρώτοι μεταξύ τους
+    τ.ω. $ \sqrt[3]{2} = \frac{m}{n} \Rightarrow 2 = \frac{m^{3}}{n^{3}} \Rightarrow 
+    m^{3} = 2n^{3} \Rightarrow m^{3} $ άρτιος $ \Rightarrow m $ άρτιος. 
+
+    Άρα $ (2k)^{3} = 2n^{3} \Rightarrow 2k^{3}=2n^{3} \Rightarrow n^{3} = 4k^{3} 
+    \Rightarrow n $ άρτιος,  ατοπο, γιατί $ (m,n)=1 $.
+\end{proof}
+
+\begin{example}
+    Να δείξετε ότι $ \sqrt{2} + \sqrt{3} $ είναι άρρητος.
+\end{example}
+
+\begin{proof}
+    Έστω ότι $ \sqrt{2} + \sqrt{3} $ είναι ρητός. Τότε και ο $ (\sqrt{2} + \sqrt{3} )
+    ^{2} = 2 + 2 \sqrt{6} + 3 = 2 \sqrt{6} + 5 $ είναι ρητός, δηλαδή ο $ \sqrt{6} $ 
+    είναι ρητός, άτοπο.
+\end{proof}
+
+\begin{prop}
+\item {}
+    $
+    \left.
+        \begin{tabular}{l}
+            $q$ ρητός \\
+            $r$ άρρητος
+        \end{tabular}
+    \right\}  \Rightarrow (q+r) $ άρρητος 
+\end{prop}
+
+\begin{proof}
+\item {}
+    Έστω $(q+r)$ άρρητος. Τότε ο $ r = (q+r)-r $ είναι ρητός ως άθροισμα δύο 
+    ρητών. Άτοπο.
+\end{proof}
+
+\begin{prop}
+\item {}
+    $
+    \left.
+        \begin{tabular}{l}
+            $r$ άρρητος \\
+            $s$ άρρητος
+        \end{tabular}
+    \right\}  \Rightarrow (r+s) $ ρητός ή άρρητος.
+\end{prop}
+
+\begin{proof}
+    Για παράδειγμα ο αριθμός $ \sqrt{2} + \sqrt{3} $ είναι άρρητος, αλλά ο αριθμός
+    $ \underbrace{r}_{\text{άρρητος}}+ \underbrace{(q-r)}_{\text{άρρητος}} =q $ 
+    είναι ρητός, αν ο $q$ είναι ρητός.
+\end{proof}
+
+\begin{prop}
+\item {}
+    $
+    \left.
+        \begin{tabular}{l}
+            $q$ ρητός \\
+            $r$ άρρητος
+        \end{tabular}
+    \right\}  \Rightarrow  $ \begin{tabular}{l}
+        $ (q \cdot r) $ ρητός $ \Leftrightarrow q =0 $ \\
+        $(q \cdot r)$   άρρητος $ \Leftrightarrow q \neq 0 $
+    \end{tabular}
+\end{prop}
+
+\begin{proof}
+    Πράγματι, αν $ q=0 $ (ρητός) και $ r $ άρρητος, τότε $ q \cdot r =0 $ είναι ρητός, 
+    αλλά αν $ q \neq 0 $ τότε $ (q \cdot r) $ είναι άρρητος, γιατί αλλιώς ο 
+    $ r = \underbrace{(q \cdot r)}_{\text{ρητός}} \cdot \underbrace{q^{-1}}_{\text{
+    ρητός}} $ είναι ρητός ως γινόμενο ρητών. Άτοπο.
+\end{proof}
 
 
+\section{Πυκνότητα Ρητών και Άρρητων}
+
+\begin{prop}[(Πυκνότητα Ρητών)]
+    Σε κάθε ανοιχτό διάστημα πραγματικών αριθμών, υπάρχει ρητός.
+\end{prop}
+
+\begin{proof}
+\item {}
+    Θα δείξουμε ότι $ (a,b) $ διάστημα στο $ \mathbb{R} \Rightarrow \exists q 
+    \in \mathbb{Q} $, τ.ω. $ a < q < b $. Πράγματι:
+
+    Αν $ a<b \Rightarrow b-a >0 \overset{\text{Αρχ.Ιδιοτ.}}{\Rightarrow} \exists 
+    n_{0} \in \mathbb{N} \; : \; \frac{1}{n_{0}} < b-a \Rightarrow b n_{0} - a n_{0} 
+    >1 \Rightarrow n_{0}b > 1+ n_{0}a$.
+
+    Τότε 
+    \begin{gather*}
+        [n_{0}a] \leq n_{0}a < [n_{0}a]+1 \leq n_{0}a +1 < n_{0}b \Leftrightarrow \\
+        n_{0}a < [n_{0}a]+1 < n_{0}b \Leftrightarrow \\
+        a < \underbrace{\frac{[n_{0}a]+1}{n_{0}}}_{\text{ρητός}}< b
+    \end{gather*}
+\end{proof}
+
+\begin{prop}[(Πυκνότητα Άρρητων)]
+    Σε κάθε ανοιχτό διάστημα πραγματικών αριθμών, υπάρχει άρρητος.
+\end{prop}
+
+\begin{proof}
+    Θα δείξουμε ότι $ (a,b) $ διάστημα στο $ \mathbb{R} \Rightarrow \exists r \in 
+    \mathbb{R} \setminus \mathbb{Q} $ τ.ω. $a < r < b$. Πράγματι:
+
+    Έστω $ \sqrt{2} $ (τυχαίος) άρρητος. Τότε
+
+    $ a < b \Leftrightarrow a - \sqrt{2} < b- \sqrt{2} \overset{\text{Πυκν. Ρητών}}{\Rightarrow} \exists q \in \mathbb{Q} \; : \;  a - \sqrt{2} < q < b - 
+    \sqrt{2} \Leftrightarrow  a < \underbrace{q + \sqrt{2}}_{\text{άρρητος}} < b $ 
+\end{proof}
 
 
-
-    \end{document}
+\end{document}
