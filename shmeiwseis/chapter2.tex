@@ -1,0 +1,53 @@
+\documentclass[main.tex]{subfiles}
+
+
+\begin{document}
+
+
+\section{Όριο Ακολουθίας}
+
+\begin{dfn}
+    Ακολουθία πραγματικών αριθμών ονομάζεται κάθε συνάρτηση με πεδίο ορισμού 
+    τους φυσικούς αριθμούς. 
+    \begin{align*}
+        a \colon &\mathbb{N} \to \mathbb{R} \\
+                 &n \to a(n)=a_{n}
+     \end{align*} 
+     Οι ακολουθίες συμβολίζονται ως $ (a_{n})_{n \in \mathbb{N}} $ ή 
+     $ \{ a_{n} \} _{n=1}^{+\infty} $ ή $ \{ a_{n} \} _{n \in \mathbb{N}} 
+     $, κλπ.
+\end{dfn}
+
+\begin{dfn}
+    Πεδίο Ορισμού της ακολουθίας, ονομάζουμε το σύνολο των όρων της, 
+    $ \{ a_{1}, a_{2}, \ldots, a_{n} \} $ το οποίο μπορεί να είναι 
+    πεπερασμένο ή άπειρο.
+\end{dfn}
+
+\begin{examples}
+        \item {}
+    \begin{enumerate}[i)]
+        \item $ a_{n}, \; \forall n \in \mathbb{N} $. Έχει Π.Ο. το σύνολο 
+            $  \{ 1,2,3, \ldots \} $.
+        \item $ a_{n} = (-1)^{n}, \; \forall n \in \mathbb{N} $. Έχει Π.Ο. 
+            το σύνολο $ \{ -1,1 \} $.
+        \item $ a_{n} = c, \; \forall n \in \mathbb{N}, c \in \mathbb{R} $.
+            Έχει Π.Ο. το σύνολο $ \{ c \} $ και ονομάζεται σταθερή ακολουθία.
+        \item $ a_{n}=2n, \; \forall n \in \mathbb{N} $. Έχει Π.Ο. το σύνολο 
+            $ \{ 2,4,6, \ldots, 2n, \ldots \} $. Πρόκειτα για την ακολουθία 
+            των άρτιων φυσικών αριθμών.
+        \item $ a_{n}= 2n-1, \; \forall n \in \mathbb{N} $. Έχει Π.Ο. το 
+            σύνολο $ \{ 1,3,5, \ldots, 2n+1, \ldots \} $. Πρόκεται για την 
+            ακολουθία των περιττών φυσικών αριθμών.
+        \item $ a_{1}= a_{2} = 1 $ και $ a_{n+2}=a_{n+1}+a_{n}, \; 
+            \forall n \mathbb{N}$. Έχει Σ.Τ. το σύνολο $ \{ 1,1,2,3,5,8,
+            13,21,34, \ldots,\} $. Πρόκειται για την ακολουθία Fibonacci. 
+    \end{enumerate}
+\end{examples}
+
+\begin{rem}
+    Ουσιαστικά οι ακολουθίες είναι λίστες πραγματικών αριθμών.
+\end{rem}
+
+
+\end{document}
