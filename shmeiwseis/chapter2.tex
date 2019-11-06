@@ -13,41 +13,89 @@
         a \colon &\mathbb{N} \to \mathbb{R} \\
                  &n \to a(n)=a_{n}
      \end{align*} 
-     Οι ακολουθίες συμβολίζονται ως $ (a_{n})_{n \in \mathbb{N}} $ ή 
-     $ \{ a_{n} \} _{n=1}^{+\infty} $ ή $ \{ a_{n} \} _{n \in \mathbb{N}} 
-     $, κλπ.
+     Οι ακολουθίες συμβολίζονται ως $ (a_{n})_{n \in \mathbb{N}} $  
+      ή $ \{ a_{n} \} _{n \in \mathbb{N}} $  ή $ \{ a_{n} \} _{n=1}^{+\infty} $, κλπ.
 \end{dfn}
 
 \begin{dfn}
-    Πεδίο Ορισμού της ακολουθίας, ονομάζουμε το σύνολο των όρων της, 
-    $ \{ a_{1}, a_{2}, \ldots, a_{n} \} $ το οποίο μπορεί να είναι 
-    πεπερασμένο ή άπειρο.
+    Σύνολο Τιμών (Σ.Τ.) της ακολουθίας $ (a_{n})_{n \in \mathbb{N}} $, ονομάζουμε 
+    το σύνολο των όρων της, $ \{ a_{1}, a_{2}, \ldots, a_{n} \} $ το οποίο μπορεί 
+    να είναι πεπερασμένο ή άπειρο.
 \end{dfn}
 
 \begin{examples}
         \item {}
     \begin{enumerate}[i)]
-        \item $ a_{n}, \; \forall n \in \mathbb{N} $. Έχει Π.Ο. το σύνολο 
+        \item $ a_{n} = n, \; \forall n \in \mathbb{N} $. Έχει Σ.Τ. το σύνολο 
             $  \{ 1,2,3, \ldots \} $.
-        \item $ a_{n} = (-1)^{n}, \; \forall n \in \mathbb{N} $. Έχει Π.Ο. 
+        \item $\left(\frac{1}{n}\right)_{n \in \mathbb{N}} $. Έχει Σ.Τ. το σύνολο 
+            $  \left\{ 1, \frac{1}{2}, \frac{1}{3}, \ldots \right\} $.
+        \item $ \{(-1)^{n}\}_{n=1}^{+ \infty}, $. Έχει Σ.Τ. 
             το σύνολο $ \{ -1,1 \} $.
         \item $ a_{n} = c, \; \forall n \in \mathbb{N}, c \in \mathbb{R} $.
-            Έχει Π.Ο. το σύνολο $ \{ c \} $ και ονομάζεται σταθερή ακολουθία.
-        \item $ a_{n}=2n, \; \forall n \in \mathbb{N} $. Έχει Π.Ο. το σύνολο 
-            $ \{ 2,4,6, \ldots, 2n, \ldots \} $. Πρόκειτα για την ακολουθία 
+            Έχει Σ.Τ. το σύνολο $ \{ c \} $ και ονομάζεται σταθερή ακολουθία.
+        \item $ a_{n}=2n, \; \forall n \in \mathbb{N} $. Έχει Σ.Τ. το σύνολο 
+            $ \{ 2,4,6, \ldots, 2n, \ldots \} $. Πρόκειται για την ακολουθία 
             των άρτιων φυσικών αριθμών.
-        \item $ a_{n}= 2n-1, \; \forall n \in \mathbb{N} $. Έχει Π.Ο. το 
+        \item $ a_{n}= 2n-1, \; \forall n \in \mathbb{N} $. Έχει Σ.Τ. το 
             σύνολο $ \{ 1,3,5, \ldots, 2n+1, \ldots \} $. Πρόκεται για την 
             ακολουθία των περιττών φυσικών αριθμών.
-        \item $ a_{1}= a_{2} = 1 $ και $ a_{n+2}=a_{n+1}+a_{n}, \; 
-            \forall n \mathbb{N}$. Έχει Σ.Τ. το σύνολο $ \{ 1,1,2,3,5,8,
+        \item \label{ex:anadr} $ a_{1}= a_{2} = 1 $ και $ a_{n+2}=a_{n+1}+a_{n}, \; 
+            \forall n \in \mathbb{N}$. Έχει Σ.Τ. το σύνολο $ \{ 1,1,2,3,5,8,
             13,21,34, \ldots,\} $. Πρόκειται για την ακολουθία Fibonacci. 
     \end{enumerate}
 \end{examples}
 
 \begin{rem}
-    Ουσιαστικά οι ακολουθίες είναι λίστες πραγματικών αριθμών.
+\item {}
+    \begin{enumerate}[i)]
+        \item Ουσιαστικά οι ακολουθίες είναι λίστες πραγματικών αριθμών.
+        \item Η ακολουθία \ref{ex:anadr}, όπου κάθε επόμενος όρος, ορίζεται με τη 
+            βοήθεια του προηγούμενου, λέγεται αναδρομική ακολουθία. Προτάσεις που 
+            αφορούν αναδρομικές ακολουθίες, αποδεικνύονται με Μαθηματική Επαγωγή.
+    \end{enumerate}
 \end{rem}
 
+
+\begin{dfn}
+    Δυο ακολουθίες, $(a_{n})_{n \in \mathbb{N}}$  και $ (b_{n})_{n \in \mathbb{N}} $
+    ονομάζονται ίσες, αν $ a_{n} = b_{n}, \; \forall n \in \mathbb{N} $.
+\end{dfn}
+
+\begin{dfn}
+    Οι πράξεις μεταξύ ακολουθιών, ορίζονται όπως ακριβώς και για τις συναρτήσεις.
+\end{dfn}
+
+\section{Φραγμένες Ακολουθίες}
+
+\begin{dfn}
+\item {}
+    Μια ακολουθία $ (a_{n})_{n \in \mathbb{N}} $ ονομάζεται:
+    \begin{enumerate}[i)]
+        \item άνω φραγμένη $ \overset{\text{ορ.}}{\Leftrightarrow} \exists M \in 
+            \mathbb{R} \; : \; a_{n} \leq M, \; \forall n \in \mathbb{N}$.
+        \item κάτω φραγμένη $ \overset{\text{ορ.}}{\Leftrightarrow} \exists m \in 
+            \mathbb{R} \; : \; m \leq a_{n}, \; \forall n \in \mathbb{N}  $
+        \item φραγμένη $ \overset{\text{ορ.}}{\Leftrightarrow} \exists$ είναι άνω και 
+            κάτω φραγμένη.
+    \end{enumerate}
+
+    \begin{prop}
+        $ (a_{n})_{n \in \mathbb{N}} $ φραγμένη $ \Leftrightarrow \exists M>0, \; M \in 
+        \mathbb{R} \; : \; \abs{a_{n}} \leq M, \; \forall n \in \mathbb{N} $.
+    \end{prop}
+\end{dfn}
+
+\begin{examples}
+\item {}  
+    \begin{enumerate}[i)]
+        \item $ a_{n}= \frac{1}{n}, \; \forall n \in \mathbb{N} $, είναι φραγμένη.
+            
+            Πράγματι, $ 0 \leq \frac{1}{n} \leq 1, \; \forall n \in \mathbb{N} $. 
+
+            Επίσης, $ \abs{\frac{1}{n}} = \frac{1}{n} \leq 1. $
+        \item 
+    \end{enumerate}
+\end{examples}
 
 \end{document}
