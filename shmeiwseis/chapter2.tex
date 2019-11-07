@@ -82,7 +82,8 @@
 
     \begin{prop}
         $ (a_{n})_{n \in \mathbb{N}} $ φραγμένη $ \Leftrightarrow \exists M>0, \; M \in 
-        \mathbb{R} \; : \; \abs{a_{n}} \leq M, \; \forall n \in \mathbb{N} $.
+        \mathbb{R} \; : \; \abs{a_{n}} \leq M, \; \forall n \in \mathbb{N} $
+        (Απολύτως φραγμένη).
     \end{prop}
 \end{dfn}
 
@@ -93,9 +94,99 @@
             
             Πράγματι, $ 0 \leq \frac{1}{n} \leq 1, \; \forall n \in \mathbb{N} $. 
 
-            Επίσης, $ \abs{\frac{1}{n}} = \frac{1}{n} \leq 1. $
-        \item 
+            Επίσης, $ \abs{\frac{1}{n}} = \frac{1}{n} \leq 1 $, άρα και 
+            απολύτως φραγμένη.
+        \item $ a_{n}=(-1)^{n} \frac{1}{n}, \; \forall n \in \mathbb{N} $ 
+            είναι απολύτως φραγμένη. Πράγματι,
+
+            \[
+                \abs{a_{n}} = \abs{(-1)^{n} \frac{1}{n}} = \abs{(-1)^{n}} 
+                \cdot \abs{\frac{1}{n}} = \abs{-1}^{n} \cdot \frac{1}{n}
+                = 1 \cdot \frac{1}{n} = \frac{1}{n} \leq 1, \; \forall n \in 
+                \mathbb{N}
+             \] 
+
+         \item $ a_{n}= \frac{(n-1)!}{n^{n}}, \; \forall n \in \mathbb{N} $
+             είναι φραγμένη. Πράγματι, $ a_{n} > 0, \; \forall n \in 
+             \mathbb{N}$, άρα 0 κ.φ. της $( a_{n})_{n \in \mathbb{N}} $. 
+             Επίσης 
+             \[
+                 a_{n}= \frac{(n-1)!}{n^{n}} = \frac{1 \cdot 2 \cdots
+                 (n-1)}{n^{n}} < \frac{\overbrace{n \cdot n \cdots n}
+             ^{n-1 \; \text{φορές}}}{n^{n}} = \frac{n^{n-1}}{n^{n}} =
+             \frac{1}{n} \leq 1, \; \forall n \in \mathbb{N},
+         \] άρα το 1 είναι α.φ. της $ (a_{n})_{n \in \mathbb{N}} $ 
+
+     \item $ a_{n}= 1 + \left(- \frac{1}{2} \right) + \left(- 
+         \frac{1}{2}\right)^{2} + \cdots + \left(-\frac{1}{2} \right) ^{n}, 
+         \; \forall n \in \mathbb{N} $ είναι απολύτως φραγμένη. Πράγματι, 
+         \[ a_{n} = 1 + \left(- \frac{1}{2}\right) + \left(- \frac{1}{2} 
+             \right)^{2} + \cdots + \left(- \frac{1}{2} \right)^{n} = 
+             \frac{1 - (- \frac{1}{2} )^{n}}{1 - (- \frac{1}{2})} = 
+         \frac{2}{3} \left[1 - \left(- \frac{1}{2} \right)^{n}\right] \]
+         Επομένως
+         \[
+             \abs{a_{n}} = \abs{\frac{2}{3} \left[1-(- \frac{1}{2} )^{n}\right]} = 
+             \frac{2}{3} \abs{\abs{1} - \left(- \frac{1}{2}\right)^{n}} \leq 
+             \frac{2}{3} \left(1 + \abs{-\frac{1}{2} }^{n} \right) = 
+             \frac{2}{3} \left(1+ \frac{1}{2^{n}}\right) < \frac{2}{3}
+             (1+1) = \frac{4}{3} 
+          \] 
+
+      \item $ a_{n}= 2n+5, \; \forall n \in \mathbb{N} $ είναι κάτω φραγμένη.
+          Πράγματι, $ 7 \leq 2n+5, \; \forall n \in \mathbb{N} $, άρα το 
+          7 είναι κ.φ. της $ (a_{n} )_{n \in \mathbb{N}} $.
+
+      \item $ a_{1}=2, \; a_{n+1}=2 - \frac{1}{a_{n}}, \forall n \in \mathbb{N}$
+          είναι φραγμένη. Πράγματι, με επαγωγή, έχουμε:
+          \begin{itemize}
+              \item Για $ n=1 $, $ a_{1}=2>1 $, ισχύει. 
+              \item Έστω ότι ισχύει για $n$, δηλ. \inlineequation[eq:
+                  anadepag1]{a_{n}>1}.
+              \item Θ.δ.ο. ισχύει και για $ n+1 $. Πράγματι, από τη σχέση~
+                  \eqref{eq: anadepag1}, έχουμε
+\[
+    a_{n}>1 \Rightarrow \frac{1}{a_{n}} < 1 \Rightarrow - \frac{1}{a_{n}} > 
+    -1 \Rightarrow 2 - \frac{1}{a_{n}} > 2-1 \Rightarrow a_{n+1} > 1.
+ \] 
+          \end{itemize}
     \end{enumerate}
 \end{examples}
+
+\section{Μονοτονία Ακολουθιών}
+
+\begin{dfn}
+    Μια ακολουθία $ (a_{n})_{n \in \mathbb{N}} $ λέγεται:
+    \begin{enumerate}[i)]
+        \item άυξουσα $ \overset{\text{ορ.}}{\Leftrightarrow} a_{n} \leq 
+            a_{n+1}, \forall n \in \mathbb{N}  $.
+        \item φθίνουσα $ \overset{\text{ορ.}}{\Leftrightarrow} a_{n} \geq 
+            a_{n+1}, \forall n \in \mathbb{N}  $.
+        \item γνησίως αύξουσα $ \overset{\text{ορ.}}{\Leftrightarrow} a_{n} 
+            < a_{n+1}$
+        \item γνησίως φθίνουσα $ \overset{\text{ορ.}}{\Leftrightarrow} a_{n} 
+            > a_{n+1}$
+    \end{enumerate}
+\end{dfn}
+
+\begin{rems}
+\item {}
+    \begin{enumerate}[i)]
+        \item $ (a_{n})_{n \in \mathbb{N}} $ γνησίως αύξουσα (φθίνουσα) $ 
+            \Rightarrow (a_{n})_{n \in \mathbb{N}} $ αύξουσα (φθίνουσα) 
+        \item $ (a_{n})_{n \in \mathbb{N}} $ γνησίως φθίνουσα  $ 
+            \Rightarrow (a_{n})_{n \in \mathbb{N}} $ ανω φραγμένη, με 
+            α.φ. το $ a_{1} $  
+        \item $ (a_{n})_{n \in \mathbb{N}} $ γνησίως αύξουσα  $ 
+            \Rightarrow (a_{n})_{n \in \mathbb{N}} $ κάτω φραγμένη, με 
+            κ.φ. το $ a_{1} $  
+    \end{enumerate}
+\end{rems}
+
+\begin{dfn}[Ισοδύναμος ορισμός της μονοτονίας]
+    Αν μια ακολουθία $ (a_{n})_{n \in \mathbb{N}} $ διατηρεί πρόσημο
+    
+\end{dfn}
+
 
 \end{document}
