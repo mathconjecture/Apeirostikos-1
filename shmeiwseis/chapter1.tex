@@ -346,8 +346,9 @@
 \begin{example}
 \item {}
     \begin{enumerate}[i)]
-        \item Το  σύνολο $ A = (0,3) $  έχει άνω φράγματα τους $ 3, 4, 144, 
-            \ldots$ και κάτω φράγματα τους $ 0, -1, -2, -128, \ldots $ 
+        \item Το  σύνολο $ A = (0,3) $  έχει ως άνω φράγματα τους αριθμούς 
+            $ 3, 4, 144, \ldots$ και κάτω φράγματα τους 
+            $ 0, -1, -2, -128, \ldots $ 
 
         \item Το σύνολο $ B = (0,+\infty) $ δεν είναι άνω φραγμένο.
     \end{enumerate}
@@ -547,10 +548,46 @@ supremum, δηλαδή έχει ελάχιστο άνω φράγμα.
 
 \section{Χαρακτηριστική Ιδιότητα του Supremum}
 
+Έστω $ A \subseteq \mathbb{R} $, $ A \neq \emptyset $ και άνω φραγμένο. Έστω 
+$ s $ α.φ. του $A$. Τότε 
+\[
+     s= \sup A \Leftrightarrow \forall \varepsilon >0, \; \exists a \in A \; 
+     : \; s - \varepsilon < a
+ \] 
+
+ \begin{proof}
+ \item {}
+     \begin{description}
+         \item[$ (\Rightarrow) $] 
+             Έστω $ s = \sup A $. Έστω $ \varepsilon >0 $. Έχουμε $ 
+             s - \varepsilon < s $ άρα το $ s- \varepsilon $ δεν είναι 
+             α.φ. του $A$, άρα $ \exists a \in A $ τέτοιο ώστε $ 
+             a > s- \varepsilon$. 
+
+         \item [$ (\Leftarrow) $] 
+             Έστω ότι $ \forall \varepsilon >0, \; \exists a \in A \; : 
+             \; s- \varepsilon < a$. Θ.δ.ο. $ s = \sup A $. 
+
+
+             \begin{minipage}{0.3\textwidth}
+             \begin{itemize}
+                 \item $ A \neq \emptyset $ \tikzmark{a}
+                 \item $ A $ άνω φραγμένο  \tikzmark{b}
+             \end{itemize}
+         \end{minipage}
+
+             \mybrace{a}{b}[$ \exists $ το $ \sup A $]
+
+
+     \end{description} 
+ \end{proof}
+ 
+
 \begin{prop}\label{prop:leqsup}
     Έστω $ A, B $ μη-κενά, άνω φραγμένα υποσύνολα του $ \mathbb{R} $. Αν $ A \subseteq 
     B$ τότε $ \sup A \leq \sup B $.
 \end{prop}
+
 
 \begin{proof}
 \item {}

@@ -12,19 +12,19 @@
     \begin{align*}
         a \colon &\mathbb{N} \to \mathbb{R} \\
                  &n \to a(n)=a_{n}
-     \end{align*} 
-     Οι ακολουθίες συμβολίζονται ως $ (a_{n})_{n \in \mathbb{N}} $  
-      ή $ \{ a_{n} \} _{n \in \mathbb{N}} $  ή $ \{ a_{n} \} _{n=1}^{+\infty} $, κλπ.
+    \end{align*} 
+    Οι ακολουθίες συμβολίζονται ως $ (a_{n})_{n \in \mathbb{N}} $  
+    ή $ \{ a_{n} \} _{n \in \mathbb{N}} $  ή $ \{ a_{n} \} _{n=1}^{+\infty} $, κλπ.
 \end{dfn}
 
 \begin{dfn}
     Σύνολο Τιμών (Σ.Τ.) της ακολουθίας $ (a_{n})_{n \in \mathbb{N}} $, ονομάζουμε 
-    το σύνολο των όρων της, $ \{ a_{1}, a_{2}, \ldots, a_{n} \} $ το οποίο μπορεί 
+    το σύνολο των όρων της, δηλαδή το $ \{ a_{1}, a_{2}, \ldots, a_{n} \} $ το οποίο μπορεί 
     να είναι πεπερασμένο ή άπειρο.
 \end{dfn}
 
 \begin{examples}
-        \item {}
+\item {}
     \begin{enumerate}[i)]
         \item $ a_{n} = n, \; \forall n \in \mathbb{N} $. Έχει Σ.Τ. το σύνολο 
             $  \{ 1,2,3, \ldots \} $.
@@ -91,7 +91,7 @@
 \item {}  
     \begin{enumerate}[i)]
         \item $ a_{n}= \frac{1}{n}, \; \forall n \in \mathbb{N} $, είναι φραγμένη.
-            
+
             Πράγματι, $ 0 \leq \frac{1}{n} \leq 1, \; \forall n \in \mathbb{N} $. 
 
             Επίσης, $ \abs{\frac{1}{n}} = \frac{1}{n} \leq 1 $, άρα και 
@@ -104,52 +104,52 @@
                 \cdot \abs{\frac{1}{n}} = \abs{-1}^{n} \cdot \frac{1}{n}
                 = 1 \cdot \frac{1}{n} = \frac{1}{n} \leq 1, \; \forall n \in 
                 \mathbb{N}
-             \] 
+            \] 
 
-         \item $ a_{n}= \frac{(n-1)!}{n^{n}}, \; \forall n \in \mathbb{N} $
-             είναι φραγμένη. Πράγματι, $ a_{n} > 0, \; \forall n \in 
-             \mathbb{N}$, άρα 0 κ.φ. της $( a_{n})_{n \in \mathbb{N}} $. 
-             Επίσης 
-             \[
-                 a_{n}= \frac{(n-1)!}{n^{n}} = \frac{1 \cdot 2 \cdots
-                 (n-1)}{n^{n}} < \frac{\overbrace{n \cdot n \cdots n}
-             ^{n-1 \; \text{φορές}}}{n^{n}} = \frac{n^{n-1}}{n^{n}} =
-             \frac{1}{n} \leq 1, \; \forall n \in \mathbb{N},
-         \] άρα το 1 είναι α.φ. της $ (a_{n})_{n \in \mathbb{N}} $ 
+        \item $ a_{n}= \frac{(n-1)!}{n^{n}}, \; \forall n \in \mathbb{N} $
+            είναι φραγμένη. Πράγματι, $ a_{n} > 0, \; \forall n \in 
+            \mathbb{N}$, άρα 0 κ.φ. της $( a_{n})_{n \in \mathbb{N}} $. 
+            Επίσης 
+            \[
+                a_{n}= \frac{(n-1)!}{n^{n}} = \frac{1 \cdot 2 \cdots
+                    (n-1)}{n^{n}} < \frac{\overbrace{n \cdot n \cdots n}
+                ^{n-1 \; \text{φορές}}}{n^{n}} = \frac{n^{n-1}}{n^{n}} =
+                \frac{1}{n} \leq 1, \; \forall n \in \mathbb{N},
+            \] άρα το 1 είναι α.φ. της $ (a_{n})_{n \in \mathbb{N}} $ 
 
-     \item $ a_{n}= 1 + \left(- \frac{1}{2} \right) + \left(- 
-         \frac{1}{2}\right)^{2} + \cdots + \left(-\frac{1}{2} \right) ^{n}, 
-         \; \forall n \in \mathbb{N} $ είναι απολύτως φραγμένη. Πράγματι, 
-         \[ a_{n} = 1 + \left(- \frac{1}{2}\right) + \left(- \frac{1}{2} 
-             \right)^{2} + \cdots + \left(- \frac{1}{2} \right)^{n} = 
-             \frac{1 - (- \frac{1}{2} )^{n}}{1 - (- \frac{1}{2})} = 
-         \frac{2}{3} \left[1 - \left(- \frac{1}{2} \right)^{n}\right] \]
-         Επομένως
-         \[
-             \abs{a_{n}} = \abs{\frac{2}{3} \left[1-(- \frac{1}{2} )^{n}\right]} = 
-             \frac{2}{3} \abs{\abs{1} - \left(- \frac{1}{2}\right)^{n}} \leq 
-             \frac{2}{3} \left(1 + \abs{-\frac{1}{2} }^{n} \right) = 
-             \frac{2}{3} \left(1+ \frac{1}{2^{n}}\right) < \frac{2}{3}
-             (1+1) = \frac{4}{3} 
-          \] 
+        \item $ a_{n}= 1 + \left(- \frac{1}{2} \right) + \left(- 
+            \frac{1}{2}\right)^{2} + \cdots + \left(-\frac{1}{2} \right) ^{n}, 
+            \; \forall n \in \mathbb{N} $ είναι απολύτως φραγμένη. Πράγματι, 
+            \[ a_{n} = 1 + \left(- \frac{1}{2}\right) + \left(- \frac{1}{2} 
+                \right)^{2} + \cdots + \left(- \frac{1}{2} \right)^{n} = 
+                \frac{1 - (- \frac{1}{2} )^{n}}{1 - (- \frac{1}{2})} = 
+            \frac{2}{3} \left[1 - \left(- \frac{1}{2} \right)^{n}\right] \]
+            Επομένως
+            \[
+                \abs{a_{n}} = \abs{\frac{2}{3} \left[1-(- \frac{1}{2} )^{n}\right]} = 
+                \frac{2}{3} \abs{\abs{1} - \left(- \frac{1}{2}\right)^{n}} \leq 
+                \frac{2}{3} \left(1 + \abs{-\frac{1}{2} }^{n} \right) = 
+                \frac{2}{3} \left(1+ \frac{1}{2^{n}}\right) < \frac{2}{3}
+                (1+1) = \frac{4}{3} 
+            \] 
 
-      \item $ a_{n}= 2n+5, \; \forall n \in \mathbb{N} $ είναι κάτω φραγμένη.
-          Πράγματι, $ 7 \leq 2n+5, \; \forall n \in \mathbb{N} $, άρα το 
-          7 είναι κ.φ. της $ (a_{n} )_{n \in \mathbb{N}} $.
+        \item $ a_{n}= 2n+5, \; \forall n \in \mathbb{N} $ είναι κάτω φραγμένη.
+            Πράγματι, $ 7 \leq 2n+5, \; \forall n \in \mathbb{N} $, άρα το 
+            7 είναι κ.φ. της $ (a_{n} )_{n \in \mathbb{N}} $.
 
-      \item $ a_{1}=2, \; a_{n+1}=2 - \frac{1}{a_{n}}, \forall n \in \mathbb{N}$
-          είναι φραγμένη. Πράγματι, με επαγωγή, έχουμε:
-          \begin{itemize}
-              \item Για $ n=1 $, $ a_{1}=2>1 $, ισχύει. 
-              \item Έστω ότι ισχύει για $n$, δηλ. \inlineequation[eq:
-                  anadepag1]{a_{n}>1}.
-              \item Θ.δ.ο. ισχύει και για $ n+1 $. Πράγματι, από τη σχέση~
-                  \eqref{eq: anadepag1}, έχουμε
-\[
-    a_{n}>1 \Rightarrow \frac{1}{a_{n}} < 1 \Rightarrow - \frac{1}{a_{n}} > 
-    -1 \Rightarrow 2 - \frac{1}{a_{n}} > 2-1 \Rightarrow a_{n+1} > 1.
- \] 
-          \end{itemize}
+        \item $ a_{1}=2, \; a_{n+1}=2 - \frac{1}{a_{n}}, \forall n \in \mathbb{N}$
+            είναι φραγμένη. Πράγματι, με επαγωγή, έχουμε:
+            \begin{itemize}
+                \item Για $ n=1 $, $ a_{1}=2>1 $, ισχύει. 
+                \item Έστω ότι ισχύει για $n$, δηλ. \inlineequation[eq:
+                    anadepag1]{a_{n}>1}.
+                \item Θ.δ.ο. ισχύει και για $ n+1 $. Πράγματι, από τη σχέση~
+                    \eqref{eq: anadepag1}, έχουμε
+                    \[
+                        a_{n}>1 \Rightarrow \frac{1}{a_{n}} < 1 \Rightarrow - \frac{1}{a_{n}} > 
+                        -1 \Rightarrow 2 - \frac{1}{a_{n}} > 2-1 \Rightarrow a_{n+1} > 1.
+                    \] 
+            \end{itemize}
     \end{enumerate}
 \end{examples}
 
@@ -158,14 +158,14 @@
 \begin{dfn}
     Μια ακολουθία $ (a_{n})_{n \in \mathbb{N}} $ λέγεται:
     \begin{enumerate}[i)]
+        \item γνησίως αύξουσα $ \overset{\text{ορ.}}{\Leftrightarrow} a_{n} 
+            < a_{n+1}, \; n \in \mathbb{N}$
+        \item γνησίως φθίνουσα $ \overset{\text{ορ.}}{\Leftrightarrow} a_{n} 
+            > a_{n+1}, \; n \in \mathbb{N}$
         \item άυξουσα $ \overset{\text{ορ.}}{\Leftrightarrow} a_{n} \leq 
             a_{n+1}, \forall n \in \mathbb{N}  $.
         \item φθίνουσα $ \overset{\text{ορ.}}{\Leftrightarrow} a_{n} \geq 
             a_{n+1}, \forall n \in \mathbb{N}  $.
-        \item γνησίως αύξουσα $ \overset{\text{ορ.}}{\Leftrightarrow} a_{n} 
-            < a_{n+1}$
-        \item γνησίως φθίνουσα $ \overset{\text{ορ.}}{\Leftrightarrow} a_{n} 
-            > a_{n+1}$
     \end{enumerate}
 \end{dfn}
 
@@ -183,10 +183,232 @@
     \end{enumerate}
 \end{rems}
 
-\begin{dfn}[Ισοδύναμος ορισμός της μονοτονίας]
-    Αν μια ακολουθία $ (a_{n})_{n \in \mathbb{N}} $ διατηρεί πρόσημο
-    
+\begin{dfn}\label{dfn:isodmono}[Ισοδύναμος ορισμός της μονοτονίας]
+\item {}
+    Αν μια ακολουθία $ (a_{n})_{n \in \mathbb{N}} $ διατηρεί πρόσημο 
+    $ \forall n \in \mathbb{N} $, τότε λέγεται:
+    \begin{enumerate}[i)]
+        \item γνησίως αύξουσα $ \overset{\text{ορ.}}{\Leftrightarrow} 
+            \frac{a_{n+1}}{a_{n}} > 1, \; \forall n \in \mathbb{N}$
+        \item γνησίως φθίνουσα $ \overset{\text{ορ.}}{\Leftrightarrow} 
+            \frac{a_{n+1}}{a_{n}} < 1, \; \forall n \in \mathbb{N}$
+        \item  αύξουσα $ \overset{\text{ορ.}}{\Leftrightarrow} 
+            \frac{a_{n+1}}{a_{n}} \geq 1 $, για τουλ. ένα $ n \in \mathbb{N} $
+        \item  φθίνουσα $ \overset{\text{ορ.}}{\Leftrightarrow} 
+            \frac{a_{n+1}}{a_{n}} \leq 1 $, για τουλ. ένα $ n \in \mathbb{N} $
+    \end{enumerate}
 \end{dfn}
+
+\section{Μεθοδολογία εύρεσης μονοτονίας μιας ακολουθίας}
+\begin{itemize}
+    \item Σχηματίζουμε τη διαφορά $ a_{n+1} - a_n $ και ελέγχουμε το 
+        πρόσημό της. Αν $ a_{n+1}-a_{n}>0, \; (<0), \; \forall n \in 
+        \mathbb{N} $ τότε $ (a_{n})_{n \in \mathbb{N}}$ γνησίως 
+        αύξουσα (γνησίως φθίνουσα). Αν για τουλάχιστον ένα 
+        $ n \in \mathbb{N} $, στις παραπάνω ανισότητες, έχω ισότητα, 
+        τότε  $ (a_{n})_{n \in \mathbb{N}} $ είναι αύξουσα (φθίνουσα).
+    \item Αν οι όροι της ακολουϑίας διατηρούν πρόσημο, $ \; \forall n \in
+        \mathbb{N} $ τότε συγκρίνουμε το πηλίκο δυο διαδοχικών όρων της 
+        ακολουθίας με τη μονάδα, και βγάζουμε τα συμπεράσματά μας 
+        σύμφωνα με τον ορισμό~\ref{dfn:isodmono}
+    \item Αν η ακολουθία δίνεται με μη-αναδρομικό τύπο, και είναι 
+        (αρκετά) σύνθετη, τότε μετατρέπω την ακολουθία στην αντίστοιχη 
+        συνάρτηση και μελετάμε τη μονοτονία της αντίστοιχης συνάρτησης.
+    \item Αν η $ (a_{n})_{n \in \mathbb{N}} $ δίνεται με αναδρομικό 
+        τύπο $ (a_{n+1}= f(a_{n})) $ τότε συνήθως η απόδειξή της γίνεται 
+        με Μαθηματική Επαγωγή.
+\end{itemize}
+
+\begin{examples}
+\item {}
+    \begin{enumerate}[i)]
+        \item Η $ a_{n} = 2n-1, \; \forall n \in \mathbb{N} $ είναι γνησίως 
+            αύξουσα. Πράγματι,
+
+            \twocolumnsides{
+                \begin{description}
+                    \item[Α᾽ τρόπος]
+                        \begin{align*}
+                            n+1 &\geq n, \; \forall n \in \mathbb{N} \\
+                            2(n+1) &\geq 2n, \; \forall n \in \mathbb{N} \\
+                            2(n+1) -1 &\geq 2n-1, \; \forall n \in \mathbb{N} \\
+                            a_{n+1} &\geq a_{n}, \; \forall n \in \mathbb{N}
+                        \end{align*}
+                \end{description}
+
+                }{
+                \begin{description}
+                    \item[Β᾽ τρόπος] 
+                        \begin{align*}
+                            a_{n+1}-a_{n} &= 2(n+1)-1 - (2n-1) \\
+                                          &= 2 >0, \; \forall n \in \mathbb{N} 
+                        \end{align*}
+                \end{description}
+
+            }
+
+        \item Η $ a_{n} = \frac{(n-1)!}{n^{n}}, \; \forall n \in \mathbb{N} $ 
+            είναι γνησίως φθίνουσα. Πράγματι, επειδή όλοι οι όροι της ακολουθίας 
+            είναι θετικοί, επομένως διατηρεί πρόσημο, έχουμε:
+            \[
+                \frac{a_{n+1}}{a_n} =
+                \frac{\frac{(n+1-1)!}{(n+1)^{n+1}}}{\frac{(n-1)!}{n^{n}}} =  
+                \frac{n^{n}\cdot n!}{(n+1)^{n+1}\cdot (n-1)!} =
+                \frac{n^{n+1}}{(n+1)^{n+1}} = \left(\frac{n}{n+1} \right)^{n+1} < 1, \; \forall n
+                \in \mathbb{N} 
+            \] 
+
+        \item Η $ a_{n}= \frac{4^{n}}{n^{2}}, \; \forall n \in \mathbb{N} $ είναι 
+            αύξουσα. Πράγματι, επειδή όλοι οι όροι της ακολουθίας είναι θετικοί, 
+            επομένως διατηρεί πρόσημο, έχουμε:
+            \[
+                \frac{a_{n+1}}{a_{n}} 
+                = \frac{\frac{4^{n+1}}{(n+1)^{2}}}{\frac{4^{n}}{n^{2}}} 
+                = \frac{4^{n+1}\cdot n^{2}}{4^{n}\cdot (n+1)^{2}} 
+                = \frac{4n^{2}}{(n+1)^{2}}
+                    = \left( \frac{2n}{n+1} \right)^{2} \geq 1, 
+                    \; \forall n \in \mathbb{N} 
+                \]
+                Η ακολουθία δεν είναι γνησίως αύξουσα, γιατί $ 
+                a_{1}= a_{2}=4$.
+                
+            \item Η $ a_{n+1}=2 - \frac{1}{a_{n}}, \; \forall n \in \mathbb{N}
+                $ με $ a_{1} = 2 $ είναι γνησίως φθίνουσα. Πράγματι, 
+                \begin{itemize}
+                    \item Για $ n=1 $, έχω: $ a_{1}= 2 >
+                        \frac{3}{2} = 2 - \frac{1}{2} = a_{2}$, ισχύει.
+                    \item Έστω ότι ισχύει για $n$, δηλ.
+                        \inlineequation[eq:epag]{a_{n+1}<a_{n}}.
+                    \item Θ.δ.ο. ισχύει για $ n+1 $. Πράγματι, 
+                        \[
+                            a_{n+1+1}=2- \frac{1}{a_{n+1}}
+                            \overset{\eqref{eq:epag}}{<} 2 - 
+                            \frac{1}{a_{n}} = a_{n+1}
+                         \] 
+                \end{itemize}
+   \end{enumerate}
+\end{examples}
+
+\section{Σύγκλιση Ακολουθιας}
+
+\begin{dfn}
+    Περιοχή ένος πραγματικού αριθμού $ x_{0} $ ονομάζεται κάθε ανοιχτό 
+    διάστημα$ (a,b)$ που περιέχει το $ x_{0} $. 
+\end{dfn}
+
+\begin{rem}
+\item {}
+    \begin{enumerate}[i)]
+        \item 
+    Αν $ \varepsilon > 0 $, τότε περιοχές του $ x_{0} $ της μορφής $ 
+    (x_{0}- \varepsilon , x_{0} + \varepsilon) $ έχουν ακτίνα $ \varepsilon $
+    και κέντρο το $ x_{0} $. 
+
+\item $ x \in (x_{0}- \varepsilon, x_{0} + \varepsilon) \Leftrightarrow
+    x_{0}- \varepsilon < x < x_{0}+ \varepsilon \Leftrightarrow 
+    - \varepsilon < x - x_{0} < \varepsilon \Leftrightarrow 
+    \abs{x- x_{0}} < \varepsilon  $ 
+    \end{enumerate}
+\end{rem}
+
+\begin{dfn}
+    Μια ακολουθία $ (a_{n})_{n \in \mathbb{N}} $ συγκλίνει στον πραγματικό 
+    αριθμό $ a \in \mathbb{R} $ (έχει όριο το $ a \in \mathbb{R} $ ή 
+    τείνει στο $ a \in \mathbb{R} $), και συμβολίζουμε 
+    $ \lim\limits_{n\to \infty} a_{n}=a $ (ή $ a_{n} \xrightarrow{n \to 
+    \infty} a $) αν 
+    \[
+        \forall \varepsilon >0, \; \exists n_{0} \in \mathbb{N} \; : 
+        \; \forall n \in \mathbb{N} \; \text{με} \; n > n_{0} \Rightarrow 
+        \abs{a_{n}-a} < \varepsilon
+     \] 
+\end{dfn}
+
+\begin{rem}
+    Γενικά το $ n_{0} $ εξαρτάται από το $ \varepsilon $ και ισχύει ότι
+    $ n_{0} = n_{0}(\varepsilon) $.
+\end{rem}
+
+\begin{dfn}
+    Η ακολουθία $ (a_{n})_{n \in \mathbb{N}}$ λέγεται μηδενική ακολουθία 
+    αν $ \lim\limits_{n\to \infty} = 0 $
+\end{dfn}
+
+\begin{examples}
+\item {}
+    \begin{enumerate}[i)]
+        \item $ \lim\limits_{n \to \infty} \frac{1}{n} = 0 $.
+            \begin{proof}
+            \item {}
+                \begin{description}
+                    \item[Δοκιμή:] $ \abs{\frac{1}{n} -0} < \varepsilon
+                        \Leftrightarrow \abs{\frac{1}{n}} < \varepsilon 
+                        \Leftrightarrow \frac{1}{n} < \varepsilon 
+                        \Leftrightarrow n > \frac{1}{\varepsilon}$
+                \end{description}
+                \begin{description}
+                    \item[Α᾽ Τρόπος:] 
+                Έστω $ \varepsilon >0 $. Τότε $ \exists n_{0} \in\mathbb{N} $
+                με \inlineequation[eq:1n1]{n_{0} > \frac{1}{\varepsilon}} (Αρχ. Ιδιοτ.) τέτοιο 
+                ώστε \inlineequation[eq:1n2]{\forall n \geq n_{0}}
+                        \[
+                            \abs{\frac{1}{n} -0} = \abs{\frac{1}{n}} =
+                            \frac{1}{n} \overset{\eqref{eq:1n2}}{\leq}
+                            \frac{1}{n_{0}} \overset{\eqref{eq:1n1}}{<} 
+                            \frac{1}{\frac{1}{\varepsilon}} = \varepsilon 
+                        \]
+
+                    \item [Β᾽ Τρόπος:]
+                Έστω $ \varepsilon >0 $. Τότε $ \exists n_{0} \in\mathbb{N} $
+                με \inlineequation[eq:1n3]{\frac{1}{n_{0}} < \varepsilon} 
+                (Αρχ. Ιδιοτ.) τέτοιο ώστε \inlineequation[eq:1n4]{\forall n 
+                \geq n_{0}}
+                        \[
+                            \abs{\frac{1}{n} -0} = \abs{\frac{1}{n}} =
+                            \frac{1}{n} \overset{\eqref{eq:1n4}}{\leq}
+                         \frac{1}{n_{0}} \overset{\eqref{eq:1n3}}{<} 
+                \varepsilon 
+                         \]
+                \end{description}
+ 
+            \end{proof}
+
+         \item $ \lim\limits_{n \to \infty} \frac{1}{n^{4}} = 0 $. 
+             \begin{proof}
+             \item {}
+                 \begin{description}
+                     \item[Δοκιμή:]$ \abs{\frac{1}{n^{4}} - 0} < \varepsilon 
+                         \Leftrightarrow \abs{\frac{1}{n^{4}}} < \varepsilon 
+                         \Leftrightarrow \frac{1}{n^{4}} < \varepsilon $
+                 \end{description}
+                 Έστω $ \varepsilon >0 $. Τότε $ \exists n_{0}  \in 
+                 \mathbb{N}$ με $ \frac{1}{n_{0}^{4}} < \varepsilon $ 
+                 τέτοιο ώστε $ \forall n \geq n_{0} $ 
+                 \[
+                     \abs{\frac{1}{n^{4}} - 0 } = \abs{\frac{1}{n^{4}}} 
+                     = \frac{1}{n^{4}} \leq \frac{1}{n_{0}^{4}} < \varepsilon
+                  \] 
+             \end{proof}
+
+         \item $ \lim\limits_{n \to \infty} \frac{1}{\sqrt{n}} = 0$.
+             \begin{proof}
+             \item {}
+                 \begin{description}
+                     \item[Δοκιμή:] $ \abs{\frac{1}{\sqrt{n}}-0 } 
+                         < \varepsilon 
+                         \Leftrightarrow \abs{\frac{1}{\sqrt{n}} } < 
+                         \varepsilon 
+                         \Leftrightarrow \frac{1}{\sqrt{n}} < 
+                         \varepsilon $
+                 \end{description}
+                 Έστω $ \varepsilon > 0 $. Τότε $ \exists n_{0} \in \mathbb{N} $
+                 με $ \frac{1}{\sqrt{n_{0}}} < \varepsilon $ τέτοιο ώστε 
+             \end{proof}
+     \end{enumerate}
+ \end{examples}
+
+%TODO
+ TODO η $ (1+ \frac{1}{n} )^{n} $ γν. αυξουσα κ ανω φραγμενη.
 
 
 \end{document}
