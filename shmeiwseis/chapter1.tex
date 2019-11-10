@@ -548,8 +548,8 @@ supremum, δηλαδή έχει ελάχιστο άνω φράγμα.
 
 \section{Χαρακτηριστική Ιδιότητα του Supremum}
 
-Έστω $ A \subseteq \mathbb{R} $, $ A \neq \emptyset $ και άνω φραγμένο. Έστω 
-$ s $ α.φ. του $A$. Τότε 
+Έστω $ A \subseteq \mathbb{R} $, $ A \neq \emptyset $ και άνω φραγμένο. 
+Έστω $ s $ α.φ. του $A$. Τότε 
 \[
      s= \sup A \Leftrightarrow \forall \varepsilon >0, \; \exists a \in A \; 
      : \; s - \varepsilon < a
@@ -569,18 +569,35 @@ $ s $ α.φ. του $A$. Τότε
              \; s- \varepsilon < a$. Θ.δ.ο. $ s = \sup A $. 
 
 
-             \begin{minipage}{0.3\textwidth}
-             \begin{itemize}
-                 \item $ A \neq \emptyset $ \tikzmark{a}
-                 \item $ A $ άνω φραγμένο  \tikzmark{b}
-             \end{itemize}
-         \end{minipage}
+             \begin{minipage}{0.23\textwidth}
+                 \begin{itemize}
+                     \item $ A \neq \emptyset $ \hfill \tikzmark{a}
+                     \item $ A $ άνω φραγμένο \hfill  \tikzmark{b}
+                 \end{itemize}
+             \end{minipage}
 
              \mybrace{a}{b}[$ \exists $ το $ \sup A $]
 
+             Έστω ότι $ s \neq \sup A $, και λόγω ότι $ s $ α.φ. του $A$ 
+             εχουμε ότι $sup A < s $. 
 
+             Επιλέγουμε $ \varepsilon = s - \sup A > 0 $
+
+             Τότε από την υπόθεση έχουμε ότι 
+             υπάρχει $ a \in A \; : \; s - \varepsilon < a \Rightarrow s 
+             - s + \sup A < a \Rightarrow \sup A < a $, άτοπο, γιατί 
+             $ \sup A $ α.φ. του $A$.  
      \end{description} 
  \end{proof}
+
+ \begin{prop}[Ισοδύναμη Πρόταση]
+Έστω $ A \subseteq \mathbb{R} $, $ A \neq \emptyset $ και άνω φραγμένο. 
+Έστω $ s $ α.φ. του $A$. Τότε 
+\[
+    s = \sup A \Leftrightarrow \forall n \in \mathbb{N} \; \exists a_{n} \in A
+    \; : \; s - \frac{1}{n} < a_{n} 
+ \] 
+ \end{prop}
  
 
 \begin{prop}\label{prop:leqsup}
