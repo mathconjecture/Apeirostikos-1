@@ -517,8 +517,39 @@
     \end{enumerate}
 \end{examples}
 
-%TODO
-TODO η $ (1+ \frac{1}{n} )^{n} $ γν. αυξουσα κ ανω φραγμενη.
+\begin{prop}
+    Η ακολουθία $ \{ (-1)^{n} \}_{n \in \mathbb{N}} $ δεν συγκλίνει.
+\end{prop}
+
+\begin{proof}
+\item {}
+    Έστω ότι η $ a_{n}= (-1)^{n} $ συγκλίνει και έστω $ \lim_{n \to +
+    \infty}(-1)^{n} = a $. 
+    
+    Τότε από τον ορισμό του ορίου, έχουμε ότι για 
+    \[ 
+        \varepsilon = 1, \; \exists n_{0} \in \mathbb{N} \; : \; \forall 
+    n \geq n_{0} \quad \abs{(-1)^{n}-a} < 1 \Leftrightarrow -1 < (-1)^{n}
+    -a < 1 \Leftrightarrow a-1 < (-1)^{n} < a+1
+\]
+
+Όμως για $ n_{1} \geq n_{0} $ με $ n_{1} $ άρτιος, έχουμε:
+
+\[
+    a-1 <  (-1)^{n_{1}} < a+1 \Leftrightarrow a-1 < 
+    \underbrace{1 < a+1}_{a>0} 
+ \] 
+
+Όμως για $ n_{2} \geq n_{0} $ με $ n_{2} $ περιττός, έχουμε:
+
+\[
+    a-1 <  (-1)^{n_{2}} < a+1 \Leftrightarrow 
+    \underbrace{a-1 < -1}_{a<0} < a+1
+ \] 
+
+ Οπότε καταλήγουμε σε άτοπο.
+\end{proof}
+
 
 \begin{prop}
     Έστω $ (a_{n})_{n \in \mathbb{N}} $ ακολουθία πραγματικών αριθμών και 
@@ -526,23 +557,24 @@ TODO η $ (1+ \frac{1}{n} )^{n} $ γν. αυξουσα κ ανω φραγμεν�
 
     \[ \lim_{n \to \infty} a_{n} = l \Leftrightarrow \lim_{n \to \infty} (
         a_{n}- l) = 0 
-    \Leftrightarrow \lim_{n \to \infty} \abs{a_{n}-l} = 0\].
+    \Leftrightarrow \lim_{n \to \infty} \abs{a_{n}-l} = 0\]
 \end{prop}
 
 \begin{proof}
 \item {}
-    \begin{align*} \lim_{n \to \infty} a_{n}= l & \Leftrightarrow \forall \varepsilon > 0 
-    \; \exists n_{0} \in \mathbb{N} \; : \; \abs{a_{n}-l} < \varepsilon, 
-    \forall n \geq n_{0} \\ 
-    \lim_{n \to \infty} (a_{n}-l) = 0 & \Leftrightarrow \forall \varepsilon >0 \; \exists n_{0} 
-    \in \mathbb{N} 
-    \; : \; \abs { (a_{n}-l) - 0} < \varepsilon , \forall n \geq n_{0} \\
-    \lim_{n \to \infty} \abs{a_{n}-l}=0 < \varepsilon & \Leftrightarrow \forall \varepsilon > 0 \; 
-    \exists n_{0} \in \mathbb{N} 
+    \begin{align*} \lim_{n \to \infty} a_{n}= l & \Leftrightarrow \forall 
+        \varepsilon > 0 \; \exists n_{0} \in \mathbb{N} \; : \; 
+        \abs{a_{n}-l} < \varepsilon, \forall n \geq n_{0} \\ 
+    \lim_{n \to \infty} (a_{n}-l) = 0 & \Leftrightarrow \forall 
+    \varepsilon >0 \; \exists n_{0} \in \mathbb{N} \; : \; 
+    \abs {(a_{n}-l) - 0} < \varepsilon , \forall n \geq n_{0} \\
+    \lim_{n \to \infty} \abs{a_{n}-l}=0 < \varepsilon & \Leftrightarrow 
+    \forall \varepsilon > 0 \; \exists n_{0} \in \mathbb{N} 
     \; : \; \abs {\abs{a_{n}- l } - 0} < \varepsilon, \forall n \geq n_{0} 
 \end{align*}
 
-και ισχύει ότι $ \abs{a_{n}-l} = \abs{(a_{n}-l)-0} = \abs{\abs{a_{n}- l} -0} $
+και ισχύει ότι $ \abs{a_{n}-l} = \abs{(a_{n}-l)-0} = 
+\abs{\abs{a_{n}- l} -0} $
 \end{proof}
 
 \begin{thm}[Μοναδικότητα του Ορίου]
@@ -553,27 +585,34 @@ TODO η $ (1+ \frac{1}{n} )^{n} $ γν. αυξουσα κ ανω φραγμεν�
     Έστω ότι μια ακολουθία $ (a_{n})_{n \in \mathbb{N}} $ συγκλίνει σε δυο 
     διαφορετικούς αριθμούς, $ a,b $. Τότε
 
-    \[ \lim_{n \to \infty} a_{n} = a \Leftrightarrow \forall \varepsilon > 0, 
-        \; \exists n_{0} \in \mathbb{N} \; : \: \forall n \geq n_{0} \quad 
-    \abs{a_{n}- a} \leq \varepsilon \].
+    \[ 
+        \lim_{n \to \infty} a_{n} = a \Leftrightarrow \forall \varepsilon >
+        0, \; \exists n_{0} \in \mathbb{N} \; : \: \forall n \geq n_{0} 
+        \quad \abs{a_{n}- a} \leq \varepsilon 
+    \]
 
-    Άρα και για $ \frac{\varepsilon}{2} \; \exists n_{1} \in \mathbb{N} \; : \; \forall 
-    n \geq n_{1} \quad \abs{a_{n_{1}} - a} < \frac{\varepsilon}{ 2}  $
+    Άρα και για $ \frac{\varepsilon}{2} \; \exists n_{1} \in \mathbb{N} \; 
+    : \; \forall n \geq n_{1} \quad \abs{a_{n_{1}} - a} < 
+    \frac{\varepsilon}{2}  $
 
-    \[ \lim_{n \to \infty} b_{n} = b \Leftrightarrow \forall \varepsilon > 0, 
-        \; \exists n_{0} \in \mathbb{N} \; : \: \forall n \geq n_{0} \quad 
-    \abs{a_{n}- b} \leq \varepsilon \]
+    \[ 
+        \lim_{n \to \infty} a_{n} = b \Leftrightarrow \forall \varepsilon 
+        > 0, \; \exists n_{0} \in \mathbb{N} \; : \: \forall n \geq n_{0} 
+        \quad \abs{a_{n}- b} \leq \varepsilon 
+    \]
 
-    Άρα και για $ \frac{\varepsilon}{2} \; \exists n_{2} \in \mathbb{N} \; : \; \forall 
-    n \geq n_{2}  \quad \abs{a_{n_{2}} - b} < \frac{\varepsilon}{ 2}  $
+    Άρα και για $ \frac{\varepsilon}{2} \; \exists n_{2} \in \mathbb{N} \; 
+    : \; \forall n \geq n_{2}  \quad \abs{a_{n_{2}} - b} < 
+    \frac{\varepsilon}{2}  $
 
-    Θέτουμε $ n_{0} = \max \{ n_{1}, n_{2} \} $, ώστε να ισχύουν οι κ οι δύο παραπάνω 
-    ανισότητες ταυτόχρονα. 
+    Θέτουμε $ n_{0} = \max \{ n_{1}, n_{2} \} $, ώστε να ισχύουν οι κ οι 
+    δύο παραπάνω ανισότητες ταυτόχρονα. 
 
     Επομένως, έχουμε 
     \[
-        0 \leq \abs{a-b} = \abs{a- a_{n}+ a_{n}- b} \leq \abs{a- a_{n}} + \abs{
-        a_{n}- b} < \frac{\varepsilon}{2} + \frac{\varepsilon}{2} = \varepsilon 
+        0 \leq \abs{a-b} = \abs{a- a_{n}+ a_{n}- b} \leq \abs{a- a_{n}} + 
+        \abs{a_{n}- b} < \frac{\varepsilon}{2} + \frac{\varepsilon}{2} 
+        = \varepsilon 
      \] 
 
      άρα από την πρόταση~\ref{prop:epsilon_prot} έχουμε ότι $ \abs{a-b} = 0 \Rightarrow a=b $.
@@ -586,14 +625,15 @@ TODO η $ (1+ \frac{1}{n} )^{n} $ γν. αυξουσα κ ανω φραγμεν�
 \end{thm}
 
 \begin{proof}
-    Έστω $ (a_{n})_{n \in \mathbb{Ν}} $ συγκλίνουσα $ \Rightarrow \exists a \in 
-    \mathbb{R} $ τέτοιο ώστε $ \lim_{n \to +\infty} a_{n}=a $, άρα 
+    Έστω $ (a_{n})_{n \in \mathbb{Ν}} $ συγκλίνουσα $ \Rightarrow \exists 
+    a \in \mathbb{R} $ τέτοιο ώστε $ \lim_{n \to +\infty} a_{n}=a $, άρα 
 \[
-    \forall \varepsilon > 0, \; \exists n_{0} \in \mathbb{N} \; : \; \forall n \geq 
-    n_{0}\quad \abs{a_{n}-a} < \varepsilon  
+    \forall \varepsilon > 0, \; \exists n_{0} \in \mathbb{N} \; : \; 
+    \forall n \geq n_{0}\quad \abs{a_{n}-a} < \varepsilon  
  \] 
- αρα και για $ \varepsilon =1>0, \; \exists n_{0} \in \mathbb{N} \; : \; \forall n \geq 
- n_{0} \quad \inlineequation[eq:sygkfrag]{\abs{a_{n}-a} < 1} $. 
+ αρα και για $ \varepsilon =1>0, \; \exists n_{0} \in \mathbb{N} \; : \; 
+ \forall n \geq n_{0} \quad \inlineequation[eq:sygkfrag]{\abs{a_{n}-a} 
+ < 1} $. 
  
  Δηλαδή $ \forall n \geq n_{0} $ έχουμε ότι 
 \[
@@ -602,27 +642,34 @@ TODO η $ (1+ \frac{1}{n} )^{n} $ γν. αυξουσα κ ανω φραγμεν�
  \] 
 
  \begin{description}
-     \item [Β᾽ τρόπος:] \[ \abs{\abs{a_{n} - \abs{a}}} \leq \abs{a_{n}- a} < 1 \Leftrightarrow -1 <
-         \abs{a_{n}} - \abs{a} < 1 \Leftrightarrow \abs{a} -1 < \abs{a_{n}} < \abs{a} + 1 \]
+     \item [Β᾽ τρόπος:] \[ \abs{\abs{a_{n}} - \abs{a}} \leq \abs{a_{n}- a} 
+             < 1 \Leftrightarrow -1 < \abs{a_{n}} - \abs{a} < 1 
+         \Leftrightarrow \abs{a} -1 < \abs{a_{n}} < \abs{a} + 1 \]
  \end{description}
 
- Δηλαδή, καταφέραμε να φράξουμε τους όρους της ακολουθίας με δείκτες $n \geq n_{0} $.
+ Δηλαδή, καταφέραμε να φράξουμε τους όρους της ακολουθίας με δείκτες 
+ $n \geq n_{0} $.
 
- Τώρα, θέτουμε $ M = \max \{ \abs{a_{1}} , \abs{a_{2}} , \ldots, \abs{a_{n-1}} , 1 + 
- \abs{a}\} $ και έχουμε ότι $ \abs{a_{n} < M}, \; \forall n \in \mathbb{N} $, επομένως 
- η $ (a_{n})_{n \in \mathbb{N}} $ είναι φραγμένη.
+ Τώρα, θέτουμε $ M = \max \{ \abs{a_{1}} , \abs{a_{2}} , \ldots, 
+     \abs{a_{n-1}} , 1 + \abs{a}\} $ και έχουμε ότι $ \abs{a_{n}} < M, \; 
+     \forall n \in \mathbb{N} $, επομένως η $ (a_{n})_{n \in \mathbb{N}} $ 
+     είναι φραγμένη.
 \end{proof}
 
 \begin{rem}
-    Προσοχή, το αντίστροφο της παραπάνω πρότασης, δεν ισχύει. Πράγματι για την  ακολουθία 
-    $ (a_{n})_{n \in \mathbb{N}} = (-1)^{n}, \; \forall n \in \mathbb{N} $ έχουμε ότι  
-    φραγμένη, όχι όμως και συγκλίνουσα.
+    Προσοχή, το αντίστροφο της παραπάνω πρότασης, δεν ισχύει. Πράγματι, 
+    για την  ακολουθία $ (a_{n})_{n \in \mathbb{N}} = (-1)^{n}, \; 
+    \forall n \in \mathbb{N} $ έχουμε ότι είναι φραγμένη, όχι όμως και 
+    συγκλίνουσα.
 \end{rem}
+
+\section{Υπακολουθίες}
 
 \begin{dfn}
     Έστω $ (a_{n})_{n \in \mathbb{N}} $ ακολουθία, και έστω $ (k_{n})_{n \in \mathbb{N}} $ γνησίως
     αύξουσα ακολουθία φυσικών αριθμών $ (k_{1}<k_{2}<k_{3}<\cdots) $. Τότε η ακολουθία 
-    $ b_{n} = (a_{k_{n}}), \; n \in \mathbb{N} $ ονομάζεται υπακολουθία της 
+    $ b_{n} = (a_{k_{n}}), \; n \in \mathbb{N} $ ονομάζεται
+    \textcolor{Col\thechapter}{υπακολουθία} της 
     $ (a_{n})_{n \in \mathbb{N}} $.
 \end{dfn}
 
@@ -1279,6 +1326,8 @@ $ a_{n} \overset{a_{n} \text{γν. αυξ.}}{\geq} a_{n_{0}} > s - \varepsilon, 
 
 %TODO apodeixh
 
+%TODO
+TODO η $ (1+ \frac{1}{n} )^{n} $ γν. αυξουσα κ ανω φραγμενη.
 
 \section{Αναδρομικές Ακολουθίες}
 \end{document}
