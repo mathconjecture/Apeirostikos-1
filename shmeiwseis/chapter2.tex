@@ -448,9 +448,11 @@ TODO η $ (1+ \frac{1}{n} )^{n} $ γν. αυξουσα κ ανω φραγμεν�
     \begin{align*} \lim_{n \to \infty} a_{n}= l & \Leftrightarrow \forall \varepsilon > 0 
     \; \exists n_{0} \in \mathbb{N} \; : \; \abs{a_{n}-l} < \varepsilon, 
     \forall n \geq n_{0} \\ 
-    \lim_{n \to \infty} (a_{n}-l) = 0 & \Leftrightarrow \forall \varepsilon >0 \; \exists n_{0} \in \mathbb{N} 
+    \lim_{n \to \infty} (a_{n}-l) = 0 & \Leftrightarrow \forall \varepsilon >0 \; \exists n_{0} 
+    \in \mathbb{N} 
     \; : \; \abs { (a_{n}-l) - 0} < \varepsilon , \forall n \geq n_{0} \\
-    \lim_{n \to \infty} \abs{a_{n}-l}=0 < \varepsilon & \Leftrightarrow \forall \varepsilon > 0 \; \exists n_{0} \in \mathbb{N} 
+    \lim_{n \to \infty} \abs{a_{n}-l}=0 < \varepsilon & \Leftrightarrow \forall \varepsilon > 0 \; 
+    \exists n_{0} \in \mathbb{N} 
     \; : \; \abs {\abs{a_{n}- l } - 0} < \varepsilon, \forall n \geq n_{0} 
 \end{align*}
 
@@ -466,17 +468,465 @@ TODO η $ (1+ \frac{1}{n} )^{n} $ γν. αυξουσα κ ανω φραγμεν�
     διαφορετικούς αριθμούς, $ a,b $. Τότε
 
     \[ \lim_{n \to \infty} a_{n} = a \Leftrightarrow \forall \varepsilon > 0, 
-    \; \exists n_{0} \in \mathbb{N} \; : \: \forall n \geq n_{0} \; 
+        \; \exists n_{0} \in \mathbb{N} \; : \: \forall n \geq n_{0} \quad 
     \abs{a_{n}- a} \leq \varepsilon \].
 
-    Άρα για $ \frac{\varepsilon}{2} \; \exists n_{0} $
+    Άρα και για $ \frac{\varepsilon}{2} \; \exists n_{1} \in \mathbb{N} \; : \; \forall 
+    n \geq n_{1} \quad \abs{a_{n_{1}} - a} < \frac{\varepsilon}{ 2}  $
+
+    \[ \lim_{n \to \infty} b_{n} = b \Leftrightarrow \forall \varepsilon > 0, 
+        \; \exists n_{0} \in \mathbb{N} \; : \: \forall n \geq n_{0} \quad 
+    \abs{a_{n}- b} \leq \varepsilon \]
+
+    Άρα και για $ \frac{\varepsilon}{2} \; \exists n_{2} \in \mathbb{N} \; : \; \forall 
+    n \geq n_{2}  \quad \abs{a_{n_{2}} - b} < \frac{\varepsilon}{ 2}  $
+
+    Θέτουμε $ n_{0} = \max \{ n_{1}, n_{2} \} $, ώστε να ισχύουν οι κ οι δύο παραπάνω 
+    ανισότητες ταυτόχρονα. 
+
+    Επομένως, έχουμε 
+    \[
+        0 \leq \abs{a-b} = \abs{a- a_{n}+ a_{n}- b} \leq \abs{a- a_{n}} + \abs{
+        a_{n}- b} < \frac{\varepsilon}{2} + \frac{\varepsilon}{2} = \varepsilon 
+     \] 
+
+     άρα από την πρόταση~\ref{prop:epsilon_prot} έχουμε ότι $ \abs{a-b} = 0 \Rightarrow a=b $.
+\end{proof}
+
+%TODO idiothtes oriwn
+
+\begin{thm}
+    Κάθε συγκλίνουσα ακολουθία είναι φραγμένη.
+\end{thm}
+
+\begin{proof}
+    Έστω $ (a_{n})_{n \in \mathbb{Ν}} $ συγκλίνουσα $ \Rightarrow \exists a \in 
+    \mathbb{R} $ τέτοιο ώστε $ \lim_{n \to +\infty} a_{n}=a $, άρα 
+\[
+    \forall \varepsilon > 0, \; \exists n_{0} \in \mathbb{N} \; : \; \forall n \geq 
+    n_{0}\quad \abs{a_{n}-a} < \varepsilon  
+ \] 
+ αρα και για $ \varepsilon =1>0, \; \exists n_{0} \in \mathbb{N} \; : \; \forall n \geq 
+ n_{0} \quad \inlineequation[eq:sygkfrag]{\abs{a_{n}-a} < 1} $. 
+ 
+ Δηλαδή $ \forall n \geq n_{0} $ έχουμε ότι 
+\[
+    \abs{a_{n}} = \abs{a_{n}-a + a} \leq \abs{a_{n} - a} + \abs{a} 
+    \overset{\eqref{eq:sygkfrag}}{<} 1 + \abs{a}  
+ \] 
+
+ \begin{description}
+     \item [Β᾽ τρόπος:] \[ \abs{\abs{a_{n} - \abs{a}}} \leq \abs{a_{n}- a} < 1 \Leftrightarrow -1 <
+         \abs{a_{n}} - \abs{a} < 1 \Leftrightarrow \abs{a} -1 < \abs{a_{n}} < \abs{a} + 1 \]
+ \end{description}
+
+ Δηλαδή, καταφέραμε να φράξουμε τους όρους της ακολουθίας με δείκτες $n \geq n_{0} $.
+
+ Τώρα, θέτουμε $ M = \max \{ \abs{a_{1}} , \abs{a_{2}} , \ldots, \abs{a_{n-1}} , 1 + 
+ \abs{a}\} $ και έχουμε ότι $ \abs{a_{n} < M}, \; \forall n \in \mathbb{N} $, επομένως 
+ η $ (a_{n})_{n \in \mathbb{N}} $ είναι φραγμένη.
+\end{proof}
+
+\begin{rem}
+    Προσοχή, το αντίστροφο της παραπάνω πρότασης, δεν ισχύει. Πράγματι για την  ακολουθία 
+    $ (a_{n})_{n \in \mathbb{N}} = (-1)^{n}, \; \forall n \in \mathbb{N} $ έχουμε ότι  
+    φραγμένη, όχι όμως και συγκλίνουσα.
+\end{rem}
+
+\begin{dfn}
+    Έστω $ (a_{n})_{n \in \mathbb{N}} $ ακολουθία, και έστω $ (k_{n})_{n \in \mathbb{N}} $ γνησίως
+    αύξουσα ακολουθία φυσικών αριθμών $ (k_{1}<k_{2}<k_{3}<\cdots) $. Τότε η ακολουθία 
+    $ b_{n} = (a_{k_{n}}), \; n \in \mathbb{N} $ ονομάζεται υπακολουθία της 
+    $ (a_{n})_{n \in \mathbb{N}} $.
+\end{dfn}
+
+%TODO παραδειγματα υπακολουθιων
+
+\begin{prop}
+    Αν μια ακολουθία είναι φραγμένη τότε και κάθε υπακολουθία της είναι φραγμένη.
+\end{prop}
+
+%TODO υπολοιπες προτασεις εδω
+
+\begin{lem}\label{lem:kn}
+    Έστω $ (a_{n})_{n \in \mathbb{N}} $ ακολουθία και $ (a_{k_{n}})_
+    {n \in \mathbb{N}} $ υπακολουθία της. Τότε $ k_{n} \geq n, \; \forall n \in 
+    \mathbb{N} $.
+\end{lem}
+
+\begin{proof}
+\item {}
+    \begin{itemize}
+        \item Για $ n=1 $, έχω: $ k_{n} \in \mathbb{N}, \; \forall n \in \mathbb{N} \Rightarrow 
+            k_{n} \geq 1 $, ισχύει:
+        \item Έστω ότι ισχύει για $ n $, δηλ. $ k_{n} \geq n $. 
+        \item θ.δ.ο. ισχύει για $ n+1 $. Πράγματι, $ k_{n+1} > k_{n} \geq n \Rightarrow k_{n+1} > n 
+            \Rightarrow k_{n+1} \geq n+1$.
+    \end{itemize}
+    \end{proof}
+
+    \begin{prop}
+        Αν μια ακολουθία $ (a_{n})_{n \in \mathbb{N}} $ συγκλίνει στο $ a \in \mathbb{R} $, τότε 
+        και κάθε υπακολουθία της συγκλίνει επίσης στο $ a \in \mathbb{R} $.
+    \end{prop}
+
+    \begin{proof}
+        Έστω $ (a_{k_{n}})_{n \in \mathbb{N}} $ υπακολουθία της $ (a_{n})_{n \in \mathbb{N}} $. 
+
+        Έστω $ \varepsilon >0 $. 
+        
+        $ \lim_{a_{n}} = a \Leftrightarrow \forall \varepsilon >0, \; \exists n_{0} \in \mathbb{N} 
+        \; : \; \forall n \geq n_{0} \quad \inlineequation[eq:ypaksygk]{\abs{a_{n}- a} < 
+        \varepsilon} $.
+
+        Άρα και για το $ \varepsilon $ που έχουμε επιλέξει, έχουμε ότι $ 
+        \exists n_{0} \in \mathbb{N} \; : \; k_{n} \overset{\text{Λημ.} \; \ref{lem:kn}}{\geq} n 
+        \geq n_{0}  $ 
+        και άρα από τη σχέση~\eqref{eq:ypaksygk}, έχουμε 
+        $\abs{a_{k_{n}} - a} < \varepsilon  $, δηλαδή $ \lim_{n \to +\infty} a_{k_{n}} = a$.
+\end{proof}
+
+\section{Ιδιότητες Ορίου Ακολουθίας}
 
 
+
+\begin{prop}
+
+    Έστω $ \lim_{n \to +\infty} a_{n} = a$ και $ \lim_{n \to +\infty} b_{n} = b $, όπου $ a,b \in
+    \mathbb{R} $. Τότε:
+    \begin{enumerate}[i)]
+        \item $ \lim_{n \to +\infty} (a_{n} + b_{n}) = a+b = \lim_{n \to +\infty} a_{n} + 
+            \lim_{n \to +\infty} b_{n} $
+        \item $ \lim_{k a_{n}} = ka = k \lim_{n \to +\infty} a_{n}, \; k \in \mathbb{R} $
+        \item $ \lim_{n \to +\infty} (a_{n}\cdot b_{n}) = a\cdot b = \lim_{n \to +\infty} a_{n}
+            \cdot \lim_{n \to +\infty} b_{n}$
+        \item $ \lim_{n \to +\infty} \frac{1}{a_{n}} = \frac{1}{a} = \frac{1}{\lim_{n \to +\infty}
+            a_{n}}, \; a \neq 0, \; a_{n} \neq 0, \; \forall n \in \mathbb{N}  $
+        \item $ \lim_{n \to +\infty} \frac{a_{n}}{b_{n}} = \frac{a}{b} = \frac{\lim_{n \to +\infty}
+            a_{n}}{\lim_{n \to +\infty} b_{n}}, \; b \neq 0, \; n \neq 0, \forall n \in
+            \mathbb{N} $
+        \item $ \lim_{n \to +\infty} a_{n}^{k} = a^{k}, 
+            \; k \geq 2, \; k \in \mathbb{N}  $  
+        \item $ \lim_{n \to +\infty} a_{n}^{\frac{1}{k}}=a^{\frac{1}{k}}, \; \forall k \in 
+            \mathbb{N}, a_{n} \geq 0, \; \forall n \in \mathbb{N} $
+    \end{enumerate}
+\end{prop}
+
+\begin{proof}
+\item {}
+    \begin{enumerate}[i)]
+        \item $ \lim_{n \to +\infty} a_{n} = a \Leftrightarrow \forall \varepsilon > 0, \; 
+            \exists n_{1} \in \mathbb{N} \; : \; \forall n \geq n_{1} \quad \abs{a_{n}-a} <
+            \varepsilon$.
+
+            Αρα και για $ \varepsilon = \frac{\varepsilon}{ 2}, \; \exists n_{1} \in \mathbb{N} 
+            \; : \; \forall n \geq n_{1} \quad \inlineequation[eq:idiot1]{\abs{a_{n}-a} <
+            \frac{\varepsilon}{ 2}} $
+
+            $ \lim_{n \to +\infty} b_{n} = b \Leftrightarrow \forall \varepsilon > 0, \; 
+            \exists n_{2} \in \mathbb{N} \; : \; \forall n \geq n_{2} \quad \abs{b_{n}-b} <
+            \varepsilon$.
+
+            Αρα και για $ \varepsilon = \frac{\varepsilon}{ 2}, \; \exists n_{2} \in \mathbb{N} 
+            \; : \; \forall n \geq n_{2} \quad \inlineequation[eq:idiot2]{\abs{b_{n}-b} <
+            \frac{\varepsilon}{ 2}} $
+
+            Θέτουμε $ n_{0}= \max \{ n1,n2 \} $.
+
+            Έστω $ \varepsilon >0 $. Τότε για $ n \geq n_{0} $, έχουμε 
+            \[
+                \abs{(a_{n}+ b_{n}) - (a+b)} = \abs{(a_{n}- a) + (b_{n}-b)} \leq \abs{a_{n}- a} + 
+                \abs{b_{n}-b} \overset{\eqref{eq:idiot1}}{\underset{\eqref{eq:idiot2}}{<}} 
+                \frac{\varepsilon }{2} + \frac{\varepsilon}{ 2} = \varepsilon
+             \] 
+
+         \item 
+            Αν $ k=0 $, τότε η σχέση είναι προφανής.
+
+            Έστω $ k \neq 0 $. 
+
+            $ \lim_{n \to +\infty} a_{n} = a \Leftrightarrow \forall \varepsilon >0, \; \exists 
+            n_{0} \in \mathbb{N} \; : \; \forall n \geq n_{0} \quad \abs{a_{n}- a} < \varepsilon$. 
+
+            Άρα και για $ \varepsilon = \frac{\varepsilon}{\abs{k}} >0 $, έχουμε ότι $ \exists 
+            n_{0} \in \mathbb{N} \; : \; \forall n \geq n_{0} \quad \inlineequation[eq:idiot3]
+            {\abs{a_{n}- a} < \frac{\varepsilon}{\abs{k}}}$. 
+
+            Έστω $ \varepsilon >0 $. Τότε $ \forall n \geq n_{0} $, έχουμε ότι 
+            \[
+                \abs{k a_{n}- ka} = \abs{k(a_{n}- a)} = \abs{k} \cdot \abs{a_{n}- a}
+                \overset{\eqref{eq:idiot3}}{<} \abs{k}
+                \cdot \frac{\varepsilon}{\abs{k}} = \varepsilon 
+             \] 
+
+         \item Έχουμε ότι $ (a_{n})_{n \in \mathbb{N}} $ συγκλίνουσα $ \Rightarrow (a_{n})_{n \in
+             \mathbb{N}} $ είναι φραγμένη. Άρα $ \exists M >0, \; M \in \mathbb{R} \; : \; 
+             \abs{a_{n} \leq M, \; \forall n \in \mathbb{N}}$. Τότε 
+
+             \begin{align*}
+                 \abs{a_{n} b_{n} - ab} = \abs{a_{n}b_{n} - a_{n}b + a_{n}b -ab} = \abs{
+                 a_{n}(b_{n}-b)+b(a_{n}-a) } &\leq \abs{a_{n}}\cdot \abs{b_{n}-b} + \abs{b} \cdot 
+                 \abs{a_{n}-a} \\
+                                             &\leq M \cdot  \abs{b_{n}-b} + \abs {b}\cdot 
+                                             \abs{a_{n}-a}
+             \end{align*}
+
+             Απο τη σύγκλιση των $ a_{n} $ και $ b_{n} $, έχουμε:
+
+             Θέτουμε $ \varepsilon_{1} = \frac{\varepsilon}{2M} >0 $ και $ \varepsilon_{2} =
+             \frac{\varepsilon}{2\abs{b}} >0 $ και επιλέγοντας $ n_{0}= \max \{ n_{1}, n_{2}\} $.
+
+             Έστω $ \varepsilon >0 $, τότε $ \forall n \geq n_{0}$, έχουμε ότι 
+\[
+    \abs{a_{n} b_{n} - ab} \leq M \cdot \abs{bn-b} + \abs{b} \cdot \abs{a_{n}- a} < 
+    M \cdot \frac{\varepsilon}{2 M} + \abs {b} \cdot \frac{\varepsilon}{2 \abs{b}} =
+    \frac{\varepsilon}{2} + \frac{\varepsilon}{2} = \varepsilon
+ \]
+
+ \begin{description}
+     \item [Β᾽ Τρόπος:]
+     \item {} 
+         $ \lim_{n \to +\infty} a_{n}= 0, \; \lim_{n \to +\infty} b_{n} = 0
+     \Rightarrow (a_{n})_{n \in \mathbb{N}}, \; (b_{n})_{n \in \mathbb{N}}  $ μηδενικές ακολουθίες, 
+     άρα είναι φραγμένες. 
+
+     Συνπώς (από μηδενική επι φραγμένη) έχουμε ότι \[ \lim_{n \to +\infty} [(a_{n}- a) 
+         \cdot (b_{n} -b)] = 0 \Rightarrow \lim_{n \to +\infty} [a_{n} b_{n} - a_{n}b - b_{n} a +
+     ab] = 0\] 
+
+     Έχουμε ότι 
+$
+\left.
+     \begin{aligned}
+         \lim_{n \to +\infty} a_{n}b = ab \\
+         \lim_{n \to +\infty} b_{n}a = ab
+      \end{aligned} 
+  \right\} $
+  
+  $ \overset{(+)}{\Rightarrow} \lim_{n \to +\infty} [a_{n} b_{n} + ab] = 2ab \Rightarrow 
+  \lim_{n \to +\infty} (a_{n}b_{n}) = ab $
+ \end{description}
+
+ \item \begin{lem}
+         $ b \neq 0 \Rightarrow \exists n_{0} \in \mathbb{N} \; : \; b_{n} \neq 0, \; n \geq n_{0} $ 
+     \end{lem}
+
+    \begin{proof}
+    \item {}
+        Έστω $ b \neq 0 \Rightarrow \frac{\abs{b}}{2} >0 $. 
+        
+        Για $ \varepsilon = \frac{\abs{b}}{2} >0 $ και λόγω ότι $ \lim_{n \to +\infty} b_{n} = b $
+        έχουμε ότι $ \exists n_{1} \in \mathbb{N} \; : \; \forall n \geq n_{1} \quad \abs{b_{n}-b} 
+        < \frac{\abs{b}}{2} $
+
+        Άρα για $ n \geq n_{1} $, έχουμε 
+        \[
+            \abs{b} = \abs{b - b_{n} + b_{n}} \leq \abs{b - b_{n}} + \abs{b_{N}} \leq
+            \frac{\abs{b}}{2} + \abs{b_{n}} \Leftrightarrow \abs{b_{n}} > \abs{b} -
+            \frac{\abs{b}}{2} \Leftrightarrow \abs{b_{n}}  > \frac{\abs{b}}{2} \Rightarrow b_{n} 
+            \neq 0, \; \forall n \geq n_{1}
+        \] 
+
+        \begin{description}
+            \item [Β᾽ Τρόπος:] 
+            \item {}
+                Γενικά ισχύει ότι αν $ x >0 $ και $ \abs{y-x} < \frac{x}{2} $, 
+                τότε \inlineequation[eq:lemidiot]{\abs{y} < \frac{x}{2}}.
+                
+                $ \lim_{n \to +\infty} b_{n} =b \Rightarrow \exists n_{0} \in \mathbb{N} \; : \; 
+                \forall n \geq n_{0} \quad \abs{b_{n}-b} < \frac{\abs{b}}{2} = \varepsilon $
+
+                Οπότε $ \forall n \geq n_{0} \; : \; \abs{\abs{b_{n}} - \abs{b}} \leq \abs{b_{n}-b}
+                < \frac{\abs{b}}{2} \Rightarrow \abs{b_{n}} \overset{\eqref{eq:lemidiot}}{<} 
+                \frac{\abs{b}}{2}   $ 
+        \end{description}
+
+        Τώρα αν $ n \geq n_{1} $ ισχύει ότι:
+
+        $ \abs{\frac{1}{b_{n}} - \frac{1}{b}} = \frac{b-b_{n}}{b_{n}\cdot b} = \frac{\abs{b-b_{n}}
+        }{\abs{b_{n}} \cdot \abs{b}} < \frac{2 \abs{b - b_{n}}}{\abs{b}^{2}} $
+
+        Έστω $ \varepsilon >0 $, τότε
+\[
+    \lim_{n \to +\infty} b_{n} =b \Leftrightarrow \exists n_{2} \in \mathbb{N} \; : \; \forall n 
+    \geq n_{2} \quad \abs{b - b_{n}} < \frac{\varepsilon \abs{b}^{2}}{2}
+ \] 
+
+ Επιλέγουμε $ n_{0} = \max \{ n_{1}, n_{2} \} $. Τότε $ \forall n \geq n_{0} $ ισχύει ότι 
+ \[
+     \abs{\frac{1}{b_{n}} - \frac{1}{b}} \leq \frac{2 \abs{b -b_{n}}}{\abs{b} ^{2}} < \varepsilon 
+  \] 
+    \end{proof}
+
+\item $ \lim_{n \to +\infty} \frac{a_{n}}{b_{n}} = \lim_{n \to +\infty} 
+    \left(a_{n}\cdot \frac{1}{b_{n}}
+    \right) = \lim_{a_{n}} \cdot \lim_{n \to +\infty} \frac{1}{b_{n}} = a \cdot \frac{1}{b} =
+    \frac{a}{b}$
+
+\item 
+Θα αποδείξουμε την πρόταση με Μαθηματική Επαγωγή.
+    \begin{itemize}
+        \item Για $ k=2 $, έχω: $ \lim_{n \to +\infty} a_{n}^{2} = \lim_{n \to
+            +\infty} (a_{n} \cdot a_{n}) = \lim_{n \to +\infty} a_{n} \cdot \lim_{n \to +\infty}
+            a_{n} =  a \cdot a = a^{2}  $, ισχύει.
+        \item Έστω ότι ισχύει για $k$, δηλ. $ \lim_{n \to +\infty} a_{n}^{k} = a^{k}  $
+        \item θ.δ.ο. ισχύει για $ k+1 $. Πράγματι, 
+\[
+    \lim_{n \to +\infty} a_{n}^{k+1}= \lim_{n \to +\infty} (a_{n}^{k} \cdot a_{n})  = \lim_{n \to
+    +\infty} a_{n}^{k} \cdot \lim_{n \to +\infty} a_{n} = a^{k} \cdot a = a^{k+1}
+ \] 
+    \end{itemize}
+
+\item 
+Θα αποδείξουμε την πρόταση με Μαθηματική Επαγωγή.
+\begin{itemize}
+    %TODO αποδειξη
+\end{itemize}
+\end{enumerate}
+\end{proof}
+
+\begin{prop}[Μηδενική επί Φραγμένη έχει όριο 0]
+\item {}
+    Έστω $ (a_{n})_{n \in \mathbb{N}} $ μηδενική ακολουθία και $ (b_{n})_{n \in \mathbb{N}} $ 
+    φραγμένη. Τότε, $ \lim_{n \to +\infty} (a_{n}\cdot b_{n}) = 0 $. 
+\end{prop}
+
+\begin{proof}
+\item {}
+    $ (b_{n})_{n \in \mathbb{N}} $ φραγμένη $ \Rightarrow \exists M>0 \; : \; \inlineequation[eq:
+    mhdfrag]{\abs{b_{n}} \leq M}, \forall n \in \mathbb{N} $.
+
+    $ (a_{n})_{n \in \mathbb{N}} $ μηδενική $ \Rightarrow \lim_{n \to +\infty} a_{n} = 0
+    \Leftrightarrow  \forall \varepsilon >0, \; \exists n_{0} \in \mathbb{N} \; : \; \forall 
+    n \geq n_{0} \quad \abs{a_{n}-0} < \varepsilon \Leftrightarrow \abs{a_{n}} < \varepsilon $ 
+
+    Άρα και για $ \varepsilon = \frac{\varepsilon}{M} >0, \; \exists n_{0} \in \mathbb{N} \; : \; 
+    \forall n \geq n_{0} \quad \inlineequation[eq:mhdfrag2]{\abs{a_{n}} < \frac{\varepsilon}{M}} $ 
+
+    Έστω $ \varepsilon >0 $. Τότε $ \exists n_{0} \in \mathbb{N} $ ώστε $ \forall n \geq n_{0} $ 
+    να έχουμε 
+    \[
+        \abs{a_{n}\cdot b_{n} - 0} = \abs{a_{n}\cdot b_{n} } = \abs{a_{n}} \cdot \abs{b_{n}} 
+        \overset{\eqref{eq: mhdfrag}}{\leq} \abs{a_{n}} \cdot M \overset{\eqref{eq:mhdfrag2}}{<} 
+        \frac{\varepsilon}{M} \cdot M = \varepsilon
+     \]
+\end{proof}
+
+\begin{prop}[Κριτήριο Παρεμβολής]
+\item {}
+    Έστω $ (a_{n})_{n \in \mathbb{N}}, (b_{n})_{n \in \mathbb{N}} $ και 
+    $ (c_{n})_{n \in \mathbb{N}} $, τρεις ακολουθίες, τέτοιες ώστε:
+
+    \vspace{\baselineskip}
+
+    \begin{minipage}{0.3\textwidth}
+    \begin{enumerate}[i)]
+        \item $ a_{n} \leq b_{n} \leq c_{n}, \; \forall n \in \mathbb{N} $ \hfill \tikzmark{a} 
+        \item $ \lim_{n \to +\infty} a_{n} = \lim_{n \to +\infty} c_{n} = l $ \hfill \tikzmark{b}
+    \end{enumerate}
+\end{minipage}
+
+    \mybrace{a}{b}[$ \lim_{n \to +\infty} b_{n} = l$]
+\end{prop}
+
+\begin{proof}
+\item {}
+    $ \lim_{n \to +\infty} a_{n} = l \Leftrightarrow \forall \varepsilon >0, \; \exists n_{1} 
+    \in \mathbb{N} \; : \; \forall n \geq n_{1} \quad \abs{a_{n} - l} < \varepsilon \Leftrightarrow 
+    \overbrace{l - \varepsilon < a_{n}} < l + \varepsilon $ 
+
+    $ \lim_{n \to +\infty} c_{n} = l \Leftrightarrow \forall \varepsilon >0, \; \exists n_{2} 
+    \in \mathbb{N} \; : \; \forall n \geq n_{2} \quad \abs{c_{n} - l} < \varepsilon \Leftrightarrow 
+    l - \varepsilon < \underbrace{c_{n} < l + \varepsilon} $
+
+    Επιλέγουμε $ n_{0} = \max \{ n_{1}, n_{2} \} $, οπότε 
+    $ \forall \varepsilon > 0, \exists n_{0} \in \mathbb{N} \; : \; \forall n \geq n_{0} $
+\begin{gather*}
+        l - \varepsilon < a_{n} \leq b_{n} \leq c_{n} < l + \varepsilon \Leftrightarrow \\
+        l - \varepsilon < b_{n} < l + \varepsilon \Leftrightarrow \\
+        - \varepsilon < b_{n} - l < \varepsilon \Leftrightarrow \\
+        \abs{b_{n}-l} < \varepsilon, \; \forall n \geq n_{0}
+\end{gather*}
+Άρα $ \lim_{n \to +\infty} b_{n} = l $.
+\end{proof}
+
+\begin{cor}
+    Έστω $ (a_{n})_{n \in \mathbb{N}} $ και $ (b_{n})_{n \in \mathbb{N}} $ ακολουθίες, τέτοιες 
+    ώστε: 
+
+    \vspace{\baselineskip}
+
+    \begin{minipage}{0.25\textwidth}
+        \begin{enumerate}[i)]
+            \item $ \abs{a_{n}} \leq b_{n}, \; \forall n \in \mathbb{N} $ \hfill \tikzmark{a}
+            \item $ \lim_{n \to +\infty} b_{n} = 0$ \hfill \tikzmark{b}
+        \end{enumerate}
+    \end{minipage}
+
+    \mybrace{a}{b}[$ \lim_{n \to +\infty} a_{n} = 0 $]
+\end{cor}
+
+
+\begin{prop}
+    Έστω $ \lim_{n \to +\infty} a_{n} = a $ και $ \lim_{n \to +\infty} b_{n} = b $. Τότε
+    $
+        a_{n} \leq b_{n}, \; \forall n \in \mathbb{N} \Rightarrow a \leq b
+     $ 
+\end{prop}
+
+\begin{proof}(Με άτοπο)
+    Έστω $ a>b \Rightarrow a-b>0 $. Θέτουμε $ \varepsilon = \frac{a-b}{2} $.
+
+   Από τον ορισμό του ορίου για τις δύο ακολουθίες, έχουμε ότι:
+\begin{align}
+    \exists n_{1} \in \mathbb{N} \; : \; \forall n \geq n_{1} \quad \abs{a_{n}-a} < \frac{a-b}{2} 
+    \label{eq:a<b1} \\
+    \exists n_{2} \in \mathbb{N} \; : \; \forall n \geq n_{2} \quad \abs{b_{n}-b} < \frac{a-b}{2}
+    \label{eq:a<b2} \\
+\end{align}
+
+Απο την σχέση~\eqref{eq:a<b1} έχουμε ότι $ - \abs{a_{n}-a} > - \frac{a-b}{2} $. Όμως $ a_{n}- a \geq 
+\abs{a_{n}-a} $, οπότε έχουμε $ a_{n}- a > - \frac{a-b}{2} \Rightarrow a_{n} > a -
+\frac{a-b}{2} = \frac{a+b}{2}, \forall n \geq n_{1} $.
+
+Απο την σχέση~\eqref{eq:a<b2} έχουμε ότι $  \abs{b_{n}-b} <  \frac{a-b}{2} $. Όμως $ b_{n}- b \leq 
+\abs{b_{n}-b} $, οπότε έχουμε $ b_{n}- b <  \frac{a-b}{2} \Rightarrow b_{n} <  b +
+\frac{a-b}{2} = \frac{a+b}{2}, \; \forall n \geq n_{2}  $.
+
+Για $ n_{0} = \max \{ n_{1}, n_{2} \} $ έχουμε ότι $ a_{n} > \frac{a+b}{2}, \; \forall n \geq n_{0}$
+και $ b_{n} < \frac{a+b}{2}, \; \forall n \geq n_{0} \Rightarrow a_{n} > b_{n}, \; \forall n 
+\geq n_{0} $, άτοπο.
 
 \end{proof}
 
 
+\begin{prop}
+    Έστω $ \lim_{n \to +\infty} a_{n} = a $ και $ \lim_{n \to +\infty} b_{n} = b $. Τότε
+    $
+        a_{n} < b_{n}, \; \forall n \in \mathbb{N} \Rightarrow a \leq b
+     $ 
+\end{prop}
 
+\begin{proof}
+    $ a_{n}< b_{n}, \; \forall n \in \mathbb{N} \Rightarrow a_{n} \leq b_{n}, \; \forall n \in
+    \mathbb{N} \Rightarrow a \leq b $
+\end{proof}
 
+\begin{rem}
+\item {}
+    Αν $ a_{n}= \frac{1}{n}, \; \forall n \in \mathbb{N} $ και $ b_{n}=0, \; \forall n \in
+    \mathbb{N} $, τότε έχουμε ότι $ \lim_{n \to +\infty} \frac{1}{n} = 0 = a $ και $ \lim_{n \to
+    +\infty} b_{n} = 0 = b $, δηλαδή $ a=b=0  $.
+\end{rem}
+
+\begin{cor}
+    Έστω $ (a_{n})_{n \in \mathbb{N}} $ ακολουθία, τέτοια ώστε $ \lim_{n \to +\infty} a_{n} = a$ 
+    και $ a_{n} \geq 0, \; \forall n \in \mathbb{N} $, τότε $ a \geq 0 $.
+\end{cor}
+
+\begin{proof}
+    Έστω $ b_{n} = 0, \; \forall n \in \mathbb{N} $. Τότε προφανώς $ a_{n} \geq b_{n}, \; \forall n
+    \in \mathbb{N} \Rightarrow \lim_{n \to +\infty} a_{n} \geq \lim_{n \to +\infty} b_{n} = 0$.
+\end{proof}
 
 \end{document}

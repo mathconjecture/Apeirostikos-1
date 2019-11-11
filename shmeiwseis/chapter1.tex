@@ -6,17 +6,15 @@
 
 \section{Μαθηματική Επαγωγή}
 
-\begin{thm}
-    Έστω $ S \subseteq \mathbb{N} $ τέτοιο ώστε:
-    \begin{minipage}[t]{0.25\textwidth}
+\mythm{Έστω $ S \subseteq \mathbb{N} $ τέτοιο ώστε:
+    \begin{minipage}[t]{0.3\textwidth}
         \begin{enumerate}[i)]
             \item  $ 1 \in S $ \hfill \tikzmark{a}
             \item  $ n \in S \Rightarrow n + 1 \in S $ \hfill \tikzmark{b}
         \end{enumerate} 
     \end{minipage}
-    \mybrace{a}{b}[$ S = \mathbb{N} $]
+\mybrace{a}{b}[$ S = \mathbb{N} $]}
 
-\end{thm}
 
 \begin{example}
     Να αποδείξετε ότι $ 4^{n} \geq n^{2}, \; \forall n \in \mathbb{N} $.
@@ -25,7 +23,7 @@
 
 \begin{proof}
 \item {}
-    \begin{itemize}
+    \begin{myitemize}
         \item Για $ n=1 $, έχω: $ 4^{1} \geq 1^{2} $, ισχύει.
         \item Έστω ότι η ανισότητα ισχύει για $n$, δηλ. 
             $\inlineequation[eq:epagex1]{4^{n} \geq n^{2}}$
@@ -35,7 +33,7 @@
                 n^{2}\cdot 4 
                 = 4n^{2} = n^{2} + 2n^{2} + n^{2} \geq n^{2} + 2n + 1 = (n+1)^{2}.
             \end{align*}
-    \end{itemize}
+    \end{myitemize}
 \end{proof}
 
 \begin{example}
@@ -44,7 +42,7 @@
 
 \begin{proof}
 \item {}
-    \begin{itemize}
+    \begin{myitemize}
         \item Για $ n=10 $, έχω: $ 2^{10} = 1024 \geq 1000 = 10^{3}  $, 
             ισχύει.
         \item Έστω ότι η ανισότητα ισχύει για $n$, δηλ. 
@@ -58,7 +56,7 @@
                                                  &\geq n^{3} + 3n^{2} + 3n + 1 \\ 
                                                  &= (n+1)^{3}
             \end{align*} 
-    \end{itemize}
+    \end{myitemize}
 \end{proof}
 
 \section{Ανισότητα Bernoulli}
@@ -69,7 +67,8 @@
 
 
 \begin{proof}
-    \begin{itemize}
+\item {}
+    \begin{myitemize}
         \item Για $ n=1 $, έχω: $ (1+a)^{1} = 1+a \geq 1+a = 1 + 1 \cdot a $
         \item Έστω ότι η ανισότητα ισχύει, για $ n $, δηλ. $\inlineequation[eq:bern]
             {(1+a)^{n} \geq 1 + na}$
@@ -82,15 +81,13 @@
                             &\geq 1 + (n+1)a
             \end{align*}
 
-    \end{itemize}
+    \end{myitemize}
 \end{proof}
 
 \section{Αθροίσματα}
 
-\begin{dfn}
-    Έστω $ a_{1}, a_{2}, \ldots, a_{n} \in \mathbb{R} $. Ορίζουμε 
-    \[ \sum_{n=1}^{N} a_{n} = a_{1} + a_{2} + \cdots + a_{n} \]
-\end{dfn}
+\mydfn{Έστω $ a_{1}, a_{2}, \ldots, a_{n} \in \mathbb{R} $. Ορίζουμε 
+    \[ \sum_{n=1}^{N} a_{n} = a_{1} + a_{2} + \cdots + a_{n} \]}
 
 \begin{example}
     Να δείξετε ότι $ \sum_{n=3}^{6} n^{2} = \sum_{n=4}^{7} (n-1)^{2}   $
@@ -163,25 +160,21 @@
 
 \section{Απόλυτη Τιμή}
 
-\begin{dfn}
-    Για κάθε $ a \in \mathbb{R} $, θέτουμε
-    \[ \abs{a} = \begin{cases} a, & a \geq 0 \\ -a, & a < 0 \end{cases}  \] 
-\end{dfn}
+\mydfn{Για κάθε $ a \in \mathbb{R} $, θέτουμε
+\[ \abs{a} = \begin{cases} a, & a \geq 0 \\ -a, & a < 0 \end{cases}  \]}
 
 \begin{rem}
     Ισχύει, 
-    \begin{itemize}
+    \begin{myitemize}
         \item  $ \abs{a} \geq 0, \;  \forall a \in \mathbb{R} $
         \item $ a \leq \abs{a}, \; \forall a \in \mathbb{R} $
-    \end{itemize}
+    \end{myitemize}
 \end{rem}
 
-\begin{prop}
-    Έστω $ \theta > 0 $. Τότε 
+\myprop{Έστω $ \theta > 0 $. Τότε 
     \[
         \abs{a} \leq \theta \Leftrightarrow - \theta \leq a \leq \theta  
-    \]
-\end{prop}
+\]}
 
 \begin{proof}
 \item {}
@@ -189,39 +182,37 @@
         \item [$(  \Rightarrow ) $] 
             Έστω ότι $ \abs{a} \leq \theta, \; a \in \mathbb{R} $ και 
             $ \theta >0 $. 
-            \begin{itemize}
+            \begin{myitemize}
                 \item Έστω $ a \geq 0 $. Τότε $ \abs{a} = a $, οπότε:
-                    \[
+                    $
                         0 \leq \abs{a} \leq \theta \Rightarrow 
                         0 \leq a \leq \theta \Rightarrow - \theta 
                         \leq a \leq \theta
-                    \] 
+                    $ 
                 \item Έστω $ a < 0 $. Τότε $ \abs{a} = -a $, οπότε:
-                    \[
+                    $
                         0 \leq \abs{a} \leq \theta \Rightarrow 
                         0 < -a \leq \theta \Rightarrow 
                         - \theta \leq a < 0 \Rightarrow 
                         - \theta \leq a \leq \theta 
-                    \] 
-            \end{itemize}
+                    $ 
+            \end{myitemize}
         \item [$(\Leftarrow)$] Έστω $ - \theta \leq a \leq \theta $ 
             για $ a \in \mathbb{R} $ και $ \theta >0 $.
-            \begin{itemize}
+            \begin{myitemize}
                 \item Έστω $ a \geq 0 $. Τότε $ \abs{a} = a $. Οπότε 
                     $ \abs{a} = a \leq \theta $.
                 \item Έστω $ a <0 $. Τότε $ \abs{a} = -a $. Οπότε
                     $ \abs{a} = -a \leq \theta $.
-            \end{itemize}
+            \end{myitemize}
     \end{description}
 \end{proof}
 
-\begin{prop}
-    Για κάθε $ a, b \in \mathbb{R} $, ισχύει:
+\myprop{Για κάθε $ a, b \in \mathbb{R} $, ισχύει:
     \begin{enumerate}[i)]
         \item $ \abs{a+b} \leq \abs{a} + \abs{b}   $
         \item $ \abs{a} - \abs{b} \leq \abs{a+b}  $
-    \end{enumerate}
-\end{prop}
+\end{enumerate}}
 
 \begin{proof}
 \item {}
@@ -270,19 +261,17 @@
 
 \section{Μέγιστο και Ελάχιστο}
 
-\begin{dfn}
-    Έστω $ A \subseteq \mathbb{R} $. Λέμε ότι το $A$ έχει μέγιστο 
+\mydfn{Έστω $ A \subseteq \mathbb{R} $. Λέμε ότι το $A$ έχει μέγιστο 
     (αντίστοιχα ελάχιστο) στοιχείο, αν υπάρχει $ x_{0} \in A $ τέτοιο 
     ώστε $ x \leq x_{0}, \; \forall x \in A $ (αντίστοιχα $ x_{0} \leq 
-    x, \; \forall x \in A$).
-\end{dfn}
+x, \; \forall x \in A$).}
 
 \begin{rem}
 \item {}
-    \begin{itemize}
+    \begin{myitemize}
         \item Το μέγιστο του συνόλου $A$, συμβολίζεται: $ \max A $
         \item Το ελάχιστο του συνόλου $A$, συμβολίζεται $ \min A $
-    \end{itemize}
+    \end{myitemize}
 \end{rem}
 
 \begin{example}
@@ -305,12 +294,9 @@
     \exists a \in A$ τέτοιο ώστε $ a > x_{0} $. Άτοπο, γιατί $ x_{0}= \max A $.
 \end{proof}
 
-\pagebreak
 
-\begin{prop}
-    Αν $ A \subseteq \mathbb{R} $ έχει μέγιστο στοιχείο, τότε αυτό είναι 
-    μοναδικό.
-\end{prop}
+\myprop{Αν $ A \subseteq \mathbb{R} $ έχει μέγιστο στοιχείο, τότε αυτό είναι 
+μοναδικό.}
 
 
 \begin{proof}
@@ -318,30 +304,26 @@
     $ x_{0} \neq {x_{0}}'$. 
 
     Τότε 
-    \begin{itemize}
+    \begin{myitemize}
         \item $ a \leq x_{0}, \; \forall a \in A \xRightarrow{{x_{0}}' 
             \in A } {x_{0}}'  \leq x_{0} $ \tikzmark{a}
         \item $ a \leq {x_{0}}', \; \forall a \in A \xRightarrow{x_{0} 
             \in A } x_{0} \leq {x_{0}}' $ \tikzmark{b}
             \mybrace{a}{b}[$ x_{0} = {x_{0}}' $, άτοπο.] 
-    \end{itemize}
+    \end{myitemize}
 \end{proof}
 
-\begin{prop}
-    Αν $ A \subseteq \mathbb{R} $ έχει ελάχιστο στοιχείο, τότε αυτό είναι 
-    μοναδικό.
-\end{prop}
+\myprop{Αν $ A \subseteq \mathbb{R} $ έχει ελάχιστο στοιχείο, τότε αυτό είναι 
+μοναδικό.}
 
 \begin{proof}
     Ομοίως 
 \end{proof}
 
-\begin{dfn}
-    Έστω $ A \subseteq \mathbb{R}, \; A \neq \emptyset $. Λέμε ότι το 
+\mydfn{Έστω $ A \subseteq \mathbb{R}, \; A \neq \emptyset $. Λέμε ότι το 
     $A$ είναι άνω φραγμένο (αντίστοιχα κάτω φραγμένο), αν $ 
     \exists x_{0} \in \mathbb{R}$ τέτοιο ώστε $ a \leq x_{0}, \; 
-    \forall a \in A$ (αντίστοιχα $ x_{0} \leq a, \; \forall a \in A $).
-\end{dfn}
+\forall a \in A$ (αντίστοιχα $ x_{0} \leq a, \; \forall a \in A $).}
 
 \begin{example}
 \item {}
@@ -360,16 +342,12 @@
 \end{rem}
 
 
-\begin{dfn}
-    Έστω $ A \subseteq \mathbb{R}, \; A \neq \emptyset $. Λέμε ότι το $A$ 
-    είναι φραγμένο, αν είναι άνω και κάτω φραγμένο. 
-\end{dfn}
+\mydfn{Έστω $ A \subseteq \mathbb{R}, \; A \neq \emptyset $. Λέμε ότι το $A$ 
+είναι φραγμένο, αν είναι άνω και κάτω φραγμένο.}
 
-\begin{prop}
-    Ένα σύνολο $ A \subseteq \mathbb{R}, \; A \neq \emptyset $ είναι 
+\myprop{Ένα σύνολο $ A \subseteq \mathbb{R}, \; A \neq \emptyset $ είναι 
     φραγμένο αν και μόνο αν $ \exists M>0 \; : \; \abs{a} \leq M, \; 
-    \forall a \in A$.
-\end{prop}
+\forall a \in A$.}
 
 \begin{proof}
 \item {}
@@ -409,12 +387,10 @@
     \end{description} 
 \end{proof}
 
-\begin{prop}
-    Έστω $ A \subseteq \mathbb{R}, A \neq \emptyset $ και έστω 
+\myprop{Έστω $ A \subseteq \mathbb{R}, A \neq \emptyset $ και έστω 
     $ -A = \{ x \in \mathbb{R} \; : \; x = -a, \; a \in A \} = \{ 
     -a \; : \; a \in A\} $. Αν $M$ είναι άνω φράγμα 
-    του $A$, τότε το $ -M $ είναι κάτω φράγμα του συνόλου $ -A $.
-\end{prop}
+του $A$, τότε το $ -M $ είναι κάτω φράγμα του συνόλου $ -A $.}
 
 \begin{proof}
     Έστω $M$ α.φ. του $A$. Τότε 
@@ -428,32 +404,28 @@
 
 \section{Supremum και Infimum}
 
-\begin{dfn}
-    Έστω $ A \subseteq \mathbb{R}, A \neq \emptyset $ και $A$ άνω 
+\mydfn{Έστω $ A \subseteq \mathbb{R}, A \neq \emptyset $ και $A$ άνω 
     φραγμένο. Αν υπάρχει άνω φράγμα $s$ του $A$ τέτοιο ώστε 
     \[
         s \leq M, \quad \text{για κάθε M άνω φράγμα του A}, 
     \] 
-    τότε το $s$ ονομάζεται supremum του $A$ και συμβολίζεται $ s=\sup A $.
-\end{dfn}
+τότε το $s$ ονομάζεται supremum του $A$ και συμβολίζεται $ s=\sup A $.}
 
-\begin{dfn}
-    Έστω $ A \subseteq \mathbb{R}, A \neq \emptyset $ και $A$ κάτω 
+\mydfn{Έστω $ A \subseteq \mathbb{R}, A \neq \emptyset $ και $A$ κάτω 
     φραγμένο. Αν υπάρχει κάτω φράγμα $s$ του $A$ τέτοιο ώστε 
     \[
         s \geq m, \quad \text{για κάθε m κάτω φράγμα του A}, 
     \] 
-    τότε το $s$ ονομάζεται infimum του $A$ και συμβολίζεται $ s=\inf A $.
-\end{dfn}
+τότε το $s$ ονομάζεται infimum του $A$ και συμβολίζεται $ s=\inf A $.}
 
 \begin{rem}
 \item {}
-    \begin{itemize}
+    \begin{myitemize}
         \item Αν το $A$ δεν είναι άνω φραγμένο, τότε γράφουμε ότι $ \sup A = 
             + \infty $.
         \item Αν το $A$ δεν είναι κάτω φραγμένο, τότε γράφουμε ότι $ \inf A = 
             - \infty $.
-    \end{itemize}
+    \end{myitemize}
 \end{rem}
 
 \begin{example}
@@ -472,12 +444,13 @@
 Κάθε μη κενό και άνω φραγμένο υποσύνολο των πραγματικών αριθμών έχει 
 supremum, δηλαδή έχει ελάχιστο άνω φράγμα.
 
-\begin{prop}
+\myprop{\label{prop:epsilon_prot}
     Έστω ότι για τον $a \in \mathbb{R}$ ισχύει ότι 
     \[
         0 \leq a < \varepsilon, \quad \forall \varepsilon >0 \Rightarrow a =0 
-    \] 
-\end{prop}
+\]}
+
+
 
 \begin{proof}
 \item {}
@@ -486,16 +459,29 @@ supremum, δηλαδή έχει ελάχιστο άνω φράγμα.
     a > 0$, έχουμε ότι $ 0 \leq a < a $, άτοπο.
 \end{proof}
 
-\begin{prop}[Αρχιμήδεια Ιδιότητα]
-\item {}
+\myprop{
+    Έστω $ (a_{n})_{n \in \mathbb{N}} $ ακολουθία, και έστω $ a \in \mathbb{R} $, ώστε:
+
+    \vspace{\baselineskip}
+
+    \begin{minipage}{0.3\textwidth}
+        \begin{enumerate}[i)]
+            \item $ 0 \leq a < a_{n}, \; \forall n \in \mathbb{N} $ \hfill \tikzmark{a}
+            \item $ \lim_{n \to +\infty} a_{n} = 0 $ \hfill \tikzmark{b}
+        \end{enumerate}
+\end{minipage}
+
+\mybrace{a}{b}[$ a = 0 $]}
+
+
+\myprop{
     \begin{enumerate}[i)]
         \item Το $ \mathbb{N} $ δεν είναι άνω φραγμένο.
         \item $ \forall y > 0, \; \exists n \in \mathbb{N} \; ; \; 
             n > y$
         \item $ \forall \varepsilon >0, \; \exists n \in \mathbb{N} \; 
             : \; \frac{1}{n} < \varepsilon$
-    \end{enumerate}
-\end{prop}
+\end{enumerate}}
 
 \begin{proof}
 \item {}
@@ -520,10 +506,8 @@ supremum, δηλαδή έχει ελάχιστο άνω φράγμα.
     \end{enumerate}
 \end{proof}
 
-\begin{prop}
-    Έστω $ A \subseteq \mathbb{R}, \; A \neq \emptyset $ και το $A$ έχει μέγιστο 
-    στοιχείο, έστω $ x_{0} = \max A $. Τότε $ \sup A = \max A = x_{0}$.
-\end{prop}
+\myprop{Έστω $ A \subseteq \mathbb{R}, \; A \neq \emptyset $ και το $A$ έχει μέγιστο 
+στοιχείο, έστω $ x_{0} = \max A $. Τότε $ \sup A = \max A = x_{0}$.}
 
 \begin{proof}
 \item {}
@@ -537,10 +521,8 @@ supremum, δηλαδή έχει ελάχιστο άνω φράγμα.
     Άρα $ x_{0}= \sup A $.
 \end{proof}
 
-\begin{prop}
-    Έστω $ A \subseteq \mathbb{R}, \; A \neq \emptyset $ και το $A$ έχει ελάχιστο
-    στοιχείο, έστω $ x_{0} = \min A $. Τότε $ \inf A = \min A = x_{0}$.
-\end{prop}
+\myprop{Έστω $ A \subseteq \mathbb{R}, \; A \neq \emptyset $ και το $A$ έχει ελάχιστο
+στοιχείο, έστω $ x_{0} = \min A $. Τότε $ \inf A = \min A = x_{0}$.}
 
 \begin{proof}
     Ομοίως 
@@ -548,12 +530,12 @@ supremum, δηλαδή έχει ελάχιστο άνω φράγμα.
 
 \section{Χαρακτηριστική Ιδιότητα του Supremum}
 
-Έστω $ A \subseteq \mathbb{R} $, $ A \neq \emptyset $ και άνω φραγμένο. 
+\myprop{Έστω $ A \subseteq \mathbb{R} $, $ A \neq \emptyset $ και άνω φραγμένο. 
 Έστω $ s $ α.φ. του $A$. Τότε 
 \[
      s= \sup A \Leftrightarrow \forall \varepsilon >0, \; \exists a \in A \; 
      : \; s - \varepsilon < a
- \] 
+ \]}
 
  \begin{proof}
  \item {}
@@ -570,10 +552,10 @@ supremum, δηλαδή έχει ελάχιστο άνω φράγμα.
 
 
              \begin{minipage}{0.23\textwidth}
-                 \begin{itemize}
+                 \begin{myitemize}
                      \item $ A \neq \emptyset $ \hfill \tikzmark{a}
                      \item $ A $ άνω φραγμένο \hfill  \tikzmark{b}
-                 \end{itemize}
+                 \end{myitemize}
              \end{minipage}
 
              \mybrace{a}{b}[$ \exists $ το $ \sup A $]
@@ -590,20 +572,57 @@ supremum, δηλαδή έχει ελάχιστο άνω φράγμα.
      \end{description} 
  \end{proof}
 
- \begin{prop}[Ισοδύναμη Πρόταση]
-Έστω $ A \subseteq \mathbb{R} $, $ A \neq \emptyset $ και άνω φραγμένο. 
+ \myprop{Έστω $ A \subseteq \mathbb{R} $, $ A \neq \emptyset $ και άνω φραγμένο. 
 Έστω $ s $ α.φ. του $A$. Τότε 
 \[
     s = \sup A \Leftrightarrow \forall n \in \mathbb{N} \; \exists a_{n} \in A
     \; : \; s - \frac{1}{n} < a_{n} 
- \] 
- \end{prop}
+\]}
  
+ \mythm{Έστω $ A \subseteq \mathbb{R} $, $ A \neq \emptyset $ και άνω φραγμένο. 
+Έστω $ s $ α.φ. του $A$. Τότε 
+\[
+    s = \sup A \Leftrightarrow \text{υπάρχει ακολουθία στοιχείων του $A$ με όριο το $s$} 
+ \]}
 
-\begin{prop}\label{prop:leqsup}
+ \begin{proof}
+ \item {}
+     \begin{description}
+         \item [$ (\Rightarrow) $]
+             Έστω $ s = \sup A $. Τότε από τη χαρακτηριστική ιδιότητα του supremum έχουμε ότι:
+            \begin{align*}
+                \exists a_{1} \in A \; &: \; s - 1 < a_{1} \\
+                \exists a_{2} \in A \; &: \; s - \frac{1}{2}  < a_{2} \\
+                                       &\vdots \\
+                \exists a_{n} \in A \; &: \; s - \frac{1}{n}  < a_{n} 
+            \end{align*} 
+
+            Επομένως υπάρχει ακολουθία, η $ (a_{n})_{n \in \mathbb{N}} $, στοιχείων του $A$, 
+            με την ιδιότητα $ s - \frac{1}{n} < a_{n} \leq s, \; \forall n \in \mathbb{N}$. 
+
+            Παρατηρούμε ότι $ \lim_{n \to +\infty} s- \frac{1}{n} = \lim_{n \to +\infty} s = s $ 
+
+            Οπότε από το Κριτήριο Παρεμβολής, έχουμε ότι $ \lim_{n \to +\infty} a_{n}= s $, 
+            το ζητούμενο.
+
+        \item [$ (\Rightarrow) $]
+            Έστω $ s $ α.φ. του $A$ και έστω ότι υπάρχει ακολουθία $ (a_{n})_{n \in \mathbb{N}} $ 
+            στοιχείων του $A$ ώστε $ \lim_{n \to +\infty} a_{n}= s$. Θ.δ.ο. $ s = \sup A $. 
+            Πράγματι, 
+
+            Έστω ότι $ s \neq \sup A $. Τότε $ \sup A < s \Rightarrow s - \sup A > 0 > 0 $. 
+
+            Επιλέγω $ \varepsilon = s - \sup A >0 $. Οπότε από τον ορισμό του οριου, έχουμε ότι 
+            $ \exists n_{0} \in \mathbb{N} \; : \; \forall n \geq n_{0} \quad \abs{a_{n} - a} < 
+            s - \sup A \Leftrightarrow \underbrace{-(s - \sup A) < a_{n} - s} < s - \sup A 
+            \Leftrightarrow a_{n} > \sup A$, άτοπο, γιατι $ \sup A $ α.φ. του $A$.
+     \end{description}
+ \end{proof}
+
+
+ \myprop{\label{prop:leqsup}
     Έστω $ A, B $ μη-κενά, άνω φραγμένα υποσύνολα του $ \mathbb{R} $. Αν $ A \subseteq 
-    B$ τότε $ \sup A \leq \sup B $.
-\end{prop}
+B$ τότε $ \sup A \leq \sup B $.}
 
 
 \begin{proof}
@@ -614,8 +633,7 @@ supremum, δηλαδή έχει ελάχιστο άνω φράγμα.
     x \leq \sup B, \forall x \in A$. Άρα το $ \sup B $ είναι α.φ. του $A$.
 \end{proof}
 
-\begin{prop}
-    Έστω $ A \subseteq \mathbb{R}, A \neq \emptyset $ και έστω $ \lambda A = 
+\myprop{Έστω $ A \subseteq \mathbb{R}, A \neq \emptyset $ και έστω $ \lambda A = 
     \{ x \in \mathbb{R} \; : \; x = \lambda a, \; a \in A \} = \{ \lambda a \; : \; 
     a \in A\} $. Τότε
     \begin{enumerate}[i)]
@@ -623,8 +641,7 @@ supremum, δηλαδή έχει ελάχιστο άνω φράγμα.
             και $ \sup (\lambda A) = \lambda \sup A $
         \item $ A $ κάτω φραγμένο και $ \lambda <0 \Rightarrow \exists $ το $ \sup A $
             και $ \sup (\lambda A) = \lambda \inf A $
-    \end{enumerate}
-\end{prop}
+\end{enumerate}}
 
 \begin{proof}
 \item {}
@@ -643,7 +660,7 @@ supremum, δηλαδή έχει ελάχιστο άνω φράγμα.
             Έστω $ s= \sup A $, το οποίο επίσης υπάρχει, γιατί $ A \neq \emptyset $ 
             και $A$ άνω φραγμένο. 
 
-            \begin{itemize}
+            \begin{myitemize}
                 \item Αποδεικνύουμε ότι $ \lambda s $ είναι α.φ. του $ \lambda A $. 
                     Πράγματι
                     \begin{align*}
@@ -667,16 +684,14 @@ supremum, δηλαδή έχει ελάχιστο άνω φράγμα.
             &\Rightarrow a \leq \frac{M}{\lambda}, \; \forall a \in A
                     \end{align*} 
                     άρα $ \frac{M}{\lambda} $ είναι α.φ. του Α.
-            \end{itemize}
+            \end{myitemize}
 
         \item Ομοίως
     \end{enumerate}
 \end{proof}
 
-\begin{prop}
-    Έστω $ A, B $, μη-κενά και άνω φραγμένα υποσύνολα του $ \mathbb{R} $. Τότε υπάρχει 
-    το $ \sup (A \cup B) $ και $ \sup (A \cup B) = \max \{ \sup A, \sup B \} $.
-\end{prop}
+\myprop{Έστω $ A, B $, μη-κενά και άνω φραγμένα υποσύνολα του $ \mathbb{R} $. Τότε υπάρχει 
+το $ \sup (A \cup B) $ και $ \sup (A \cup B) = \max \{ \sup A, \sup B \} $.}
 
 \begin{proof}
     Έστω $ x \in A \cup B \Rightarrow \begin{cases} x \in A \overset{A \; \text{α.φ.}}{
@@ -706,11 +721,9 @@ supremum, δηλαδή έχει ελάχιστο άνω φράγμα.
     \sup (A \cup B) = \sup B = \max \{ \sup A, \sup B \} $.
 \end{proof}
 
-\begin{prop}
-    Έστω $ A, B $, μη-κενά και κάτω φραγμένα υποσύνολα του $ \mathbb{R} $. 
+\myprop{Έστω $ A, B $, μη-κενά και κάτω φραγμένα υποσύνολα του $ \mathbb{R} $. 
     Τότε υπάρχει το $ \inf (A \cup B) $ και $ \inf (A \cup B) = \min \{ \inf A, 
-    \inf B \} $.
-\end{prop}
+\inf B \} $.}
 
 \begin{proof}
     Ομοίως
@@ -725,9 +738,7 @@ supremum, δηλαδή έχει ελάχιστο άνω φράγμα.
     \end{enumerate}
 \end{lem}
 
-\begin{thm}[Ύπαρξη τετραγωνικής ρίζας του 2]
-    Υπάρχει μοναδικός θετικός αριθμός $ x \in \mathbb{R} $ τέτοιος ώστε $ x^{2}=2 $.
-\end{thm}
+\mythm{Υπάρχει μοναδικός θετικός αριθμός $ x \in \mathbb{R} $ τέτοιος ώστε $ x^{2}=2 $.}
 
 \begin{proof}
 \item {}
@@ -744,7 +755,7 @@ supremum, δηλαδή έχει ελάχιστο άνω φράγμα.
 
     Θα δείξουμε ότι $ x^{2} = 2 $ αποκλείοντας τις περιπτώσεις $ x^{2} <2 $ και 
     $ x^{2} > 2 $.
-    \begin{itemize}
+    \begin{myitemize}
         \item Έστω $ x^{2} > 2 $. Επιλέγω $ \varepsilon = \frac{1}{2} \min \{ x, 
             \frac{x^{2}-2}{2x}\} $.
 
@@ -773,13 +784,11 @@ supremum, δηλαδή έχει ελάχιστο άνω φράγμα.
             Έστω ότι υπάρχουν $ 2 $ αριθμοί, έστω $ x,y $ τέτοιοι ώστε $ x^{2} =2 $ 
             και $ y^{2}=2 $. Τότε $ x^{2}=y^{2} \overset{\ref{lem:ineqreal3}}
             {\Rightarrow} x =y $.
-    \end{itemize}
+    \end{myitemize}
 \end{proof}
 
-\begin{thm}[Ύπαρξη $n$-οστής ρίζας]
-    Για κάθε $ x_{0} >0 $ και για κάθε $ n \in \mathbb{N} $ υπάρχει μοναδικός, θετικός 
-    πραγμτικός αριθμός $ p $, τέτοιος ώστε $ p^{n}= x_{0} $.
-\end{thm}
+\mythm{Για κάθε $ x_{0} >0 $ και για κάθε $ n \in \mathbb{N} $ υπάρχει μοναδικός, θετικός 
+πραγμτικός αριθμός $ p $, τέτοιος ώστε $ p^{n}= x_{0} $.}
 
 \begin{cor}\label{cor:ineqs}
     Έστω $ x,y >0 $ και $ n \in \mathbb{N} $. Τότε
@@ -838,10 +847,8 @@ supremum, δηλαδή έχει ελάχιστο άνω φράγμα.
 
 \section{Ακέραιο Μέρος}
 
-\begin{prop}[Ύπαρξη Ακεραίου Μέρους]
-    Έστω $ x \in \mathbb{R} $. Τότε υπάρχει μοναδικός ακέραιος αριθμός 
-    $ m \in \mathbb{Z} $ τέτοιος ώστε $\inlineequation[eq:akermer]{m \leq x < m +1}$.
-\end{prop}
+\myprop{Έστω $ x \in \mathbb{R} $. Τότε υπάρχει μοναδικός ακέραιος αριθμός 
+$ m \in \mathbb{Z} $ τέτοιος ώστε $\inlineequation[eq:akermer]{m \leq x < m +1}$.}
 
 \begin{proof}
     Έστω $ x \in \mathbb{R} $. Επειδή $ \mathbb{N} $ όχι άνω φραγμένο, τότε από την 
@@ -856,10 +863,8 @@ supremum, δηλαδή έχει ελάχιστο άνω φράγμα.
     $ m' +1 \leq m \leq x $, άτοπο.
 \end{proof}
 
-\begin{dfn}
-    Έστω $ x \in \mathbb{R} $. Ο μοναδικός ακέραιος που ικανοποιεί την 
-    σχέση~\eqref{eq:akermer} ονομάζεται ακέραιο μέρος του $x$ και συμβολίζεται $ [x] $.
-\end{dfn}
+\mydfn{Έστω $ x \in \mathbb{R} $. Ο μοναδικός ακέραιος που ικανοποιεί την 
+σχέση~\eqref{eq:akermer} ονομάζεται ακέραιο μέρος του $x$ και συμβολίζεται $ [x] $.}
 
 \begin{example}
 \item {}
@@ -905,9 +910,7 @@ supremum, δηλαδή έχει ελάχιστο άνω φράγμα.
     \end{enumerate}
 \end{rem}
 
-\begin{thm}
-    Ο $ \sqrt{2} $ είναι άρρητος.
-\end{thm}
+\mythm{Ο $ \sqrt{2} $ είναι άρρητος.}
 
 \begin{proof}
     Έστω $ \sqrt{2} $ όχι άρρητος. Άρα $ \sqrt{2} $ ρητός, δηλαδή $ \exists m,n 
@@ -971,9 +974,7 @@ supremum, δηλαδή έχει ελάχιστο άνω φράγμα.
     και γενικότερα ισχύει η επόμενη πρόταση.
 \end{rem}
 
-\begin{prop}
-    $ \sqrt{n} $ άρρητος $ \Leftrightarrow n $ όχι τετράγωνο κάποιου φυσικού αριθμού.
-\end{prop}
+\myprop{$ \sqrt{n} $ άρρητος $ \Leftrightarrow n $ όχι τετράγωνο κάποιου φυσικού αριθμού.}
 
 \begin{example}
     Να δείξετε ότι ο αριθμός $ \sqrt[3]{2} $ είναι άρρητος.
@@ -999,16 +1000,14 @@ supremum, δηλαδή έχει ελάχιστο άνω φράγμα.
     είναι ρητός, άτοπο.
 \end{proof}
 
-\begin{prop}
-\item {}
+\myprop{
     $
     \left.
         \begin{tabular}{l}
             $q$ ρητός \\
             $r$ άρρητος
         \end{tabular}
-    \right\}  \Rightarrow (q+r) $ άρρητος 
-\end{prop}
+\right\}  \Rightarrow (q+r) $ άρρητος}
 
 \begin{proof}
 \item {}
@@ -1016,16 +1015,14 @@ supremum, δηλαδή έχει ελάχιστο άνω φράγμα.
     ρητών. Άτοπο.
 \end{proof}
 
-\begin{prop}
-\item {}
+\myprop{
     $
     \left.
         \begin{tabular}{l}
             $r$ άρρητος \\
             $s$ άρρητος
         \end{tabular}
-    \right\}  \Rightarrow (r+s) $ ρητός ή άρρητος.
-\end{prop}
+\right\}  \Rightarrow (r+s) $ ρητός ή άρρητος.}
 
 \begin{proof}
     Για παράδειγμα ο αριθμός $ \sqrt{2} + \sqrt{3} $ είναι άρρητος, αλλά ο αριθμός
@@ -1033,8 +1030,7 @@ supremum, δηλαδή έχει ελάχιστο άνω φράγμα.
     είναι ρητός, αν ο $q$ είναι ρητός.
 \end{proof}
 
-\begin{prop}
-\item {}
+\myprop{
     $
     \left.
         \begin{tabular}{l}
@@ -1044,8 +1040,7 @@ supremum, δηλαδή έχει ελάχιστο άνω φράγμα.
     \right\}  \Rightarrow  $ \begin{tabular}{l}
         $ (q \cdot r) $ ρητός $ \Leftrightarrow q =0 $ \\
         $(q \cdot r)$   άρρητος $ \Leftrightarrow q \neq 0 $
-    \end{tabular}
-\end{prop}
+\end{tabular}}
 
 \begin{proof}
     Πράγματι, αν $ q=0 $ (ρητός) και $ r $ άρρητος, τότε $ q \cdot r =0 $ είναι ρητός, 
@@ -1057,9 +1052,7 @@ supremum, δηλαδή έχει ελάχιστο άνω φράγμα.
 
 \section{Πυκνότητα Ρητών και Άρρητων}
 
-\begin{prop}[(Πυκνότητα Ρητών)]
-    Σε κάθε ανοιχτό διάστημα πραγματικών αριθμών, υπάρχει ρητός.
-\end{prop}
+\myprop{Σε κάθε ανοιχτό διάστημα πραγματικών αριθμών, υπάρχει ρητός.}
 
 \begin{proof}
 \item {}
@@ -1078,9 +1071,7 @@ supremum, δηλαδή έχει ελάχιστο άνω φράγμα.
     \end{gather*}
 \end{proof}
 
-\begin{prop}[(Πυκνότητα Άρρητων)]
-    Σε κάθε ανοιχτό διάστημα πραγματικών αριθμών, υπάρχει άρρητος.
-\end{prop}
+\myprop{Σε κάθε ανοιχτό διάστημα πραγματικών αριθμών, υπάρχει άρρητος.}
 
 \begin{proof}
     Θα δείξουμε ότι $ (a,b) $ διάστημα στο $ \mathbb{R} \Rightarrow \exists r \in 
