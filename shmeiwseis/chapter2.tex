@@ -6,8 +6,7 @@
 
 \section{Ορισμός Ακολουθίας}
 
-\begin{dfn}
-    \textcolor{Col\thechapter}{Ακολουθία} πραγματικών αριθμών ονομάζεται 
+\mydfn{\textcolor{Col\thechapter}{Ακολουθία} πραγματικών αριθμών ονομάζεται 
     κάθε συνάρτηση με πεδίο ορισμού τους φυσικούς αριθμούς. 
     \begin{align*}
         a \colon &\mathbb{N} \to \mathbb{R} \\
@@ -15,16 +14,13 @@
     \end{align*} 
     Οι ακολουθίες συμβολίζονται ως $ (a_{n})_{n \in \mathbb{N}} $  
     ή $ \{ a_{n} \} _{n \in \mathbb{N}} $  ή $ \{ a_{n} \} _{n=1}^{+\infty}$
-    , κλπ.
-\end{dfn}
+, κλπ.}
 
-\begin{dfn}
-    \textcolor{Col\thechapter}{Σύνολο Τιμών} (Σ.Τ.) της ακολουθίας 
+\mydfn{\textcolor{Col\thechapter}{Σύνολο Τιμών} (Σ.Τ.) της ακολουθίας 
     $ (a_{n})_{n \in \mathbb{N}} $, 
     ονομάζουμε το σύνολο των όρων της, δηλαδή το σύνολο 
     $ \{ a_{1}, a_{2}, \ldots, a_{n} \} $ το οποίο μπορεί να είναι 
-    πεπερασμένο ή άπειρο.
-\end{dfn}
+πεπερασμένο ή άπειρο.}
 
 \begin{examples}
 \item {}
@@ -67,21 +63,16 @@
     \end{enumerate}
 \end{rem}
 
-\begin{dfn}
-    Δυο ακολουθίες, $(a_{n})_{n \in \mathbb{N}}$  και $ (b_{n})_{n \in 
+\mydfn{Δυο ακολουθίες, $(a_{n})_{n \in \mathbb{N}}$  και $ (b_{n})_{n \in 
     \mathbb{N}} $ ονομάζονται \textcolor{Col\thechapter}{ίσες}, αν $ a_{n} 
-    = b_{n}, \; \forall n \in \mathbb{N} $.
-\end{dfn}
+= b_{n}, \; \forall n \in \mathbb{N} $.}
 
-\begin{dfn}
-    Οι πράξεις μεταξύ ακολουθιών, ορίζονται όπως ακριβώς και για τις 
-    συναρτήσεις.
-\end{dfn}
+\mydfn{Οι πράξεις μεταξύ ακολουθιών, ορίζονται όπως ακριβώς και για τις 
+συναρτήσεις.}
 
 \section{Φραγμένες Ακολουθίες}
 
-\begin{dfn}
-\item {}
+\mydfn{
     Μια ακολουθία $ (a_{n})_{n \in \mathbb{N}} $ ονομάζεται:
     \begin{enumerate}[i)]
         \item \textcolor{Col\thechapter}{άνω φραγμένη} 
@@ -93,15 +84,11 @@
         \item \textcolor{Col\thechapter}{φραγμένη} 
             $ \overset{\text{ορ.}}{\Leftrightarrow} \exists$ 
             είναι άνω και κάτω φραγμένη.
-    \end{enumerate}
+\end{enumerate}}
 
-    \begin{prop}
-        $ (a_{n})_{n \in \mathbb{N}} $ φραγμένη $ \Leftrightarrow \exists 
+        \myprop{$ (a_{n})_{n \in \mathbb{N}} $ φραγμένη $ \Leftrightarrow \exists 
         M>0, \; M \in \mathbb{R} \; : \; \abs{a_{n}} \leq M, \; \forall 
-        n \in \mathbb{N} $
-        (Απολύτως φραγμένη).
-    \end{prop}
-\end{dfn}
+        n \in \mathbb{N} $ (Απολύτως φραγμένη).}
 
 \begin{examples}
 \item {}  
@@ -187,9 +174,7 @@
     \end{enumerate}
 \end{examples}
 
-\begin{prop}
-    Η ακολουθία $ \left(1 + \frac{1}{n} \right)^{n} $ είναι φραγμένη.
-\end{prop}
+\myprop{Η ακολουθία $ \left(1 + \frac{1}{n} \right)^{n} $ είναι φραγμένη.}
 
 \begin{proof}
 \item {}
@@ -245,8 +230,7 @@
 
 \section{Μονοτονία Ακολουθιών}
 
-\begin{dfn}
-    Μια ακολουθία $ (a_{n})_{n \in \mathbb{N}} $ λέγεται:
+\mydfn{Μια ακολουθία $ (a_{n})_{n \in \mathbb{N}} $ λέγεται:
     \begin{enumerate}[i)]
         \item \textcolor{Col\thechapter}{γνησίως αύξουσα} 
             $ \overset{\text{ορ.}}{\Leftrightarrow} a_{n} 
@@ -260,8 +244,7 @@
         \item \textcolor{Col\thechapter}{φθίνουσα} 
             $ \overset{\text{ορ.}}{\Leftrightarrow} a_{n} \geq 
             a_{n+1}, \forall n \in \mathbb{N}  $.
-    \end{enumerate}
-\end{dfn}
+\end{enumerate}}
 
 \begin{rems}
 \item {}
@@ -394,9 +377,7 @@
     \end{enumerate}
 \end{examples}
 
-\begin{prop}
-    Η ακολουθία $ \left(1+ \frac{1}{n}\right)^{n} $ είναι γνησίως αύξουσα.
-\end{prop}
+    \myprop{Η ακολουθία $ \left(1+ \frac{1}{n}\right)^{n} $ είναι γνησίως αύξουσα.}
 
 \begin{proof}
 \item {}
@@ -438,10 +419,8 @@
 
 \section{Σύγκλιση Ακολουθιας}
 
-\begin{dfn}
-    \textcolor{Col\thechapter}{Περιοχή} ένος πραγματικού αριθμού $ x_{0} $ 
-    ονομάζεται κάθε ανοιχτό διάστημα $(a,b)$ που περιέχει το $ x_{0} $. 
-\end{dfn}
+\mydfn{\textcolor{Col\thechapter}{Περιοχή} ένος πραγματικού αριθμού $ x_{0} $ 
+ονομάζεται κάθε ανοιχτό διάστημα $(a,b)$ που περιέχει το $ x_{0} $. }
 
 \begin{rem}
 \item {}
@@ -459,8 +438,7 @@
     \end{enumerate}
 \end{rem}
 
-\begin{dfn}
-    Μια ακολουθία $ (a_{n})_{n \in \mathbb{N}} $ \textcolor{Col\thechapter}
+\mydfn{Μια ακολουθία $ (a_{n})_{n \in \mathbb{N}} $ \textcolor{Col\thechapter}
     {συγκλίνει} στον πραγματικό 
     αριθμό $ a \in \mathbb{R} $ (έχει όριο το $ a \in \mathbb{R} $ ή 
     τείνει στο $ a \in \mathbb{R} $), και συμβολίζουμε 
@@ -470,23 +448,20 @@
         \forall \varepsilon >0, \; \exists n_{0} \in \mathbb{N} \; : 
         \; \forall n \in \mathbb{N} \; \text{με} \; n \geq n_{0} 
         \Rightarrow \abs{a_{n}-a} < \varepsilon
-    \] 
-\end{dfn}
+    \] }
 
 \begin{rem}
     Γενικά το $ n_{0} $ εξαρτάται από το $ \varepsilon $ και ισχύει ότι
     $ n_{0} = n_{0}(\varepsilon) $.
 \end{rem}
 
-\begin{dfn}
-    Μια ακολουθία λέμε ότι \textcolor{Col\thechapter}{αποκλίνει} 
+\mydfn{Μια ακολουθία λέμε ότι \textcolor{Col\thechapter}{αποκλίνει} 
     (ή είναι αποκλίνουσα), αν 
     \begin{itemize}
         \item δεν υπάρχει το όριό της, για παράδειγμα αν η ακολουθία 
             ταλαντεύεται
         \item απειρίζεται, θετικά ή αρνητικά.
-    \end{itemize}
-\end{dfn}
+\end{itemize}}
 
 \begin{rem}[Άρνηση ορισμού του ορίου]
     \[
@@ -496,11 +471,9 @@
     \] 
 \end{rem}
 
-\begin{dfn}
-    Η ακολουθία $ (a_{n})_{n \in \mathbb{N}}$ λέγεται
+\mydfn{Η ακολουθία $ (a_{n})_{n \in \mathbb{N}}$ λέγεται
     \textcolor{Col\thechapter}{μηδενική ακολουθία}
-    αν $ \lim\limits_{n\to \infty} = 0 $
-\end{dfn}
+αν $ \lim\limits_{n\to \infty} = 0 $}
 
 \begin{examples}
 \item {}
@@ -633,9 +606,7 @@
     \end{enumerate}
 \end{examples}
 
-\begin{prop}
-    Η ακολουθία $ \{ (-1)^{n} \}_{n \in \mathbb{N}} $ δεν συγκλίνει.
-\end{prop}
+\myprop{Η ακολουθία $ \{ (-1)^{n} \}_{n \in \mathbb{N}} $ δεν συγκλίνει.}
 
 \begin{proof}
 \item {}
@@ -667,14 +638,12 @@
 \end{proof}
 
 
-\begin{prop}
-    Έστω $ (a_{n})_{n \in \mathbb{N}} $ ακολουθία πραγματικών αριθμών και 
+\myprop{Έστω $ (a_{n})_{n \in \mathbb{N}} $ ακολουθία πραγματικών αριθμών και 
     $ l \in \mathbb{R} $. Τότε ισχύου οι ισοδυναμίες:
 
     \[ \lim_{n \to \infty} a_{n} = l \Leftrightarrow \lim_{n \to \infty} (
         a_{n}- l) = 0 
-    \Leftrightarrow \lim_{n \to \infty} \abs{a_{n}-l} = 0\]
-\end{prop}
+    \Leftrightarrow \lim_{n \to \infty} \abs{a_{n}-l} = 0\]}
 
 \begin{proof}
 \item {}
@@ -695,9 +664,7 @@
     \abs{\abs{a_{n}- l} -0} $
 \end{proof}
 
-\begin{thm}[Μοναδικότητα του Ορίου]
-    Το όριο μιας ακολουθίας, όταν υπάρχει είναι μοναδικό.
-\end{thm}
+\mythm{Το όριο μιας ακολουθίας, όταν υπάρχει είναι μοναδικό.}
 
 \begin{proof}
     Έστω ότι μια ακολουθία $ (a_{n})_{n \in \mathbb{N}} $ συγκλίνει σε 
@@ -739,9 +706,7 @@
 
 %TODO idiothtes oriwn
 
-\begin{thm}
-    Κάθε συγκλίνουσα ακολουθία είναι φραγμένη.
-\end{thm}
+\mythm{Κάθε συγκλίνουσα ακολουθία είναι φραγμένη.}
 
 \begin{proof}
     Έστω $ (a_{n})_{n \in \mathbb{Ν}} $ συγκλίνουσα $ \Rightarrow 
@@ -779,21 +744,17 @@
 
 \section{Υπακολουθίες}
 
-\begin{dfn}
-    Έστω $ (a_{n})_{n \in \mathbb{N}} $ ακολουθία, και έστω $ 
+\mydfn{Έστω $ (a_{n})_{n \in \mathbb{N}} $ ακολουθία, και έστω $ 
     (k_{n})_{n \in \mathbb{N}} $ γνησίως
     αύξουσα ακολουθία φυσικών αριθμών $ (k_{1}<k_{2}<k_{3}<\cdots) $. 
     Τότε η ακολουθία $ b_{n} = (a_{k_{n}}), \; n \in \mathbb{N} $ 
     ονομάζεται \textcolor{Col\thechapter}{υπακολουθία} της 
-    $ (a_{n})_{n \in \mathbb{N}} $.
-\end{dfn}
+$ (a_{n})_{n \in \mathbb{N}} $.}
 
 %TODO παραδειγματα υπακολουθιων
 
-\begin{prop}
-    Αν μια ακολουθία είναι φραγμένη τότε και κάθε υπακολουθία της 
-    είναι φραγμένη.
-\end{prop}
+\myprop{Αν μια ακολουθία είναι φραγμένη τότε και κάθε υπακολουθία της 
+είναι φραγμένη.}
 
 \begin{rem}
 \item {}
@@ -808,11 +769,9 @@
     \end{enumerate}
 \end{rem}
 
-\begin{prop}
-    Αν μια ακολουθία έιναι γνησίως αύξουσα (αντίστοιχα γνησίως φθίνουσα) 
+\myprop{Αν μια ακολουθία έιναι γνησίως αύξουσα (αντίστοιχα γνησίως φθίνουσα) 
     τότε και κάθε υπακολουθία της θα είναι γνησίως αύξουσα (αντίστοιχα 
-    γνησίως φθίνουσα).
-\end{prop}
+γνησίως φθίνουσα).}
 %TODO υπολοιπες προτασεις εδω
 
 \begin{lem}\label{lem:kn}
@@ -835,11 +794,9 @@
     \end{itemize}
 \end{proof}
 
-\begin{prop}
-    Αν μια ακολουθία $ (a_{n})_{n \in \mathbb{N}} $ συγκλίνει στο $ a 
+\myprop{Αν μια ακολουθία $ (a_{n})_{n \in \mathbb{N}} $ συγκλίνει στο $ a 
     \in \mathbb{R} $, τότε και κάθε υπακολουθία της συγκλίνει επίσης 
-    στο $ a \in \mathbb{R} $.
-\end{prop}
+στο $ a \in \mathbb{R} $.}
 
 \begin{proof}
 \item {}
@@ -864,8 +821,7 @@
 
 
 
-\begin{prop}
-    Έστω $ \lim_{n \to +\infty} a_{n} = a$ και $ \lim_{n \to +\infty} 
+\myprop{Έστω $ \lim_{n \to +\infty} a_{n} = a$ και $ \lim_{n \to +\infty} 
     b_{n} = b $, όπου $ a,b \in \mathbb{R} $. Τότε:
     \begin{enumerate}[i)]
         \item $ \lim_{n \to +\infty} (a_{n} + b_{n}) = a+b = 
@@ -887,8 +843,7 @@
     \item $ \lim_{n \to +\infty} {a_{n}}^{\frac{1}{k}}
             =a^{\frac{1}{k}}, \; \forall k \in 
             \mathbb{N}, a_{n} \geq 0, \; \forall n \in \mathbb{N} $
-    \end{enumerate}
-\end{prop}
+\end{enumerate}}
 
 \begin{proof}
 \item {}
@@ -1124,12 +1079,9 @@
     \end{enumerate}
 \end{proof}
 
-\begin{prop}[Μηδενική επί Φραγμένη έχει όριο 0]
-\item {}
-    Έστω $ (a_{n})_{n \in \mathbb{N}} $ μηδενική ακολουθία και 
+\myprop{Έστω $ (a_{n})_{n \in \mathbb{N}} $ μηδενική ακολουθία και 
     $ (b_{n})_{n \in \mathbb{N}} $ 
-    φραγμένη. Τότε, $ \lim_{n \to +\infty} (a_{n}\cdot b_{n}) = 0 $. 
-\end{prop}
+φραγμένη. Τότε, $ \lim_{n \to +\infty} (a_{n}\cdot b_{n}) = 0 $.}
 
 \begin{proof}
 \item {}
@@ -1159,14 +1111,12 @@
     \]
 \end{proof}
 
-\begin{prop}[Κριτήριο Παρεμβολής]
-\item {}
-    Έστω $ (a_{n})_{n \in \mathbb{N}}, (b_{n})_{n \in \mathbb{N}} $ και 
+\myprop{Έστω $ (a_{n})_{n \in \mathbb{N}}, (b_{n})_{n \in \mathbb{N}} $ και 
     $ (c_{n})_{n \in \mathbb{N}} $, τρεις ακολουθίες, τέτοιες ώστε:
 
     \vspace{\baselineskip}
 
-    \begin{minipage}{0.3\textwidth}
+    \begin{minipage}{0.35\textwidth}
         \begin{enumerate}[i)]
             \item $ a_{n} \leq b_{n} \leq c_{n}, \; \forall n \in 
                 \mathbb{N} $ \hfill \tikzmark{a} 
@@ -1175,8 +1125,7 @@
         \end{enumerate}
     \end{minipage}
 
-    \mybrace{a}{b}[$ \lim_{n \to +\infty} b_{n} = l$]
-\end{prop}
+\mybrace{a}{b}[$ \lim_{n \to +\infty} b_{n} = l$]}
 
 \begin{proof}
 \item {}
@@ -1222,11 +1171,9 @@
 \end{cor}
 
 
-\begin{prop}
-    Έστω $ \lim_{n \to +\infty} a_{n} = a $ και $ 
+\myprop{Έστω $ \lim_{n \to +\infty} a_{n} = a $ και $ 
     \lim_{n \to +\infty} b_{n} = b $. Τότε
-    $ a_{n} \leq b_{n}, \; \forall n \in \mathbb{N} \Rightarrow a \leq b $ 
-\end{prop}
+$ a_{n} \leq b_{n}, \; \forall n \in \mathbb{N} \Rightarrow a \leq b $ }
 
 \begin{proof}(Με άτοπο)
 \item {}
@@ -1282,11 +1229,9 @@
 \end{proof}
 
 
-\begin{prop}
-    Έστω $ \lim_{n \to +\infty} a_{n} = a $ και $ \lim_{n \to +\infty} 
+\myprop{Έστω $ \lim_{n \to +\infty} a_{n} = a $ και $ \lim_{n \to +\infty} 
     b_{n} = b $. Τότε
-    $ a_{n} < b_{n}, \; \forall n \in \mathbb{N} \Rightarrow a \leq b $ 
-\end{prop}
+$ a_{n} < b_{n}, \; \forall n \in \mathbb{N} \Rightarrow a \leq b $ }
 
 \begin{proof}
 \item {}
@@ -1315,10 +1260,8 @@
     \lim_{n \to +\infty} b_{n} = 0$.
 \end{proof}
 
-\begin{thm}
-    Κάθε αύξουσα και άνω φραγμένη ακολουθία συγκλίνει στο 
-    supremum του συνόλου των όρων της.
-\end{thm}
+\mythm{Κάθε αύξουσα και άνω φραγμένη ακολουθία συγκλίνει στο 
+supremum του συνόλου των όρων της.}
 
 \begin{proof}
     Έστω $ (a_{n})_{n \in \mathbb{N}} $ ακολουθία πραγματικών αριθμών, 
@@ -1344,10 +1287,8 @@
     \varepsilon, \forall n \geq n_{0} \]
 \end{proof}
 
-\begin{thm}
-    Κάθε φθίνουσα και κάτω φραγμένη ακολουθία συγκλίνει στο infimum του 
-    συνόλου των όρων της.
-\end{thm}
+\mythm{Κάθε φθίνουσα και κάτω φραγμένη ακολουθία συγκλίνει στο infimum του 
+συνόλου των όρων της.}
 
 \begin{proof}
     Ομόίως με το προηγούμενο θεώρημα. Έστω 
@@ -1361,9 +1302,7 @@
     %TODO   
 \end{proof}
 
-\begin{prop}
-    $ \lim_{n \to \infty} x^{n} = 0, \; \abs{x} <1  $
-\end{prop}
+\myprop{$ \lim_{n \to \infty} x^{n} = 0, \; \abs{x} <1  $}
 
 \begin{proof}
 \item {}
@@ -1398,30 +1337,24 @@
 \section{Άπειρο Όριο Ακολουθίας}
 
 
-\begin{dfn}
-    Μια ακολουθία πραγματικών αριθμών $ (a_{n})_{n \in \mathbb{N}} $ 
+\mydfn{Μια ακολουθία πραγματικών αριθμών $ (a_{n})_{n \in \mathbb{N}} $ 
     \textcolor{Col\thechapter}{αποκλίνει} στο $ +\infty $ (συμβ.: 
     $ \lim_{n \to \infty} a_{n} = + 
     \infty $), αν $ \forall M>0, \; \exists n_{0} \in 
-    \mathbb{N} \; : \; a_{n} > M, \; \forall n \geq n_{0}$
-\end{dfn}
+\mathbb{N} \; : \; a_{n} > M, \; \forall n \geq n_{0}$}
 
-\begin{dfn}
-    Μια ακολουθία πραγματικών αριθμών $ (a_{n})_{n \in \mathbb{N}} $ 
+\mydfn{Μια ακολουθία πραγματικών αριθμών $ (a_{n})_{n \in \mathbb{N}} $ 
     \textcolor{Col\thechapter}{αποκλίνει} στο $ -\infty $ (συμβ.: 
     $ \lim_{n \to \infty} a_{n} = - 
     \infty $), αν $ \forall M>0, \; \exists n_{0} \in 
-    \mathbb{N} \; : \; a_{n} < -M, \; \forall n \geq n_{0}$
-\end{dfn}
+\mathbb{N} \; : \; a_{n} < -M, \; \forall n \geq n_{0}$}
 
-\begin{prop}
-    Έστω $ (a_{n})_{n \in \mathbb{N}} $ ακολουθία θετικών 
+\myprop{Έστω $ (a_{n})_{n \in \mathbb{N}} $ ακολουθία θετικών 
     πραγματικών αριθμών. 
     Η $ (a_{n})_{n \in \mathbb{N}} $ αποκλίνει στο $ + \infty $ αν και 
     μονον αν η ακολουθία 
     $ \left(\frac{1}{a_{n}} \right)_{n \in \mathbb{N}} $ συγκλίνει 
-    στο 0.
-\end{prop}
+στο 0.}
 
 
 \begin{proof}
@@ -1455,9 +1388,7 @@
     \end{description}
 \end{proof}
 
-\begin{prop}
-    $ \lim_{n \to \infty} x^{n} = +\infty, \; x >1 $.
-\end{prop}
+\myprop{$ \lim_{n \to \infty} x^{n} = +\infty, \; x >1 $.}
 
 \begin{proof}
 \item {}
@@ -1473,9 +1404,7 @@
 \end{proof}
 
 
-\begin{prop}
-    $ \lim_{n \to \infty} \sqrt[n]{n} = 1, \; \forall n \in \mathbb{N}  $
-\end{prop}
+\myprop{$ \lim_{n \to \infty} \sqrt[n]{n} = 1, \; \forall n \in \mathbb{N}  $}
 
 \begin{proof}
     Έστω $ n \in \mathbb{N} \Rightarrow n \geq 1, \; \forall n \in 
@@ -1496,10 +1425,8 @@
     1^{2} = 1 \Rightarrow \lim_{n \to \infty} \sqrt[n]{n} =1 \]
 \end{proof}
 
-\begin{prop}
-    Έστω $ a>0 $. Τότε $ \lim_{n \to \infty} \sqrt[n]{a}=1, \; \forall n \in
-    \mathbb{N} $.
-\end{prop}
+\myprop{Έστω $ a>0 $. Τότε $ \lim_{n \to \infty} \sqrt[n]{a}=1, \; \forall n \in
+    \mathbb{N} $.}
 
 \begin{proof}
 \item {}
@@ -1529,9 +1456,7 @@
     \end{itemize}
 \end{proof}
 
-\begin{prop}
-    $ \lim_{n \to \infty} \sqrt[n]{n!} = +\infty $ 
-\end{prop}
+\myprop{$ \lim_{n \to \infty} \sqrt[n]{n!} = +\infty $ }
 
 
 \begin{proof}
@@ -1587,10 +1512,8 @@
     \sqrt{\frac{n}{2}} > M \Rightarrow \sqrt[n]{n!} > M $. 
 \end{proof}
 
-\begin{thm}[Bolzano-Weierstrass]
-    Κάθε φραγμένη ακολουθία πραγματικών αριθμών έχει συγκλίνουσα 
-    υπακολουθία
-\end{thm}
+\mythm{Κάθε φραγμένη ακολουθία πραγματικών αριθμών έχει συγκλίνουσα 
+υπακολουθία.}
 
 %TODO apodeixh
 
