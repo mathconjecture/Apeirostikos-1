@@ -187,6 +187,62 @@
     \end{enumerate}
 \end{examples}
 
+\begin{prop}
+    Η ακολουθία $ \left(1 + \frac{1}{n} \right)^{n} $ είναι φραγμένη.
+\end{prop}
+
+\begin{proof}
+\item {}
+    Θεωρούμε την (βοηθητική) ακολουθία $ b_{n} = \left(1+ \frac{1}{n} \right)^{n+1}, 
+    \; \forall n \in \mathbb{N}$. Θα δείξουμε ότι η $ (b_{n})_{n \in \mathbb{N}} $ 
+    είναι γνησίως φθίνουσα. Πράγματι, 
+    \begin{align*}
+        b_{n+1}< b_{n} 
+        &\Leftrightarrow \left(1+ \frac{1}{n_{0}+1} \right)^{n_{0}+2} < \left(1 + 
+        \frac{1}{n_{0}} \right)^{n_{0} +1} \\
+        & \Leftrightarrow \left(1+ \frac{1}{n_{0}+1} \right)^{n_{0}+1} \cdot 
+        \left(1 + \frac{1}{n_{0}+1}\right) < \left(1+ \frac{1}{n_{0}} \right)^{n_{0}+1}
+        \\
+        & \Leftrightarrow \left(\frac{n_{0}+2}{n_{0}+1} \right)^{n_{0}+1} 
+        \cdot \left(1 + \frac{1}{n_{0}+1}\right) < \left(\frac{n_{0}+1}{n_{0}} 
+            \right)^{n_{0}+1} \\
+        & \Leftrightarrow \left(1 + \frac{1}{n_{0}+1} \right) < 
+        \left(\frac{(n_{0}+1)^{2}}{n_{0}(n_{0} +2)} \right)^{n_{0}+1} \\
+        & \Leftrightarrow \left(1 + \frac{1}{n_{0}+1} \right) < \left(\frac{n_{0}^{2}+
+        2 n_{0}+1}{n_{0}^{2}+2 n_{0}} \right)^{n_{0}+1} \\
+        & \Leftrightarrow \left(1 + \frac{1}{n_{0}+1} \right) < 
+        \left(1+ \frac{1}{n_{0}(n_{0}+2)} \right)^{n_{0}+1}
+     \end{align*} 
+
+     Για $ a= \frac{1}{n_{0}(n_{0}+2)} \geq 0 $, η ανισότητα Bernoulli, δίνει:
+     \[
+         \left(1+ \frac{1}{n_{0}(n_{0}+2)} \right)^{n_{0}+1} > 1 + (n_{0}+1)\cdot 
+         \frac{1}{n_{0}(n_{0}+2)} = 1 + \frac{n_{0}+1}{n_{0}^{2}+ 2 n_{0}} 
+      \] 
+      ΄Αρα αρκεί να δείξουμε ότι 
+      \begin{align*}
+          1 + \frac{n_{0}+1}{n_{0}^{2}+ 2 n_{0}} &> 1 + \frac{1}{n_{0}+1} 
+          \Leftrightarrow  \\
+          (n_{0}+1)^{2} &> n_{0}^{2} + 2 n_{0} \Leftrightarrow \\
+          1 &> 0 \quad \text{που ισχύει.}
+       \end{align*}
+
+       Άρα τελικά,
+   \[
+       b_{n} = \left(1+ \frac{1}{n} \right)^{n+1} = \left(1+ \frac{1}{n} \right)^{n} 
+       \cdot \left(1 + \frac{1}{n} \right) = a_{n}\cdot \left(1+ \frac{1}{n} \right) 
+     > a_{n} 
+    \]
+    Οπότε, έχουμε
+    \begin{align*}
+        a_{1} \leq a_{n} &< b_{n} \leq b_{1}, \; \forall n \in \mathbb{N} 
+        \Leftrightarrow \\
+        2 \leq a_{n} &\leq 4, \; \forall n \in \mathbb{N}
+     \end{align*}
+     άρα η $ a_{n} = \left(1 + \frac{1}{n} \right)^{n} $ είναι φραγμένη.
+\end{proof}
+
+
 \section{Μονοτονία Ακολουθιών}
 
 \begin{dfn}
@@ -337,6 +393,48 @@
             \end{itemize}
     \end{enumerate}
 \end{examples}
+
+\begin{prop}
+    Η ακολουθία $ \left(1+ \frac{1}{n}\right)^{n} $ είναι γνησίως αύξουσα.
+\end{prop}
+
+\begin{proof}
+\item {}
+    Έστω $ n_{0} \in \mathbb{N} $. Τότε 
+    \begin{align*}
+        \left(1+ \frac{1}{n_{0}+1} \right)^{n_{0}+1} > 
+        \left(1+ \frac{1}{n_{0}} \right)^{n_{0}} 
+        &\Leftrightarrow \left(1+ \frac{1}{n_{0}+1} \right)^{n_{0}} 
+        \cdot \left(1 + \frac{1}{n_{0} +1} \right) > \left(1+ \frac{1}{n_{0}+1} 
+        \right) \\
+        & \Leftrightarrow \frac{(n_{0}+2)^{n_{0}}}{(n_{0}+1)^{n_{0}}} \cdot 
+        \frac{n_{0}+2}{n_{0}+1} > \frac{(n_{0}+1)^{n_{0}}}{n_{0}^{n_{0}}} \\
+        & \Leftrightarrow \frac{n_{0}^{n_{0}}(n_{0}+2)^{n_{0}}}{(n_{0}+1)^{2n0}} > 
+        \frac{n_{0}+1}{n_{0}+2} \\
+        & \Leftrightarrow \left(\frac{n_{0}(n_{0}+2)}{(n_{0}+1)^{2}}\right)^{n_{0}} > 
+        \frac{n_{0}+2-2+1}{n_{0}+2} \\
+        & \Leftrightarrow \left(\frac{n_{0}^{2}+2 n_{0}+1-1}{(n_{0}+1)^{2}}\right)
+        ^{n_{0}} > 1-\frac{1}{n_{0}+2} \\
+        & \Leftrightarrow \left(\frac{(n_{0}+1)^{2}-1}{(n_{0}+1)^{2}} \right)^{n_{0}}
+        > 1 - \frac{1}{n_{0}+2} \\
+        & \Leftrightarrow \left(1 - \frac{1}{(n_{0}+1)^{2}} \right)^{n_{0} } > 1 - 
+        \frac{1}{n_{0}+2} \\
+    \end{align*} 
+    Άρα αρκεί να δείξουμε αυτή την ανισότητα. Πράγματι,
+    για $ a = - \frac{1}{(n_{0}+1)^{2}} > -1 $ απο ανισότητα Bernoulli: 
+    \begin{align*}
+        \left(1- \frac{1}{(n_{0}+1)^{2}}\right)^{n_{0}} > 1 - n_{0}\cdot 
+        \frac{1}{(n_{0}+1)^{2}} > 1 - \frac{1}{n_{0}+2} 
+    \end{align*}
+    όπου χρησιμοποιήσαμε το γεγονός ότι $ \frac{n_{0}}{(n_{0}+1)^{2}} < 
+    \frac{1}{n_{0}+2}  $, το οποίο ισχύει, γιατί 
+    \[
+        \frac{n_{0}}{(n_{0}+1)^{2}} < \frac{1}{n_{0}+2} 
+        \Leftrightarrow n_{0}(n_{0}+2) < (n_{0}+1)^{2} 
+        \Leftrightarrow n_{0}^{2}+2 n_{0} < n_{0}^{2} + 2 n_{0}+1 
+        \Leftrightarrow 0 < 1
+    \]
+\end{proof}
 
 \section{Σύγκλιση Ακολουθιας}
 
@@ -1138,9 +1236,9 @@
     Από τον ορισμό του ορίου για τις δύο ακολουθίες, έχουμε ότι:
     \begin{align}
         \exists n_{1} \in \mathbb{N} \; : \; \forall n \geq n_{1} 
-        \quad \abs{a_{n}-a} < \frac{a-b}{2} \label{eq:a<b1} \\
+        \quad \abs{a_{n}-a} < \frac{a-b}{2} \label{eq:aleqb1} \\
         \exists n_{2} \in \mathbb{N} \; : \; \forall n \geq n_{2} 
-        \quad \abs{b_{n}-b} < \frac{a-b}{2} \label{eq:a<b2} 
+        \quad \abs{b_{n}-b} < \frac{a-b}{2} \label{eq:aleqb2} 
     \end{align}
 
     Έχουμε ότι
@@ -1149,7 +1247,7 @@
     \begin{itemize}
         \item $ -\abs{a_{n}-a} \leq a_{n}-a \leq \abs{a_{n}-a} $ \hfill 
             \tikzmark{a}
-        \item Από την~\eqref{eq:a<b1} έχουμε $ - \abs{a_{n}-a} > - 
+        \item Από την~\eqref{eq:aleqb1} έχουμε $ - \abs{a_{n}-a} > - 
             \frac{a-b}{2} $ \hfill \tikzmark{b}
     \end{itemize}    
     \end{minipage}
@@ -1161,11 +1259,11 @@
 
     Έχουμε ότι
 
-    \begin{minipage}{0.5\textwidth}
+    \begin{minipage}{0.45\textwidth}
     \begin{itemize}
         \item $ -\abs{b_{n}-b} \leq b_{n}-b \leq \abs{b_{n}-b} $ \hfill 
             \tikzmark{a}
-        \item Από την~\eqref{eq:a<b2} έχουμε $ \abs{b_{n}-b} < 
+        \item Από την~\eqref{eq:aleqb2} έχουμε $ \abs{b_{n}-b} < 
             \frac{a-b}{2} $ \hfill \tikzmark{b}
     \end{itemize}    
     \end{minipage}
@@ -1187,14 +1285,13 @@
 \begin{prop}
     Έστω $ \lim_{n \to +\infty} a_{n} = a $ και $ \lim_{n \to +\infty} 
     b_{n} = b $. Τότε
-    $
-    a_{n} < b_{n}, \; \forall n \in \mathbb{N} \Rightarrow a \leq b
-    $ 
+    $ a_{n} < b_{n}, \; \forall n \in \mathbb{N} \Rightarrow a \leq b $ 
 \end{prop}
 
 \begin{proof}
-    $ a_{n}< b_{n}, \; \forall n \in \mathbb{N} \Rightarrow a_{n} \leq 
-    b_{n}, \; \forall n \in \mathbb{N} \Rightarrow a \leq b $
+\item {}
+    \[ a_{n}< b_{n}, \; \forall n \in \mathbb{N} \Rightarrow a_{n} \leq 
+    b_{n}, \; \forall n \in \mathbb{N} \Rightarrow a \leq b \]
 \end{proof}
 
 \begin{rem}
@@ -1279,7 +1376,7 @@
         \item $ x \neq 0 \Rightarrow 0 < \abs{x} < 1 
             \overset{x \neq 0}{\Rightarrow} \frac{1}{\abs{x}} > 1  $. 
 
-            Οπότε $ a = \frac{1}{\abs{x}} - 1 > 0 $. Τότε έχουμε ότι 
+            Οπότε θέτουμε $ a = \frac{1}{\abs{x}} - 1 > 0 $. Τότε έχουμε ότι 
             \begin{align*} 
                 \frac{1}{\abs{x}} = a+1 
                     &\Rightarrow 0< \frac{1}{\abs{x}^{n}}  = (1+a)^{n}
@@ -1303,14 +1400,16 @@
 
 \begin{dfn}
     Μια ακολουθία πραγματικών αριθμών $ (a_{n})_{n \in \mathbb{N}} $ 
-    αποκλίνει στο $ +\infty $ (συμβ.: $ \lim_{n \to \infty} a_{n} = + 
+    \textcolor{Col\thechapter}{αποκλίνει} στο $ +\infty $ (συμβ.: 
+    $ \lim_{n \to \infty} a_{n} = + 
     \infty $), αν $ \forall M>0, \; \exists n_{0} \in 
     \mathbb{N} \; : \; a_{n} > M, \; \forall n \geq n_{0}$
 \end{dfn}
 
 \begin{dfn}
     Μια ακολουθία πραγματικών αριθμών $ (a_{n})_{n \in \mathbb{N}} $ 
-    αποκλίνει στο $ -\infty $ (συμβ.: $ \lim_{n \to \infty} a_{n} = - 
+    \textcolor{Col\thechapter}{αποκλίνει} στο $ -\infty $ (συμβ.: 
+    $ \lim_{n \to \infty} a_{n} = - 
     \infty $), αν $ \forall M>0, \; \exists n_{0} \in 
     \mathbb{N} \; : \; a_{n} < -M, \; \forall n \geq n_{0}$
 \end{dfn}
@@ -1352,7 +1451,7 @@
             Έστω $ M > 0 $. Θέτω $ \varepsilon = \frac{1}{M} > 0 $. Από 
             δεδομένο $ \exists n_{0} \in \mathbb{N} \; : \; \forall n \geq 
             n_{0} \quad \abs{\frac{1}{a_{n}} - 0} < \varepsilon \Rightarrow
-            \frac{1}{a_{n}} > \frac{1}{\varepsilon}=M $
+            a_{n} > \frac{1}{\varepsilon}=M $
     \end{description}
 \end{proof}
 
@@ -1391,10 +1490,10 @@
 
     $ \lim_{n \to \infty} \frac{\sqrt{n} -1}{n} = \lim_{n \to \infty} 
     \left( \frac{\sqrt{n}}{n} - \frac{1}{n}\right) = 0 - 0 = 0 $ και 
-    άρα από το Κριτήριο Παρεμβολής, έχουμε ότι $ \lim_{n \to \infty} a = 0 
+    άρα από το Κριτήριο Παρεμβολής, έχουμε ότι \[ \lim_{n \to \infty} a = 0 
     \Rightarrow \lim_{n \to \infty} \sqrt[2n]{n} = 1 \Rightarrow \lim_{n \to
     \infty} (\sqrt[n]{n}) = \lim_{n \to \infty} (\sqrt[2n]{n})^{2} =  
-    1^{2} = 1 \Rightarrow \lim_{n \to \infty} \sqrt[n]{n} =1 $.
+    1^{2} = 1 \Rightarrow \lim_{n \to \infty} \sqrt[n]{n} =1 \]
 \end{proof}
 
 \begin{prop}
@@ -1406,19 +1505,19 @@
 \item {}
     \begin{itemize}
         \item $ a>1 \Rightarrow a^{\frac{1}{n}} > 1^{\frac{1}{n}}, \; 
-            \forall n \in \mathbb{N} \Rightarrow \sqrt[n]{n} >1, \; 
+            \forall n \in \mathbb{N} \Rightarrow \sqrt[n]{a} >1, \; 
             \forall n \in \mathbb{N} $
 
-            Για κάθε $ n \in \mathbb{N} $ θέτουμε $ b_{n} = \sqrt[n]{n} -1 
-            > 0 \Rightarrow \sqrt[n]{n} = b_{n} + 1 \Rightarrow a = (
+            Για κάθε $ n \in \mathbb{N} $ θέτουμε $ b_{n} = \sqrt[n]{a} -1 
+            > 0 \Rightarrow \sqrt[n]{a} = b_{n} + 1 \Rightarrow a = (
             b_{n}+1)^{n} \geq 1 + n b_{n} \Rightarrow n b_{n} \leq a-1
             \Rightarrow 0 \leq b_{n} \leq \frac{a-1}{n}, \; \forall n \in
             \mathbb{N} $
 
             Επειδή $ \lim_{n \to \infty} \frac{a-1}{n} = \lim_{n \to \infty}
-            (\frac{a}{n} - \frac{1}{n}) = 0 - 0 = 0 $, άρα από το 
+            \left(\frac{a}{n} - \frac{1}{n}\right) = 0 - 0 = 0 $, άρα από το 
             Κριτήριο Παρεμβολής, έχουμε ότι $ \lim_{n \to \infty} b_{n} = 
-            \lim_{n \to \infty} \sqrt[n]{a}-1 = 0 \Rightarrow \lim_{n \to
+            \lim_{n \to \infty} (\sqrt[n]{a}-1) = 0 \Rightarrow \lim_{n \to
             \infty} \sqrt[n]{a} =1 $.
 
         \item $ a< 1 \Rightarrow \frac{1}{a} > 1 $. Τότε από την 
@@ -1495,8 +1594,14 @@
 
 %TODO apodeixh
 
-%TODO
-TODO η $ (1+ \frac{1}{n} )^{n} $ γν. αυξουσα κ ανω φραγμενη.
 
 \section{Αναδρομικές Ακολουθίες}
+
+
+
+
+
+
+
+
 \end{document}
