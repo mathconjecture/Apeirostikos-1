@@ -72,8 +72,7 @@
 
 \section{Φραγμένες Ακολουθίες}
 
-\mydfn{
-    Μια ακολουθία $ (a_{n})_{n \in \mathbb{N}} $ ονομάζεται:
+\mydfn{Μια ακολουθία $ (a_{n})_{n \in \mathbb{N}} $ ονομάζεται:
     \begin{enumerate}[i)]
         \item \textcolor{Col\thechapter}{άνω φραγμένη} 
             $ \overset{\text{ορ.}}{\Leftrightarrow} \exists M \in 
@@ -103,7 +102,6 @@
             απολύτως φραγμένη.
         \item $ a_{n}=(-1)^{n} \frac{1}{n}, \; \forall n \in \mathbb{N} $ 
             είναι απολύτως φραγμένη. Πράγματι,
-
             \[
                 \abs{a_{n}} = \abs{(-1)^{n} \frac{1}{n}} = \abs{(-1)^{n}} 
                 \cdot \abs{\frac{1}{n}} = \abs{-1}^{n} \cdot \frac{1}{n}
@@ -114,11 +112,10 @@
         \item $ a_{n}= \frac{(n-1)!}{n^{n}}, \; \forall n \in \mathbb{N} $
             είναι φραγμένη. Πράγματι, 
 
-            \begin{itemize}
-                \item $ a_{n} > 0, \; \forall n \in 
+                 $ a_{n} > 0, \; \forall n \in 
                     \mathbb{N}$, άρα 0 κ.φ. της $( a_{n})_{n \in 
                     \mathbb{N}} $. 
-                \item Επίσης 
+                 Επίσης 
                     \[
                         a_{n}= \frac{(n-1)!}{n^{n}} = \frac{1 \cdot 2 
                             \cdots (n-1)}{n^{n}} < \frac{\overbrace{n 
@@ -127,7 +124,6 @@
                         \frac{1}{n} \leq 1, \; \forall n \in \mathbb{N},
                     \]
                     άρα το 1 είναι α.φ. της $(a_{n})_{n \in \mathbb{N}}$. 
-            \end{itemize}
 
         \item $ a_{n}= 1 + \left(- \frac{1}{2} \right) + \left(- 
                 \frac{1}{2}\right)^{2} + \cdots + \left(-\frac{1}{2} 
@@ -341,6 +337,8 @@
         συνήθως η απόδειξή της γίνεται με Μαθηματική Επαγωγή.
 \end{itemize}
 
+\pagebreak
+
 \begin{examples}
 \item {}
     \begin{enumerate}[i)]
@@ -413,6 +411,29 @@
                         \frac{1}{a_{n}} = a_{n+1}
                     \] 
             \end{itemize}
+
+            \item Να δείξετε ότι ακολουθία $ a_{n} = (-1)^{n} \frac{1}{n^{2}}, 
+                \; \forall n \in \mathbb{N} $ 
+                δεν είναι μονότονη.
+
+                \begin{proof}
+                \item {}
+                    Θα δείξουμε ότι η ακολουθία δεν διατηρεί πρόσημο. Πράγματι, 
+                    $ \forall n \in \mathbb{N} $
+                    \begin{align*}
+                        a_{n+1}- a_{n} = \frac{(-1)^{n+1}}{(n+1)^{2}} - 
+                        \frac{(-1)^{n}} {n^{2}} 
+                        &= \frac{(-1)^{n+1}}{(n+1)^{2}} + 
+                        \frac{(-1)^{n+1}}{n^{2}}= \\
+                        &= (-1)^{n+1}\Biggl[\underbrace{\frac{1}{(n+1)^{2}} + 
+                                \frac{1}{n^{2}}}_{b_{n} > 0, \; \forall n \in 
+                        \mathbb{N}}\Biggr] 
+                        = \begin{cases}
+                            -b_{n}, & n \; \text{περιττός} \\
+                            b_{n}, & n \; \text{άρτιος} 
+                        \end{cases}
+                    \end{align*} 
+                \end{proof}
     \end{enumerate}
 \end{examples}
 
@@ -553,6 +574,7 @@
                         \]
                 \end{description}
             \end{proof}
+
 
         \item $ \lim\limits_{n \to \infty} \frac{1}{n^{4}} = 0 $. 
             \begin{proof}
@@ -855,6 +877,28 @@ $ (a_{n})_{n \in \mathbb{N}} $.}
     και άρα από τη σχέση~\eqref{eq:ypaksygk}, έχουμε 
     $\abs{a_{k_{n}} - a} < \varepsilon  $, δηλαδή 
     $ \lim_{n \to +\infty} a_{k_{n}} = a$.
+\end{proof}
+
+\begin{rem}
+    Αν δυο υπακολουθίες μιας ακολουθίας $ (a_{n})_{n \in \mathbb{N}} $ συγκλίνουν 
+    σε διαφορετικά όρια, τότε δεν υπάρχει το όριο της ακολουθίας 
+    $ (a_{n})_{n \in \mathbb{N}} $.
+\end{rem}
+
+\begin{example}
+    Να δείξετε ότι η ακολουθία $ a_{n} = (-1)^{n}\frac{n}{n+1} $ δεν συγκλίνει. 
+\end{example}
+
+\begin{proof}
+\item {}
+    Θεωρούμε τις υπακολουθίες:
+    \begin{itemize}
+        \item $ a_{2n} = (-1)^{2n} \frac{2n}{2n+1} = \frac{2n}{2n+1} = \frac{2n}{n(2+
+            \frac{1}{n})} = \frac{2}{2+ \frac{1}{n}} \xrightarrow{n \to \infty} 1 $
+        \item $ a_{2n-1} = (-1)^{2n-1} \frac{2n-1}{2n-1+1} = -\frac{2n-1}{2n} = 
+            -\left(1 - \frac{1}{2n}\right) \xrightarrow{n \to \infty} -1  $
+    \end{itemize}
+    Άρα, η ακολουθία $ a_{n}= (-1)^{n} \frac{n}{n+1} $ δεν συγκλίνει.
 \end{proof}
 
 
@@ -1577,13 +1621,14 @@ supremum του συνόλου των όρων της.}
     \sqrt{\frac{n}{2}} > M \Rightarrow \sqrt[n]{n!} > M $. 
 \end{proof}
 
-\mythm{Κάθε φραγμένη ακολουθία πραγματικών αριθμών έχει συγκλίνουσα 
-υπακολουθία.}
 
-%TODO apodeixh
+\mythmm{Bolzano-Weierstrass}{Κάθε φραγμένη ακολουθία πραγματικών αριθμών 
+    έχει συγκλίνουσα υπακολουθία.}
 
 
-\section{Αναδρομικές Ακολουθίες}
+\begin{proof}[Χωρίς Απόδειξη]
+    
+\end{proof}
 
 
 
