@@ -379,30 +379,71 @@
                 \end{proof}
         \end{enumerate}
 
-            \item Να δείξετε με τη βοήθεια του ορισμού τα όρια.
-                \begin{enumerate}[i)]
-                    \item 
-                        \begin{description}
-                            \item [Δοκιμή:] $ \abs{\frac{n}{3n-1} - \frac{1}{3}} < 
-                                \varepsilon \Leftrightarrow 
-                                \abs{\frac{3n-3n+1}{3(3n-1)}} < \varepsilon 
-                                \Leftrightarrow \frac{1}{3(3n-1)} < \varepsilon 
-                                \Leftrightarrow \frac{1}{3n-1} < 3 \varepsilon 
-                                \Leftrightarrow 3n -1 > \frac{1}{3 \varepsilon} 
-                                \Leftrightarrow \frac{1}{3 \varepsilon} < n + 1 
-                                \Leftrightarrow n > \frac{1+ \frac{1}{3 \varepsilon}}
-                                {3} \Leftrightarrow n > \frac{1}{3} + 
-                                \frac{1}{9 \varepsilon}   $
+    \item Να δείξετε ότι οι παρακάτω ακολουθίες δεν συγκλίνουν.
+        \begin{enumerate}[i)]
+            \item $ a_{n} = (-1)^{n} \frac{n}{n+1} $ 
+            \item $ a_{n} = (-1)^{n} \frac{n+3}{2n} $ 
+            \item $ a_{n} = \lambda n, \; \lambda > 0 $ 
+        \end{enumerate}
 
-                                Έστω $ \varepsilon >0 $. Τότε $ \exists n_{0} \in 
-                                \mathbb{N}$ με $ n_{0}> \frac{1}{3} + 
-                                \frac{1}{9 \varepsilon} \; :
-                                \; \abs{\frac{n}{3n-1} - \frac{1}{3}} = 
-                                \abs{\frac{3n-3n+1}{3(3n-1)}} = \frac{1}{3(3n-1)} = $
-                        \end{description}
-                \end{enumerate}
+        \begin{proof}
+        \item {}
+            \begin{enumerate}[i)]
+                \item Θεωρούμε τις υπακολουθίες $(a_{2n})_{n \in \mathbb{N}} $ 
+                και $(a_{2n-1})_{n \in \mathbb{N}} $. Έχουμε,
 
-\end{enumerate}
+                        \begin{align*} 
+                            \lim_{n \to \infty} a_{2n} = \lim_{n \to \infty}  (-1)^{2n} 
+                            \frac{2n}{2n+1} = \lim_{n \to \infty}  \frac{2n}{2n+1} = 
+                            \lim_{n \to \infty} \frac{2n}{n(2 + \frac{1}{n})} = 
+                            \lim_{n \to \infty} \frac{2}{2 + \frac{1}{n}} = 
+                            \frac{2}{2+0} = 1 
+                        \end{align*}
+
+                        \begin{align*} 
+                            \lim_{n \to \infty} a_{2n-1} = \lim_{n \to \infty} 
+                            (-1)^{2n-1} \frac{2n-1}{2n-1 + 1} = \lim_{n \to \infty} - 
+                            \frac{2n-1}{2n} = -\lim_{n \to \infty} 
+                            \frac{n (2 - \frac{1}{n})}{2n} = - \lim_{n \to \infty} 
+                            \frac{2 - \frac{1}{n} }{2} = -1 
+                        \end{align*}
+                
+                 Επειδή $ \lim_{n \to \infty} a_{2n} \neq \lim_{n \to \infty} a_{2n-1} $
+                 η ακολουθία $ (a_{n})_{n \in \mathbb{N}} $ δε συγκλίνει.
+
+                \item Θεωρούμε τις υπακολουθίες $(a_{2n})_{n \in \mathbb{N}} $ 
+                και $(a_{2n-1})_{n \in \mathbb{N}} $. Έχουμε,
+
+                \begin{align*}
+                    \lim_{n \to \infty} a_{2n} = (-1)^{2n} \lim_{n \to \infty} 
+                    \frac{2n+3}{2\cdot 2n} = \lim_{n \to \infty} \frac{2n+3}{4n} = 
+                    \lim_{n \to \infty} \frac{n(2+ \frac{3}{n})}{4n} = 
+                    \lim_{n \to \infty} \frac{2 + \frac{3}{n}}{4} = \frac{1}{2} 
+                \end{align*}
+
+                \begin{align*}
+                    \lim_{n \to \infty} a_{2n-1} = \lim_{n \to \infty} (-1)^{2n-1} 
+                    \frac{2n-1 +3}{2 \cdot (2n-1)} = \lim_{n \to \infty} - 
+                    \frac{2n+2}{4n-2} = - \lim_{n \to \infty} 
+                    \frac{n(2+ \frac{2}{n})}{n(4- \frac{2}{n})} = - \lim_{n \to \infty}
+                    \frac{2 + \frac{2}{n}}{4 - \frac{2}{n}} = - \frac{1}{2}
+                \end{align*}
+
+                 Επειδή $ \lim_{n \to \infty} a_{2n} \neq \lim_{n \to \infty} a_{2n-1} $
+                 η ακολουθία $ (a_{n})_{n \in \mathbb{N}} $ δε συγκλίνει.
+
+             \item Η ακολουθία $(\lambda n)_{n \in \mathbb{N}} $ δε συγκλίνει, διότι 
+                 δεν είναι φραγμένη. Πράγματι, γιατί αν $ (a_{n})_{n \in \mathbb{N}} $
+                 είναι φραγμένη, τότε
+                 \[
+                     \abs{a_{n}} = \abs{\lambda n} \overset{\lambda >0}{=} 
+                     \lambda n \leq a, \; \forall n \in \mathbb{N} \Leftrightarrow 
+                     n \leq \frac{a}{\lambda}, \; \forall n \in \mathbb{N} \; 
+                     \text{άτοπο, γιατι $ \mathbb{N} $ όχι άνω φραγμένο}
+                  \] 
+        \end{enumerate}    
+        \end{proof}
+        
 
 % Η ακολουθία $ a_{n}=n, \; \forall n \in \mathbb{N} $ δεν συγκλίνει. 
 %    \begin{proof}(Με άτοπο)
@@ -414,6 +455,32 @@
 %        Δηλαδή, $ \forall n \geq n_{0}, \; n < a+1 $, άτοπο, γιατί $ \mathbb{N} $ 
 %        όχι άνω φραγμένο.
 %    \end{proof}
+
+\end{enumerate}
+
+            % \item Να δείξετε με τη βοήθεια του ορισμού τα όρια.
+            %     \begin{enumerate}[i)]
+            %         \item 
+            %             \begin{description}
+            %                 \item [Δοκιμή:] $ \abs{\frac{n}{3n-1} - \frac{1}{3}} < 
+            %                     \varepsilon \Leftrightarrow 
+            %                     \abs{\frac{3n-3n+1}{3(3n-1)}} < \varepsilon 
+            %                     \Leftrightarrow \frac{1}{3(3n-1)} < \varepsilon 
+            %                     \Leftrightarrow \frac{1}{3n-1} < 3 \varepsilon 
+            %                     \Leftrightarrow 3n -1 > \frac{1}{3 \varepsilon} 
+            %                     \Leftrightarrow \frac{1}{3 \varepsilon} < n + 1 
+            %                     \Leftrightarrow n > \frac{1+ \frac{1}{3 \varepsilon}}
+            %                     {3} \Leftrightarrow n > \frac{1}{3} + 
+            %                     \frac{1}{9 \varepsilon}   $
+
+            %                     Έστω $ \varepsilon >0 $. Τότε $ \exists n_{0} \in 
+            %                     \mathbb{N}$ με $ n_{0}> \frac{1}{3} + 
+            %                     \frac{1}{9 \varepsilon} \; :
+            %                     \; \abs{\frac{n}{3n-1} - \frac{1}{3}} = 
+            %                     \abs{\frac{3n-3n+1}{3(3n-1)}} = \frac{1}{3(3n-1)} = $
+            %             \end{description}
+            %     \end{enumerate}
+
 
 
 
