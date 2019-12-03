@@ -443,44 +443,259 @@
                   \] 
         \end{enumerate}    
         \end{proof}
-        
 
-% Η ακολουθία $ a_{n}=n, \; \forall n \in \mathbb{N} $ δεν συγκλίνει. 
-%    \begin{proof}(Με άτοπο)
-%        Έστω ότι συγκλίνει στο $ a \in \mathbb{R} $.
-%        Τότε για $ \varepsilon =1>0 $ έχουμε ότι 
-%        \[ \forall n \geq n_{0}, \; \exists n_{0} \in \mathbb{N} \;
-%        : \; \abs{n-a} < 1 \Leftrightarrow a - 1 < n < 
-%        a+ 1\] 
-%        Δηλαδή, $ \forall n \geq n_{0}, \; n < a+1 $, άτοπο, γιατί $ \mathbb{N} $ 
-%        όχι άνω φραγμένο.
-%    \end{proof}
+    \item Να υπολογιστούν τα παρακάτω όρια.
+
+        \begin{enumerate}[i)]
+            \item $ \lim_{n \to \infty} \frac{n^{2}+3n}{n^{2}+2n+1} = 
+                \lim_{n \to \infty} \frac{n^{2}(1+ \frac{3}{n})}{n^{2}(1+ \frac{2}{n} 
+                + \frac{1}{n^{2}})} = \lim_{n \to \infty} 
+                \frac{1+ \frac{3}{n}}{1+ \frac{2}{n} + \frac{1}{n^{2}}} = 
+                \frac{1+0}{1+0+0} = 1 $ 
+
+            \item $ \lim_{n \to \infty} \sqrt[3]{\frac{n^{3}+n}{n^{3}+2n}} = 
+                \sqrt[3]{\lim_{n \to \infty} \frac{n^{3}(1+ 
+                \frac{1}{n^{2}})}{n^{3}(1+ \frac{2}{n^{2}})}} = 
+                \sqrt[3]{\lim_{n \to \infty} \frac{1+ \frac{1}{n^{2}}}{1+
+                \frac{2}{n^{2}}}} = \sqrt[3]{\frac{1+0}{1+0}} = \sqrt[3]{1} = 1  $
+        \end{enumerate}
+       
+    \item Να υπολογιστούν τα παρακάτω όρια με τη βοήθεια του Κριτηρίου Παρεμβολής.
+
+        \begin{enumerate}[i)]
+            \item $ \lim_{n \to \infty} \frac{(-1)^{n}}{n^{2}+2n} $
+                \begin{proof}
+                \item {}
+                    $ \abs{a_{n}} = \abs{\frac{(-1)^{n}}{n^{2}+2n}} =
+                    \frac{\abs{(-1)^{n}}}{\abs{n^{2}+2n}} = \frac{1}{n^{2}+2n} \leq 
+                    \frac{1}{n^{2}} $
+
+                    Όμως $ \lim_{n \to \infty} \frac{1}{n^{2}} = 0 $, άρα και $ 
+                    \lim_{n \to \infty} a_{n} = \lim_{n \to \infty} 
+                    \frac{(-1)^{n}}{n^{2}+2n} = 0$
+                \end{proof}
+
+            \item $ \lim_{n \to \infty} (\sqrt{n+2} - \sqrt{n}) $
+                \begin{proof}
+                \item {}
+                    \begin{align*} 
+                        \abs{a_{n}} &= \abs{\sqrt{n+2} - \sqrt{n}} = \sqrt{n+2} - 
+                        \sqrt{n} =  \frac{(\sqrt{n+2} - \sqrt{n})(\sqrt{n+2} + 
+                        \sqrt{n})}{\sqrt{n+2} + \sqrt{n}} = 
+                        \frac{n+2-n}{\sqrt{n+2} + \sqrt{n}} \\
+                                    &= \frac{2}{\sqrt{n+2} + 
+                                    \sqrt{n} } \leq \frac{2}{\sqrt{n}}  
+                    \end{align*}
+
+                    Όμως $ \lim_{n \to \infty} \frac{2}{\sqrt{n}} = 0 $, άρα και 
+                    $ \lim_{n \to \infty} \sqrt{n+2} - \sqrt{n} = 0 $
+                \end{proof}
+
+            \item $ \lim_{n \to \infty} \left(\sqrt{n^{3}+4} - \sqrt{n^{3}+1}\right) $
+                \begin{proof}
+                \item {}
+                    \begin{align*}
+                        \abs{a_{n}} &= \abs{\sqrt{n^{3}+4} - \sqrt{n^{3}+1}} = 
+                        \sqrt{n^{3}+4} - \sqrt{n^{3}+1} = \frac{(\sqrt{n^{3}+4}-
+                            \sqrt{n^{3}+1})(\sqrt{n^{3}+4}+ 
+                        \sqrt{n^{3}+1})}{\sqrt{n^{3}+4} + \sqrt{n^{3}+1}} \\
+                                    &= \frac{n^{3}+4 - n^{3}-1}{\sqrt{n^{3}+4} + 
+                                        \sqrt{n^{3}+1}} = \frac{3}{\sqrt{n^{3}+4} + 
+                                    \sqrt{n^{3}+1}} <
+                                    \frac{3}{\sqrt{n^{3}+1}+ \sqrt{n^{3}+1}} = 
+                                    \frac{3}{2 \sqrt{n^{3}+1}} < 
+                                    \frac{3}{\sqrt{n^{3}}} \\
+                                    &= \frac{3}{n \sqrt{n}} 
+                    \end{align*}
+
+                    Όμως $ \lim_{n \to \infty} \frac{3}{n \sqrt{n}} = 
+                    \lim_{n \to \infty} \left(\frac{3}{n} \cdot 
+                    \frac{1}{\sqrt{n}}\right) = 
+                    0 \cdot 0 = 0 $, άρα και $ \lim_{n \to \infty} 
+                    \left(\sqrt{n^{3}+4} - \sqrt{n^{3}+1}\right) = 0 $ 
+                \end{proof}
+
+            \item $ \lim_{n \to \infty} \frac{4 \sin^{3}{n} + 3 \cos^{2}{n}}{n^{2}} $
+                \begin{proof}
+                \item {}
+                    \begin{align*}
+                        \abs{\frac{4 \sin^{3}{n} + 3 \cos^{2}{n}}{n^{2}}} 
+                        &= \frac{\abs{4 \sin^{3}{n} + 3 \cos^{2}{n}}}{n^{2}} \leq 
+                        \frac{\abs{4 \sin^{3}{n}} + \abs{3 \cos^{2}{n}}}{n^{2}} = 
+                        \frac{4 \abs{\sin^{3}{n}} + 3 \abs{\cos^{2}{n}}}{n^{2}} \\ 
+                        &= \frac{4 \abs{\sin{n}}^{3} + 3 \abs{\cos{n}}^{3}}{n^{2}} \leq 
+                        \frac{4 \cdot 1^{3}+ 3 \cdot 1 ^{3}}{n^{2}} = \frac{7}{n^{2}} 
+                        < \frac{7}{n} 
+                    \end{align*}
+
+                    Όμως $ \lim_{n \to \infty} \frac{7}{n} = 0 $, άρα και $ 
+                    \lim_{n \to \infty} \frac{4 \sin^{3}{n} + 3 \cos^{2}{n}}{n^{2}} = 0$
+                \end{proof}
+
+            \item $ \lim_{n \to \infty} \frac{\cos{n} + 3 \sin{4n}}{2 \sqrt{n}-1} $
+                \begin{proof}
+                \item {}
+                    \begin{align*}
+                        \abs{a_{n}} &= \abs{\frac{\cos{n} + 3 \sin{4n}}{2 \sqrt{n} -1}} 
+                        = \frac{\abs{\cos{n} + 3 \sin{4n}}}{2 \sqrt{n} -1} \leq 
+                        \frac{\abs{\cos{n}} + \abs{3 \sin{4n}}}{2 \sqrt{n} -1} = 
+                        \frac{\abs{\cos{n}} + 3 \abs{\sin{4n}}}{2 \sqrt{n} -1} \leq 
+                        \frac{1 + 3 \cdot 1}{2 \sqrt{n} -1} \\ 
+                                    &= \frac{4}{2 \sqrt{n} -1} 
+                    \end{align*}
+                    
+                    Όμως $ \lim_{n \to \infty} \frac{4}{\sqrt{n} (2 - 
+                    \frac{1}{\sqrt{n}})} = \lim_{n \to \infty}  
+                    \left(\frac{1}{\sqrt{n}} \cdot \frac{4}{(2- 
+                    \frac{1}{\sqrt{n}})}\right) = 0 \cdot \frac{4}{2-0} = 0 $
+                \end{proof}
+
+            \item $ \lim_{n \to \infty} \sqrt[n]{3^{n}+4^{n}+n} $
+                \begin{proof}
+                \item {}
+                    Ισχύει
+                    \begin{align*}
+                        4^{n} &\leq 3^{n}+4^{n}+n \leq 4^{n}+4^{n}+4^{n}, \; 
+                        \forall n \in \mathbb{N} \\
+                        4^{n} &\leq 3^{n}+4^{n}+n \leq 3\cdot 4^{n}, \; \forall n 
+                        \in \mathbb{N} \\
+                        \sqrt[n]{4^{n}} & \leq \sqrt[n]{3^{n}+4^{n}+n} \leq 
+                        \sqrt[n]{3\cdot 4^{n}}, \; 
+                        \forall n \in \mathbb{N} \\
+                        4 & \leq \sqrt[n]{3^{n}+4^{n}+n} \leq 4 \cdot \sqrt[n]{3}, \; 
+                        \forall n \in \mathbb{N}
+                    \end{align*}
+                \end{proof}
+
+                Όμως $ \lim_{n \to \infty} 4 = 4 $ και $ \lim_{n \to \infty} 4 
+                \sqrt[n]{3} = 4 \cdot
+                1 = 4$, άρα από Κριτήριο παρεμβολής και $ \lim_{n \to \infty}
+                \sqrt[n]{3^{n}+4^{n}+n} = 4 $
+
+            \item $ \lim_{n \to \infty} \sqrt[n]{\frac{n^{2}}{3n^{2}+2}} $
+                \begin{proof}
+                \item {}
+                    Ισχύει
+                    \begin{align*}
+                        \frac{1}{5} = \frac{n^{2}}{5n^{2}} \leq 
+                        \frac{n^{2}}{3n^{2}+2n^{2}} \leq \frac{n^{2}}{3n^{2}+2} 
+                        \leq \frac{n^{2}}{3n^{2}} = \frac{1}{3}, 
+                        \; \forall n \in \mathbb{N}
+                    \end{align*}
+                    Επομένως 
+                    \[
+                        \sqrt[n]{\frac{1}{5}} \leq \sqrt[n]{\frac{n^{2}}{3n^{2}+2}} 
+                        \leq \sqrt[n]{\frac{1}{3}}, \; \forall n \in \mathbb{N}
+                     \] 
+                     Όμως $ \lim_{n \to \infty} \sqrt[n]{\frac{1}{5}} = 
+                     \lim_{n \to \infty}
+                     \sqrt{\frac{1}{3}} = 1 $, άρα από Κριτήριο Παρεμβολής 
+                     και $ \lim_{n \to \infty} \sqrt[n]{\frac{n^{2}}{3n^{2}+2}} = 1 $
+                \end{proof}
+
+            \item $ \lim_{n \to \infty} \sqrt[n]{n^{2}+n} $
+                \begin{proof}
+                \item {}
+Ισχύει
+\[
+   1 < \sqrt[n]{n^{2}+n} \leq \sqrt[n]{n^{2}+n^{2}} = \sqrt[n]{2n^{2}}, \; 
+ \forall n \in \mathbb{N} 
+ \]
+
+ Όμως $ \lim_{n \to \infty} 1 = 1$ και $ \lim_{n \to \infty} \sqrt[n]{2n^{2}} = 
+ \lim_{n \to \infty} (\sqrt[n]{2} \cdot \sqrt[n]{n^{2}}) =  \lim_{n \to \infty} 
+ (\sqrt[n]{2} \cdot \sqrt[n]{n} \cdot \sqrt[n]{n}) = 1 \cdot 1 \cdot 1 = 1$, άρα και 
+ $ \lim_{n \to \infty} \sqrt[n]{n^{2}+n} = 1 $
+                \end{proof}
+        \end{enumerate}
+
+    \item Να υπολογιστούν τα παρακάτω όρια με τη βοήθεια του ορίου 
+        $ \lim_{n \to \infty} \left(1+ \frac{1}{n} \right)^{n} = e $ 
+
+        \begin{enumerate}[i)]
+            \item $ \lim_{n \to \infty} \left(1+ \frac{1}{n-2} \right)^{n}, \; n 
+                \geq 3 $
+                \begin{proof}
+                \item {}
+                    \begin{align*}
+                        a_{n} = \left(1+ \frac{1}{n-2} \right)^{n} = \left(1+ 
+                        \frac{1}{n-2} \right)^{n-2+2} = 
+                        \underbrace{\left(1+ \frac{1}{n-2} 
+                            \right)^{n-2}}_{\tilde{a} _{n-2}} \cdot \left(1 + 
+                            \frac{1}{n-2} 
+                        \right)^{2} \xrightarrow{n \to \infty} e \cdot (1+0)^{2} = e
+                    \end{align*}
+                    γιατί
+                    \[
+                        \lim_{n \to \infty} \tilde{a} _{n} = \lim_{n \to \infty} 
+                        \left(1+ \frac{1}{n}\right)^{n} = e 
+                        \overset{\text{Πρότ.}}{\Rightarrow} 
+                        \lim_{n \to \infty} \tilde{a} _{n-2} = \lim_{n \to \infty} 
+                        \left(1+ \frac{1}{n-2} \right)^{n-2} = e
+                     \] 
+                \end{proof}
+
+            \item $ \lim_{n \to \infty} \left(1 + \frac{1}{3n} \right)^{n} $
+                \begin{proof}
+                \item {}
+                    \begin{align*}
+                        a_{n}= \left(1+ \frac{1}{3n} \right)^{n} = \left(1+ 
+                        \frac{1}{3n} \right)
+                        ^{3n\cdot \frac{1}{3}} = \Biggl(\underbrace{\left(1+ 
+                            \frac{1}{3n} \right)^{3n}}_{\tilde{a} _{3n}}
+                        \Biggr)^{\frac{1}{3}} \xrightarrow{n \to \infty} \sqrt[3]{e} 
+                    \end{align*}
+                    γιατί
+                    \[
+                        \lim_{n \to \infty} \tilde{a} _{n} = \lim_{n \to \infty} 
+                        \left(1+ \frac{1}{n}\right)^{n} = e 
+                        \overset{\text{Πρότ.}}{\Rightarrow} 
+                        \lim_{n \to \infty} \tilde{a} _{3n} = \lim_{n \to \infty} 
+                        \left(1+ \frac{1}{3n} \right)^{3n} = e
+                    \]
+                \end{proof}
+
+
+            \item $ \lim_{n \to \infty} \left(1+ \frac{2}{n} \right)^{n} $
+                \begin{proof}
+                \item {}
+                    \begin{align*}
+                        a_{n}
+                        &= \left(1+ \frac{2}{n} \right)^{n} = \left(\frac{n+2}{n} 
+                            \right)^{n} = \left( \frac{n+2}{n+1} \cdot 
+                        \frac{n+1}{n}\right)^{n} = \left(\frac{n+2}{n+1} \right)^{n} 
+                        \cdot \left(\frac{n+1}{n} \right)^{n} \\
+                        &= \left(1 + \frac{1}{n+1} \right)^{n} \cdot \left(1+ 
+                        \frac{1}{n} \right)^{n} \xrightarrow{n \to \infty}  
+                        e \cdot e = e^{2}
+                    \end{align*}  
+                \end{proof}
+
+
+            \item $ \lim_{n \to \infty} \left(\frac{2n+3}{2n} \right)^{3n+2} $
+                \begin{proof}
+                \item {}
+                    \[
+                        a_{n}= \left(\frac{2n+3}{2n} \right)^{3n+2} = \left(1+ 
+                        \frac{3}{2n} \right)^{3n+2} = 
+                        \underbrace{\left(1+ \frac{3}{2n} \right)^{3n}}
+                        _{\tilde{a}_{3n}} \cdot \left(1+ 
+                        \frac{3}{2n} \right)^{2} \xrightarrow{n \to \infty}
+                        (e^{3})^{\frac{3}{2}} \cdot 1  = e^{4}\cdot \sqrt{e} 
+                    \] 
+                    γιατί 
+                    \[
+                        \lim_{n \to \infty} \tilde{a} _{n} = \lim_{n \to \infty} 
+                        \left(1+ \frac{3}{n} \right)^{n} = e^{3} 
+                        \overset{\text{Προτ.}}{\Rightarrow } \lim_{n \to \infty} 
+                        \tilde{a} _{2n} = \lim_{n \to \infty} \left(1+ \frac{3}{2n} 
+                        \right)^{2n} = e^{3}
+                    \]
+                \end{proof}
+
+        \end{enumerate}
 
 \end{enumerate}
-
-            % \item Να δείξετε με τη βοήθεια του ορισμού τα όρια.
-            %     \begin{enumerate}[i)]
-            %         \item 
-            %             \begin{description}
-            %                 \item [Δοκιμή:] $ \abs{\frac{n}{3n-1} - \frac{1}{3}} < 
-            %                     \varepsilon \Leftrightarrow 
-            %                     \abs{\frac{3n-3n+1}{3(3n-1)}} < \varepsilon 
-            %                     \Leftrightarrow \frac{1}{3(3n-1)} < \varepsilon 
-            %                     \Leftrightarrow \frac{1}{3n-1} < 3 \varepsilon 
-            %                     \Leftrightarrow 3n -1 > \frac{1}{3 \varepsilon} 
-            %                     \Leftrightarrow \frac{1}{3 \varepsilon} < n + 1 
-            %                     \Leftrightarrow n > \frac{1+ \frac{1}{3 \varepsilon}}
-            %                     {3} \Leftrightarrow n > \frac{1}{3} + 
-            %                     \frac{1}{9 \varepsilon}   $
-
-            %                     Έστω $ \varepsilon >0 $. Τότε $ \exists n_{0} \in 
-            %                     \mathbb{N}$ με $ n_{0}> \frac{1}{3} + 
-            %                     \frac{1}{9 \varepsilon} \; :
-            %                     \; \abs{\frac{n}{3n-1} - \frac{1}{3}} = 
-            %                     \abs{\frac{3n-3n+1}{3(3n-1)}} = \frac{1}{3(3n-1)} = $
-            %             \end{description}
-            %     \end{enumerate}
-
 
 
 
