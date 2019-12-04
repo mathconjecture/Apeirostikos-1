@@ -693,8 +693,84 @@
                     \]
                 \end{proof}
 
+            \item $ \lim_{n \to \infty} \left(1- \frac{1}{n^{2}}\right)^{n} $
+                \begin{proof}
+                    \begin{align*}
+                        a_{n}=\left(1- \frac{1}{n^{2}} \right)^{n} = 
+                        \left[\left(1- \frac{1}{n} \right) \cdot
+                        \left(1+ \frac{1}{n} \right)\right]^{n} = \left(\frac{n-1}{n} 
+                        \right)^{n} \cdot 
+                        \left(1+ \frac{1}{n} \right)^{n} \xrightarrow{n \to \infty}  
+                        \frac{1}{e} \cdot e = 1
+                     \end{align*} 
+                γιατί 
+                \begin{align*}
+                    \lim_{n \to \infty} \left(\frac{n-1}{n} \right)^{n} = 
+                    \lim_{n \to \infty} \left(\frac{1}{\frac{n-1}{n}}\right)^{n} = 
+                    \lim_{n \to \infty} \frac{1}{\left(\frac{n-1+1}{n-1}\right)^{n}} = 
+                    \lim_{n \to \infty} \frac{1}{\left(1+ \frac{1}{n-1} \right)^{n}} =
+                    \frac{1}{e} 
+                \end{align*}
+                \end{proof}
+
+            \item $ \lim_{n \to \infty} \left(\frac{n^{2}-1}{n^{2}+1} \right)^{n^{2}} $
+                \begin{proof}
+                   \begin{align*}
+                       a_{n} = \left(\frac{n^{2}-1}{n^{2}+1}\right)^{n^{2}} = 
+                       \left(\frac{n^{2}\left(1- 
+                       \frac{1}{n^{2}}\right)}{n^{2}\left(1+ 
+                       \frac{1}{n^{2}}\right)}\right)^{n^{2}} = 
+                       \frac{\left(1 - \frac{1}{n^{2}}\right)^{n^{2}}}
+                       {\left(1 + \frac{1}{n^{2}} \right)^{n^{2}}} 
+                       \xrightarrow{n \to \infty}  
+                       \frac{\frac{1}{e}}{e} = \frac{1}{e^{2}} 
+                   \end{align*} 
+                \end{proof}
         \end{enumerate}
 
+    \item Να υπολογιστούν τα παρακάτω όρια.
+        \begin{enumerate}[i)]
+            \item $ \lim_{n \to \infty} \sqrt[n]{3^{n} + 5^{n}+7^{n}} $ 
+                \begin{proof}
+                    \begin{gather*}
+                        7^{n} < 3^{n}+5^{n}+7^{n} < 7^{n}+7^{n}+7^{n} = 3\cdot 7^{n} 
+                        \Leftrightarrow \\
+                        \sqrt[n]{7^{n}} < \sqrt[n]{3^{n}+5^{n}+7^{n}} < 
+                        \sqrt[n]{3 \cdot 7^{n}} \Leftrightarrow \\
+                        7 < \sqrt[n]{3^{n}+5^{n}+7^{n}} < 7\cdot \sqrt[n]{3} 
+                        \Leftrightarrow \\
+                    \end{gather*}
+                    Όμως $ \lim_{n \to \infty} 7 = 7 $ και $ \lim_{n \to \infty} 7 
+                    \cdot \sqrt[n]{3} = 7 \cdot 1 = 7$, άρα και $ 
+                    \lim_{n \to \infty} \sqrt[n]{3^{n}+5^{n}+7^{n}} = 7$
+                \end{proof}
+
+            \item $ \lim_{n \to \infty} \sqrt[n]{(\frac{3}{5})^{n}+(\frac{5}{6})^{n}} $
+                \begin{proof}
+                    Ισχύει ότι $ \frac{3}{5} < \frac{5}{6} $, οπότε
+                    \begin{gather*}
+                        \left(\frac{5}{6}\right)^{n} < \left(\frac{3}{5}\right)^{n}+ 
+                        \left(\frac{5}{6}\right)^{n} < \left(\frac{5}{6}\right)^{n} + 
+                        \left(\frac{5}{6}\right)^{n} = 2 \cdot 
+                        \left(\frac{5}{6}\right)^{n} 
+                        \Leftrightarrow \\
+                        \sqrt[n]{\left(\frac{5}{6}\right)^{n}} < 
+                        \sqrt[n]{\left(\frac{3}{5}\right)^{n}+ 
+                        \left(\frac{5}{6}\right)^{n}} < 
+                        \sqrt[n]{2\cdot \left(\frac{5}{6}\right)^{n}} 
+                        \Leftrightarrow \\
+                        \frac{5}{6} < \sqrt[n]{\left(\frac{3}{5}\right)^{n}+ 
+                        \left(\frac{5}{6}\right)^{n}} < \frac{5}{6} \cdot 
+                            \sqrt[n]{2} 
+                    \end{gather*}
+                    Όμως $ \lim_{n \to \infty} \frac{5}{6} = \frac{5}{6} $ και 
+                    $ \lim_{n \to \infty} \left(\frac{5}{6} \cdot \sqrt[n]{2}\right) = 
+                    \frac{5}{6} \cdot 1 = \frac{5}{6} $, άρα και $ 
+                    \lim_{n \to \infty} \sqrt[n]{\left(\frac{3}{5} \right)^{n} + 
+                    \left(\frac{5}{6}\right)^{n}} = \frac{5}{6} $
+                \end{proof}
+
+        \end{enumerate}
 \end{enumerate}
 
 
