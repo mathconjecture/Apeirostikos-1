@@ -837,6 +837,141 @@
                 \end{proof}
                 Όμως $ \lim_{n \to \infty} \frac{1}{n} = 0 $, άρα και 
                 $ \lim_{n \to \infty} \frac{3n}{3^{n}(n^{2}+2)} = 0 $
+
+            \item ({\bfseries Θέμα:2018}) $ \lim_{n \to \infty} 
+                \sqrt[n]{\frac{1}{2^{n}}+ \frac{1}{3^{n}}} $ 
+                \hfill Απ: $ \frac{1}{2} $ 
+                \begin{proof}
+                    Ισχύει ότι 
+                    \[
+                        \frac{1}{2} = \sqrt[n]{\frac{1}{2^{n}}} < 
+                        \sqrt[n]{\frac{1}{2^{n}} + \frac{1}{3^{n}} } < 
+                        \sqrt[n]{\frac{1}{2^{n}} + \frac{1}{2^{n}}} = 
+                        \sqrt[n]{\frac{2}{2^{n}}} = \frac{1}{2} \cdot \sqrt[n]{2} 
+                    \] 
+                \end{proof}
+                Όμως $ \lim_{n \to \infty} \frac{1}{2} = \frac{1}{2} $ και 
+                $ \lim_{n \to \infty} \left(\frac{1}{2} \cdot \sqrt[n]{2}\right) = 
+                \frac{1}{2} \cdot 1 = \frac{1}{2} $, άρα και 
+                $ \lim_{n \to \infty} \sqrt[n]{\frac{1}{2^{n}} + \frac{1}{3^{n}}} = 
+                \frac{1}{2}  $
+
+    \item ({\bfseries Θέμα:2018}) $ \lim_{n \to \infty} \frac{n^{3}}{3^{n}} $ 
+        \hfill Απ: $ 0 $
+        \begin{description}
+            \item [Α᾽ Τρόπος:(Κριτήριο Λόγου)]
+                \begin{align*}
+                    \frac{a_{n+1}}{a_{n}} = 
+                    \frac{\frac{(n+1)^{3}}{3^{n+1}}}{\frac{n^{3}}{3^{n}}} = 
+                    \frac{(n+1)^{3}}{n^{3}} \cdot \frac{3^{n}}{3^{n+1}} = 
+                    \left(\frac{n+1}{n} \right)^{3} \cdot \frac{3^{n}}{3\cdot 3^{n}} = 
+                    \frac{1}{3} \cdot \left(1 + \frac{1}{n})^{3} 
+                        \xrightarrow{n \to \infty} \frac{1}{3} < 1
+                    \end{align*}
+                    άρα από κριτήριο Λόγου, έχουμε ότι η σειρά 
+                    $ \sum_{n=1}^{\infty} \frac{n^{3}}{3^{n}} $ συγκλίνει, επομένως 
+                    από γνωστό θεωϱημα έχουμε ότι $ \lim_{n \to \infty} 
+                    \frac{n^{3}}{3^{n}} = 0 $.
+
+                \item [Β᾽ Τρόπος:(Κριτήριο Ρίζας)]
+                    \begin{align*}
+                        \sqrt[n]{a_{n}} = \sqrt[n]{\frac{n^{3}}{3^{n}}} = 
+                        \frac{\sqrt[n]{n^{3}}}{3} \frac{\sqrt[n]{n} 
+                            \cdot \sqrt[n]{n} \cdot \sqrt[n]{n}
+                        }{3} \xrightarrow{n \to \infty} \frac{1 \cdot 1 \cdot 1}{3} = 
+                        \frac{1}{3} < 1
+                    \end{align*}
+                    άρα από κριτήριο Ρίζας, έχουμε ότι η σειρά 
+                    $ \sum_{n=1}^{\infty} \frac{n^{3}}{3^{n}} $ συγκλίνει, επομένως 
+                    από γνωστό θεωϱημα έχουμε ότι $ \lim_{n \to \infty} 
+                    \frac{n^{3}}{3^{n}} = 0 $.
+
+                \item [Γ᾽ Τρόπος: (Βλάχου)]
+                    \[
+                        \lim_{n \to \infty} \sqrt[n]{a_{n}} = \lim_{n \to \infty} 
+                        \sqrt[n]{\frac{n^{3}}{3^{n}}} = \lim_{n \to \infty} 
+                        \frac{\sqrt[n]{n^{3}}}{3} = \lim_{n \to \infty} 
+                        \frac{(\sqrt[n]{n})^{3}}{3} \xrightarrow{n \to \infty} 
+                        \frac{1}{3}  
+                    \] 
+                    Άρα για $ \varepsilon = \frac{1}{2} >0 $ έχουμε ότι $ \exists n_{0} 
+                    \in \mathbb{N} \; : \; \forall n \geq n_{0} \quad 
+                    \abs{\sqrt[n]{\frac{n^{3}}{3^{n}}} - \frac{1}{3}} < 
+                    \frac{1}{2} $.
+
+                    Άρα $ - \frac{1}{2} < 
+                \sqrt[n]{\frac{n^{3}}{3^{n}}} - \frac{1}{3} < \frac{1}{2}, \; 
+                \forall n \geq n_{0} \Rightarrow \sqrt[n]{\frac{n^{3}}{3^{n}}} - 
+                    \frac{1}{3} < \frac{1}{2}, \forall n \geq n_{0} \Rightarrow 
+                    \sqrt[n]{\frac{n^{3}}{3^{n}}} < \frac{5}{6}, \forall n \geq n_{0} $ 
+
+                    Επομένως $ \frac{n^{3}}{3^{n}} < \left(\frac{5}{6}\right)^{n}, 
+                    \forall n \geq n_{0} \Leftrightarrow 0 <  \frac{n^{3}}{3^{n}} < 
+                    \left( \frac{5}{6}\right)^{n}, \forall n \geq n_{0}  $
+                    
+                    Όμως $ \lim_{n \to \infty} (\frac{5}{6} )^{n} = 0 $, οπότε 
+                    από Κριτήριο Παρεμβολής, έπεται ότι 
+                    $ \lim_{n \to \infty} \frac{n^{3}}{3^{n}} = 0 $
+            \end{description}
+
+    \item ({\bfseries Θέμα:2019}) $ \lim_{n \to \infty} \sqrt[n]{\frac{1}{3^{n}} + 
+        \frac{1}{4^{n}} + \frac{1}{5^{n}}} $ \hfill Απ: $ \frac{1}{3} $
+        \begin{proof}
+        \item {}
+            Όπως και το θέμα του $ 2018 $.
+        \end{proof}
+
+    \item ({\bfseries Θέμα:2019}) $ \lim_{n \to \infty} \frac{n^{4}+5n-6}{2^{n}} $ 
+        \hfill Απ: 1 
+        \begin{proof}
+        \item {}
+            \begin{description}
+                \item [Α᾽ Τρόπος:(Βλάχου)]
+                    Θα υπολογίσουμε το όριο $ \lim_{n \to \infty} 
+                    \sqrt[n]{\frac{n^{4}+5n-6}{2^{n}}} = \lim_{n \to \infty} 
+                    \frac{\sqrt[n]{n^{4}+5n-6}}{2}  $
+
+                    Για το όριο του αριθμητή έχουμε:
+                    \begin{gather*}
+                        1<n^{4}+5n-6<n^{4}+5n^{4}=6\cdot n^{4}, \; 
+                        \forall n \in \mathbb{N} \\
+                        1 < \sqrt[n]{n^{4}+5n-6} < \sqrt[n]{6\cdot n^{4}}, \; 
+                        \forall n \in \mathbb{N} \\
+                        1 < \sqrt[n]{n^{4}+5n-6} < \sqrt[n]{6} \cdot \sqrt[n]{n^{4}}, 
+                        \; \forall n \in \mathbb{N} \\
+                        1 < \sqrt[n]{n^{4}+5n-6} < \sqrt[n]{6} \cdot (\sqrt[n]{n})^{4},
+                        \; \forall n \in \mathbb{N}
+                    \end{gather*} 
+                    Όμως $ \lim_{n \to \infty} 1 = 1 $ και $ \lim_{n \to \infty} 
+                    \sqrt[n]{6} \cdot (\sqrt[n]{n} )^{4} = 1 \cdot 1^{4} =1 $, άρα 
+                    και $ \lim_{n \to \infty} \sqrt[n]{n^{4}+5n-6} = 1 $
+
+                    Επομένως $ \lim_{n \to \infty} \frac{\sqrt[n]{n^{4}+5n-6}}{2} = 
+                    \frac{1}{2} $
+
+                    Για $ \varepsilon = \frac{1}{3} >0 $, έχουμε ότι 
+                    $ \exists n_{0} \in \mathbb{N} \; : \; \forall n \geq n_{0} 
+                    \quad \abs{\sqrt[n]{\frac{n^{4}+5n-6}{2^{n}}} - \frac{1}{2}} < 
+                    \frac{1}{3} $
+
+                    Άρα 
+                    \begin{gather*}
+                        \sqrt[n]{\frac{n^{4}+5n-6}{2^{n}}} - \frac{1}{2} < 
+                        \frac{1}{3}, \; \forall n \geq n_{0} \Leftrightarrow  
+                        \sqrt[n]{\frac{n^{4}+5n-6}{2^{n}}} < \frac{5}{6}, \;
+                        \forall n \geq n_{0} 
+                    \end{gather*}
+                        οπότε 
+                        \[
+                            0 \leq \frac{n^{4}+5n-6}{2^{n}} < 
+                            \left(\frac{5}{6} \right)^{n}, \; \forall n \geq n_{0} 
+                         \] 
+                         όμως $ \lim_{n \to \infty} (\frac{5}{6} )^{n} = 0 $, άρα 
+                         από Κριτήριο Παρεμβολής, έχουμε ότι 
+                         $ \lim_{n \to \infty} \frac{n^{4}+5n-6}{2^{n}} = 0 $
+             \end{description}
+        \end{proof}
+
         \end{enumerate}
 \end{enumerate}
 
