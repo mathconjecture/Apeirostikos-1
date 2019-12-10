@@ -8,7 +8,7 @@
 \section{Ορισμός}
 
 
-Έστω $ {(a_{n})}_{n \in \mathbb{N}}$ ακολουθία. Τότε ορίζουμε την ακολουϑία 
+\mydfn{Έστω $ {(a_{n})}_{n \in \mathbb{N}}$ ακολουθία. Τότε ορίζουμε την ακολουϑία 
 \begin{align*}
     S_{1} &= a_{1} \\
     S_{2} &= a_{1}+ a_{2} \\
@@ -24,7 +24,7 @@
 \] 
 Οι όροι της ακολουθίας $ {(S_{n})}_{n \in \mathbb{N}} $ ονομάζονται 
 \textcolor{Col2}{μερικά αθροίσματα}
-της σειράς.
+της σειράς.}
 
 \section{Παραδείγματα}
 
@@ -87,6 +87,7 @@ $ S \in \mathbb{R} $, ο οποίος
         \item Να υπολογιστεί το άθροισμα της σειράς $ \sum_{n=1}^{\infty} 
             \frac{1}{n(n+1)} $.
             \begin{proof}
+            \item 
                 Έχουμε
                 \[
                     a_{n} = \frac{1}{n(n+1)} = \frac{A}{n} + \frac{B}{n+1} = 
@@ -108,13 +109,14 @@ $ S \in \mathbb{R} $, ο οποίος
                     S_{n} &= 1 - \frac{1}{n+1} \\
                     \vdots
                 \end{align*}
-            Επομένως $ \lim_{n \to \infty} {(S_{n})}_{n \in \mathbb{N}} = 
+            Επομένως $ \lim_{n \to \infty} S_{n} = 
             \lim_{n \to \infty} \left(1 - \frac{1}{n+1}\right) = 1 - 0 = 1 $
         \end{proof}
 
         \item Να υπολογιστεί το άθροισμα της σειράς $ \sum_{n=1}^{\infty} 
             \ln{\left(\frac{n}{n+1}\right)} $
             \begin{proof}
+            \item {}
                 Έχουμε
                 \[
                     a_{n} = \ln{\left(\frac{n}{n+1}\right)} = \ln{n} - \ln{(n+1)}  
@@ -134,7 +136,7 @@ $ S \in \mathbb{R} $, ο οποίος
                     S_{n} &= - \ln{(n+1)} \\
                     \vdots
                 \end{align*}
-                επομένως $ \lim_{n \to \infty} {(S_{n})}_{n \in \mathbb{N}} = 
+                επομένως $ \lim_{n \to \infty} S_{n} = 
                 \lim_{n \to \infty} (- \ln{(n+1)}) = - \infty $ οπότε η σειρά αποκλίνει.
             \end{proof}
     \end{enumerate}
