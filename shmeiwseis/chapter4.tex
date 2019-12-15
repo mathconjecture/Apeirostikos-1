@@ -1,0 +1,59 @@
+\documentclass[main.tex]{subfiles}
+
+
+
+\begin{document}
+
+\section{Ορισμός}
+
+\begin{dfn}
+    Έστω $ f \colon A \subset \mathbb{R} \to \mathbb{R} $ συνάρτηση και $ x_{0} \in A $. 
+    Η $f$ ονομάζεται συνεχής στο $ x_{0} \in \mathbb{R} $ αν $ \forall \varepsilon >0, 
+    \; \exists \delta >0 \; : \forall x \in A \quad \abs{x- x_{0}} < \delta 
+    \Rightarrow \abs{f(x) - f(x_{0})} < \varepsilon $
+\end{dfn}
+
+\begin{prop}
+    Οι σταθερές συναρτήσεις $ f \colon \mathbb{R} \to \mathbb{R} $ με $ f(x)=c, \; c \in 
+    \mathbb{R}$ είναι συνεχείς.
+\end{prop}
+\begin{proof}
+\item {}
+    Έστω $ \varepsilon >0 $ και $ x_{0} \in \mathbb{R} $. 
+    Επιλέγουμε τυχαίο $ \delta >0 $ και έχουμε ότι $ \forall x \in \mathbb{R} $ 
+    \[
+        \abs{x- x_{0}} < \delta \Rightarrow \abs{f(x)- f(x_{0})} = \abs{c-c} = 0 < 
+        \varepsilon 
+     \]
+\end{proof}
+
+\begin{prop}
+    Η ταυτοτική συνάρτηση $ f \colon \mathbb{R} \to \mathbb{R} $ με $ f(x)=x, \; x \in 
+    \mathbb{R}$ είναι συνεχής στο $ \mathbb{R} $.
+\end{prop}
+\begin{proof}
+\item {}
+    Έστω $ \varepsilon >0 $ και $ x_{0} \in \mathbb{R} $. 
+    Επιλέγουμε $ \delta = \varepsilon $ και έχουμε ότι $ \forall x \in \mathbb{R} $ 
+    \[
+        \abs{x- x_{0}} < \delta \Rightarrow \abs{f(x)-f(x_{0})} = \abs{x- x_{0}} < 
+        \delta = \varepsilon
+    \]
+\end{proof}
+
+\begin{prop}
+    Η συνάρτηση $ f \colon \mathbb{R} \to \mathbb{R} $ με $ f(x)= \sin{x}, \; x \in 
+    \mathbb{R}$ είναι συνεχής.
+\end{prop}
+\begin{proof}
+\item {}
+    Έστω $ \varepsilon >0 $ και $ x_{0} \in \mathbb{R} $. 
+    \[
+        \abs{\sin{x} - \sin{x_{0}}} = 2 \abs{\sin{\left(\frac{x - x_{0}}{2}\right)} 
+        \cdot \cos{\left(\frac{x+ x_{0}}{2}\right)}} \leq 2 
+        \abs{\sin{\left(\frac{x- x_{0}}{2}\right)}} \cdot 
+        \abs{\cos{\left(\frac{x+ x_{0}}{2}\right)} } \leq 2 \frac{x- x_{0}}{2} = 
+    \]
+    Επιλέγουμε $ \delta = \varepsilon $ και έχουμε ότι $ \forall x \in \mathbb{R} $ 
+\end{proof}
+\end{document}
