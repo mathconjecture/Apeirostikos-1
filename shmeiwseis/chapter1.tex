@@ -86,8 +86,8 @@
 
 \section{Αθροίσματα}
 
-\mydfn{Έστω $ a_{1}, a_{2}, \ldots, a_{n} \in \mathbb{R} $. Ορίζουμε 
-    \[ \sum_{n=1}^{N} a_{n} = a_{1} + a_{2} + \cdots + a_{n} \]}
+\mydfn{Έστω $ a_{1}, a_{2}, \ldots, a_{N} \in \mathbb{R} $. Ορίζουμε 
+    \[ \sum_{n=1}^{N} a_{n} = a_{1} + a_{2} + \cdots + a_{N} \]}
 
 \begin{example}
     Να δείξετε ότι $ \sum_{n=3}^{6} n^{2} = \sum_{n=4}^{7} (n-1)^{2}   $
@@ -124,39 +124,76 @@
 \end{proof}
 
 \begin{example}
+    Να δείξετε ότι $ \sum_{n=1}^{20} (2n+1) - \sum_{n=8}^{20} (2n+1) = \sum_{n=1}^{7} 
+    (2n+1) $ 
+\end{example}
+\begin{proof}
+        \item 
+            \[
+                \sum_{n=1}^{20} (2n+1) = \sum_{n=1}^{7} (2n+1) + 
+                \sum_{n=8}^{20} (2n+1) - \sum_{n=8}^{20} (2n+1) = 
+                \sum_{n=1}^{20} (2n+1)
+            \]
+\end{proof}
+
+\begin{example}
     Να δείξετε ότι $ \sum_{n=1}^{5} \frac{1}{n(n+1)} = 1 - \frac{1}{6}  $
 \end{example}
 
 \begin{proof}
-    \begin{align*}
-        \sum_{n=1}^{5} \frac{1}{n(n+1)} 
+\item {}
+    \begin{description}
+        \item [Α᾽ Τρόπος:]
+            \begin{align*}
+                \sum_{n=1}^{5} \frac{1}{n(n+1)} 
         &= \frac{1}{1\cdot 2} + \frac{1}{2 \cdot 3} + \frac{1}{3 \cdot 4} 
         + \frac{1}{4 \cdot 5} + \frac{1}{5 \cdot 6} \\
         &= \left(\frac{1}{1} - \frac{1}{2}\right) + \left(\frac{1}{2} 
         - \frac{1}{3} \right) + \left(\frac{1}{3} - \frac{1}{4}\right) 
         + \left(\frac{1}{4} - \frac{1}{5}\right) +
         \left(\frac{1}{5} - \frac{1}{6}\right)  = 1 - \frac{1}{6}
-    \end{align*}
-\end{proof}
+            \end{align*}
 
+        \item [Β᾽ Τρόπος: (Με ανάλυση σε Απλά Κλάσματα)]
+        \item {}
+            Έχουμε $ \frac{1}{n(n+1)} = \frac{A}{n} + \frac{B}{n+1} = 
+            \frac{1}{n} - \frac{1}{n+1}$, οπότε
+            \begin{align*}
+                \sum_{n=1}^{5} \frac{1}{n(n+1)} = \sum_{n=1}^{5} \left(\frac{1}{n} - 
+                \frac{1}{n+1}\right)    
+                = \left(\frac{1}{1} - \frac{1}{2}\right) + \left(\frac{1}{2} 
+                - \frac{1}{3} \right) + \left(\frac{1}{3} - \frac{1}{4}\right) 
+                + \left(\frac{1}{4} - \frac{1}{5}\right) +
+                \left(\frac{1}{5} - \frac{1}{6}\right)  = 1 - \frac{1}{6}
+            \end{align*} 
+    \end{description}
+    
+\end{proof}
 
 
 \begin{example}
-    Να δείξετε ότι $ \sum_{n=1}^{100} \frac{1}{n(n+1)} \leq \sum_{n=1}^{100}
-    \frac{1}{n^{2}} $.
+    Να δείξετε ότι $ \sum_{n=1}^{100} \frac{1}{n(n+1)} \leq \sum_{n=2}^{101} 
+    \frac{1}{n^{2}} $
 \end{example}
-
 \begin{proof}
+\item {} 
+    Έχουμε $ n-1 < n $ και $ n-1 > 0, \; \forall n \geq 2 $, οπότε
     \[
-        \frac{1}{n(n+1)} = \frac{1}{n^{2}+n} \leq \frac{1}{n^{2}} ,\; 
-        \forall n \in \mathbb{N} 
+        \frac{1}{n-1} \leq \frac{1}{n} \overset{\cdot \frac{1}{n} >0}{\Rightarrow}
+        \frac{1}{n(n-1)} \leq \frac{1}{n^{2}} \Rightarrow \sum_{n=1}^{100} 
+        \frac{1}{n(n+1)} = \sum_{n=2}^{101} \frac{1}{n(n-1)} \leq \sum_{n=2}^{101} 
+        \frac{1}{n^{2}} 
     \] 
-    Οπότε,
-    \[
-        \sum_{n=1}^{100} \frac{1}{n(n+1)} \leq \sum_{n=1}^{100} 
-        \frac{1}{n^{2}}
-    \]
 \end{proof}
+
+\begin{example}
+\item {}
+    \begin{enumerate}[wide,labelwidth=!,labelindent=0pt]
+        \item $ \sum_{n=1}^{N} n = \frac{N(N+1)}{2}, \; \forall n \in \mathbb{N}  $
+        \item $ \sum_{n=1}^{N} n^{2} = \frac{N(N+1)(N+2)}{6}, \; \forall N \in 
+            \mathbb{N} $
+    \end{enumerate}
+\end{example}
 
 \section{Απόλυτη Τιμή}
 
