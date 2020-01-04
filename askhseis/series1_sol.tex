@@ -1,0 +1,172 @@
+\input{preamble/preamble.tex}
+\input{preamble/definitions.tex}
+
+\everymath{\displaystyle}
+
+\begin{document}
+
+\begin{center}
+    \minibox[frame,c,pad=5pt]{\large \bfseries  Σειρές \\ \large Ασκήσεις}
+\end{center}
+
+\vspace{\baselineskip}
+
+\begin{enumerate}
+    \item 
+    \begin{enumerate}[i)]
+        \item Έχουμε $ a_{n}= \frac{n^{2}+1}{3n^{2}-1} > 0, \; \forall n \in 
+            \mathbb{N} $. Επομένως η σειρά συγκλίνει ή απειρίζεται θετικά.
+
+            Όμως \[ \lim_{n \to \infty} a_{n} = \lim_{n \to \infty} 
+                \frac{n^{2}+1}{3n^{2}-1} = \lim_{n \to \infty} 
+                \frac{n^{2}(1+ \frac{1}{n^{{2}}})}{n^{2}(3- \frac{1}{n^{2}})} = 
+                \lim_{n \to \infty} \frac{1 + \frac{1}{n^{2}}}{3- \frac{1}{n^{2}}} = 
+                \frac{1+0}{3-0} = \frac{1}{3} \neq 0
+            \] επομένως από γνωστή πρόταση η σειρά αποκλίνει και άρα απειρίζεται 
+            θετικά.
+
+        \item Έχουμε $ a_{n}= \frac{2n^{3}+n-1}{n^{3}+4} > 0, \; \forall n \in 
+            \mathbb{N} $. Επομένως η σειρά συγκλίνει ή απειρίζεται θετικά.
+            Όμως
+            \[
+                \lim_{n \to \infty} \frac{2n^{3}+n-1}{n^{3}+4} = \lim_{n \to \infty}
+                \frac{n^{3}(2+ \frac{1}{n^{2}}- \frac{1}{n^{3}})}{n^{3}
+                (1+ \frac{4}{n^{3}})} = \lim_{n \to \infty} = 
+                \lim_{n \to \infty} \frac{2+ \frac{1}{n^{2}}- 
+                \frac{1}{n^{3}}}{1 + \frac{4}{n^{3}}} =  
+                \frac{2+0-0}{1+0} = 2 \neq 0
+            \]
+            επομένως από γνωστή πρόταση η σειρά απειρίζεται αποκλίνει και 
+            άρα απειρίζεται θετικά. 
+    \end{enumerate}
+
+\item 
+    \begin{enumerate}[i)]
+        \item Παρατηρούμε ότι $ a_{n} = \frac{n^{2}+1}{n} \geq 0, \; \forall n 
+            \in \mathbb{N} $. Έχουμε 
+            \[
+                a_{n} = \frac{n^{2}+1}{n} = n + \frac{1}{n} \geq 
+                \frac{1}{n}, \; \forall n \in \mathbb{N}  
+            \]
+            Επομένως $ 0 \leq \frac{1}{n} \leq \frac{n^{2}+1}{n}, \; \forall n \in
+            \mathbb{N}  $ και $ \sum_{n=1}^{\infty} \frac{1}{n} $ αποκλίνει, επομένως 
+            από κριτήριο σύγκρισης και $ \sum_{n=1}^{\infty} \frac{n^{2}+1}{n} $ 
+            αποκλίνει.
+
+        \item Παρατηρούμε ότι $ a_{n} = \frac{3n^{3}+1}{4n^{4}-1} \geq 0, \; \forall n 
+            \in \mathbb{N} $. Έχουμε
+            \[
+                a_{n} = \frac{3n^{3}+1}{4n^{4}-1} \geq \frac{3n^{3}}{4n^{4}} = 
+                \frac{3}{4} \frac{1}{n}, \; \forall n \in \mathbb{N} 
+            \] 
+            Επομένως $ 0 \leq \frac{3}{4} \frac{1}{n} \leq \frac{3n^{3}+1}{4n^{3}-1}, 
+            \; \forall n \in \mathbb{N} $ και $ \sum_{n=1}^{\infty} \frac{3}{4} 
+            \frac{1}{n} $ αποκλίνει γιατί $ \sum_{n=1}^{\infty} \frac{1}{n} $ 
+            αποκλίνει, επομένως από κριτήριο σύγκρισης και $ \sum_{n=1}^{\infty} 
+            \frac{3n^{3}+1}{4n^{4}-1} $ αποκλίνει.
+
+        \item Παρατηρούμε ότι $ a_{n} = \frac{10n+2019}{n^{2}+1} \geq 0, \; 
+            \forall n \in \mathbb{N} $. Έχουμε
+            \[
+                a_{n} = \frac{10n+2019}{n^{2}+1} \geq \frac{10n}{n^{2}+1} \geq 
+                \frac{10n}{n^{2}+n^{2}} = \frac{10n}{2n^{2}} = 5 \frac{1}{n}, \; 
+                \forall n \in \mathbb{N}
+            \] 
+            Επομένως $ 0 \leq 5 \frac{1}{n} \leq \frac{10n+2019}{n^{2}+1}, \; 
+            \forall n \in \mathbb{N} $ και $ \sum_{n=1}^{\infty} 5 \frac{1}{n} $ 
+            αποκλίνει, γιατί $ \sum_{n=1}^{\infty} \frac{1}{n} $ αποκλίνει, 
+            επομένως από κριτήριο Σύγκρισης και $ \sum_{n=1}^{\infty} 
+            \frac{10n +2019}{n^{2}+1} $ αποκλίνει.
+
+        \item Παρατηρούμε ότι $ a_{n} = \frac{2n}{n^{2}+1} \geq 0, \; \forall n \in 
+            \mathbb{N} $.  Έχουμε 
+            \[
+                a_{n} = \frac{2n}{n^{2}+1} \geq \frac{2n}{n^{2}+n^{2}} = 
+                \frac{2n}{2n^{2}} \geq \frac{1}{n}, \; \forall n \in \mathbb{N} 
+            \] 
+            Επομένως $ 0 \leq \frac{1}{n} \leq \frac{2n}{n^{2}+1}, \; 
+            \forall n \in \mathbb{N} $ και $ \sum_{n=1}^{\infty} \frac{1}{n} $ 
+            αποκλίνει, επομένως από κριτήριο Σύγκρισης και $ \sum_{n=1}^{\infty} 
+            \frac{2n}{n^{2}+1} $ αποκλίνει.
+
+        \item Παρατηρούμε ότι $ a_{n} = \frac{\sqrt[3]{n^{2}+1}}{n+1} \geq 0, \; 
+            \forall n \in \mathbb{N} $. Έχουμε
+            \[
+                a_{n} = \frac{\sqrt[3]{n^{2}+1}}{n+1} \geq \frac{\sqrt[3]{n^{2}}}{n+1} 
+                \geq \frac{\sqrt[3]{n^{2}}}{n+n} = \frac{\sqrt[3]{n^{2}}}{2n} =
+                \frac{1}{2n^{\frac{1}{3}}}, \; \forall n \in \mathbb{N}
+            \] 
+            Επομένως $ 0 \leq \frac{1}{2n^{\frac{1}{3}}} \leq 
+            \frac{\sqrt[3]{n^{2}+1} }{n+1}, \; \forall n \in \mathbb{N} $ και 
+            $ \sum_{n=1}^{\infty} \frac{1}{2} \frac{1}{n^{\frac{1}{3}}} $ 
+            αποκλίνει γιατί $ \sum_{n=1}^{\infty} \frac{1}{n^{\frac{1}{3}}} $ 
+            αποκλίνει, ως γενικευμένη αρμονική με $ \rho = \frac{1}{3} < 1 $ 
+            επομένως από κριτήριο Σύγκρισης και $ \sum_{n=1}^{\infty} 
+            \frac{\sqrt[3]{n^{2}+1}}{n+1} $ αποκλίνει.
+
+        \item Παρατηρούμε ότι $ a_{n} = \frac{1}{\sqrt{n(n+1)}} \geq 0, \; \forall n 
+            \in \mathbb{N} $. Έχουμε
+            \[
+                a_{n} = \frac{1}{\sqrt{n(n+1)}} \geq \frac{1}{\sqrt{(n+1)(n+1)}} = 
+                \frac{1}{\sqrt{(n+1)^{2}} } = \frac{1}{n+1} \geq \frac{1}{n+n} = 
+                \frac{1}{2n}, \; \forall n \in \mathbb{N}   
+            \] 
+            Επομένως $ 0 \leq \frac{1}{2n} \leq \frac{1}{\sqrt{n(n+1)}}, \; 
+            \forall n \in \mathbb{N} $ και $ \sum_{n=1}^{\infty} \frac{1}{2} 
+            \frac{1}{n} $ αποκλίνει γιατί $ \sum_{n=1}^{\infty} \frac{1}{n} $ 
+            αποκλίνει, επομένως από κριτήριο Σύγκρισης και 
+            $ \sum_{n=1}^{\infty} \frac{1}{\sqrt{n(n+1)}} $ αποκλίνει.
+
+            \begin{rem}
+                Ένας 2ος τρόπος
+                \[
+                    a_{n} = \frac{1}{\sqrt{n(n+1)}} = \frac{1}{\sqrt{n^{2}+n}} \geq 
+                    \frac{1}{\sqrt{n^{2}+n^{2}}} = \frac{1}{\sqrt{2n^{2}}} = 
+                    \frac{1}{\sqrt{2}n}, \; \forall n \in \mathbb{N}   
+                \] 
+            \end{rem}
+
+        \item Παρατηρούμε ότι $ a_{n} = \frac{\sqrt{n}}{n^{3}+1} \geq 0, \; 
+            \forall n \in \mathbb{N} $. Έχουμε
+            \[
+                a_{n} = \frac{\sqrt{n}}{n^{3}+1} \leq \frac{\sqrt{n}}{n^{3}} =
+                \frac{n^{\frac{1}{2}}}{n^{3}} = \frac{1}{n^{\frac{5}{2}}}, \; 
+                \forall n \in \mathbb{N}
+            \] 
+            Επομένως $ 0 \leq \frac{\sqrt{n}}{n^{3}+1} \leq \frac{1}{n^{\frac{5}{2}}}, 
+            \; \forall n \in \mathbb{N}$ και $ \sum_{n=1}^{\infty} 
+            \frac{1}{n^{\frac{5}{2} }}$ συγκλίνει ως γενικευμένη αρμονική με 
+            $ \rho = \frac{5}{2} > 1 $, επομένως από κριτήριο Σύγκρισης η 
+            $ \sum_{n=1}^{\infty} \frac{\sqrt{n}}{n^{3}+1} $ συγκλίνει.
+
+        \item Παρατηρούμε ότι $ a_{n} = \frac{\sqrt{n}}{n + 5 \sqrt{n}} \geq 0, \; 
+            \forall n \in \mathbb{N}$. Έχουμε
+            \[
+                a_{n} = \frac{\sqrt{n}}{n+ 5 \sqrt{n}} \geq \frac{\sqrt{n}}{n+ 5n} = 
+                \frac{\sqrt{n}}{6n} = \frac{1}{6 \sqrt{n}} \geq \frac{1}{6n}, 
+                \; \forall n \in \mathbb{N}
+            \] 
+            Επομένως $ 0 \leq \frac{1}{6n} \leq \frac{\sqrt{n}}{n+ 5 \sqrt{n}}, \; 
+            \forall n \in \mathbb{N} $ και 
+            $ \sum_{n=1}^{\infty} \frac{1}{6} \frac{1}{n} $ αποκλίνει γιατί 
+            $ \sum_{n=1}^{\infty} \frac{1}{n} $ αποκλίνει, επομένως από κριτήριο 
+            Σύγκρισης και $ \sum_{n=1}^{\infty} \frac{\sqrt{n}}{n+ 5 \sqrt{n}} $ 
+            αποκλίνει.
+
+        \item Παρατηρούμε ότι $ \sum_{n=1}^{\infty} \frac{3^{n}}{5^{n}+1} \geq 0, 
+            \; \forall n \in \mathbb{N}$. Έχουμε
+            \[
+                a_{n} = \frac{3^{n}}{5^{n}+1} \leq \frac{3^{n}}{5^{n}} = 
+                \left(\frac{3}{5}\right)^{n}, \; \forall n \in \mathbb{N} 
+            \] 
+            Επομένως $ 0 \leq \frac{3^{n}}{5^{n}+1} \leq \left(\frac{3}{5} \right)^{n},
+            \; \forall n \in \mathbb{N} $ και $ \sum_{n=1}^{\infty} 
+            \left(\frac{3}{5} \right)^{n}$
+            συγκλίνει ως γεωμετρική σειρά με $ \abs{\lambda} = \abs{\frac{3}{5}} = 
+            \frac{3}{5} < 1 $, επομένως από κριτήριο Σύγκρισης και 
+            $ \sum_{n=1}^{\infty} \frac{3^{n}}{5^{n}+1} $ συγκλίνει.
+    \end{enumerate}
+\end{enumerate}
+
+
+\end{document}
