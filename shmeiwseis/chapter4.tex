@@ -24,7 +24,7 @@
     \[
         \abs{x- x_{0}} < \delta \Rightarrow \abs{f(x)- f(x_{0})} = \abs{c-c} = 0 < 
         \varepsilon 
-     \]
+    \]
 \end{proof}
 
 \begin{prop}
@@ -50,10 +50,483 @@
     Έστω $ \varepsilon >0 $ και $ x_{0} \in \mathbb{R} $. 
     \[
         \abs{\sin{x} - \sin{x_{0}}} = 2 \abs{\sin{\left(\frac{x - x_{0}}{2}\right)} 
-        \cdot \cos{\left(\frac{x+ x_{0}}{2}\right)}} \leq 2 
+        \cdot \cos{\left(\frac{x+ x_{0}}{2}\right)}} = 2 
         \abs{\sin{\left(\frac{x- x_{0}}{2}\right)}} \cdot 
-        \abs{\cos{\left(\frac{x+ x_{0}}{2}\right)} } \leq 2 \frac{x- x_{0}}{2} = 
+        \abs{\cos{\left(\frac{x+ x_{0}}{2}\right)}} \leq 2 \frac{\abs{x- x_{0}}}{2}
     \]
-    Επιλέγουμε $ \delta = \varepsilon $ και έχουμε ότι $ \forall x \in \mathbb{R} $ 
+    Επιλέγουμε $ \delta = \varepsilon $ και έχουμε ότι $ \forall \varepsilon >0, \; 
+    \exists \delta = \varepsilon > 0 \; : \; \forall x \in \mathbb{R} \quad 
+    \abs{x- x_{0}} < \delta $
+    \begin{align*}
+        \abs{\sin{x} - \sin{x_{0}}} = \cdots \leq \abs{x - x_{0}} < \delta = 
+        \varepsilon  
+    \end{align*} 
 \end{proof}
+
+\begin{thm}[Αρχή Μεταφοράς]
+    Μια συνάρτηση $ f \colon A \to \mathbb{R} $ είναι συνεχής στο $ x_{0} \in A $, 
+    αν και μόνον αν, για κάθε ακολουθία $ (x_{n})_{n \in \mathbb{N}} $ με
+
+    \vspace{\baselineskip}
+
+    \begin{minipage}{0.25\textwidth}
+        \begin{myitemize}
+        \item $ x_{n} \in A, \forall n \in \mathbb{N} $ \hfill \tikzmark{a}
+        \item $ \lim_{n \to \infty} x_{n} = x_{0} $ \hfill \tikzmark{b}
+        \end{myitemize}
+    \end{minipage}
+    \mybrace{a}{b}[$ \lim_{n \to \infty} f(x_{n}) = f(x_{0}) $]
+\end{thm}
+
+\begin{proof}
+\item {}
+    \begin{description}
+        \item [($ \Rightarrow $)]
+            Έστω $ f $ συνεχής στο $ x_{0} $ και έστω ακολουθία 
+            $ (x_{n})_{n \in \mathbb{N}} $ με $ x_{n} \in A $ και $ x_{n} 
+            \xrightarrow{n \to \infty} x_{0} $.
+            Θα δείξουμε ότι $ f(x_{n}) \xrightarrow{n \to \infty} x_{0} $.
+
+            Έστω $ \varepsilon >0 $.
+
+            Ζητάμε $ n_{0} \in \mathbb{N} \; : \; 
+            \forall n \geq n_{0} \quad \abs{f(x_{n}) - f(x_{0})}<
+            \varepsilon $.
+
+            Από την συνέχεια της $f$ στο $ x_{0} $ έχουμε:
+            \[
+                \exists \delta >0 \; : \; \quad \forall x \in A \quad 
+                \abs{x- x_{0}} < \delta \Rightarrow 
+                \inlineequation[eq:contres]{\abs{f(x) - f(x_{0}) < \varepsilon}}
+            \] 
+            Επειδή $ x_{n} \xrightarrow{n \to \infty} x_{0} $ τότε $ \exists n_{0} 
+            \in \mathbb{N} \; : \; \forall n \geq n_{0} \quad
+            \abs{x_{n} - x_{0}} < \delta $. 
+
+            Οπότε $ \forall n \geq n_{0}$ έχω ότι $ x_{n} \in A $ και 
+            $ \abs{x_{n}- x_{0}} < \delta 
+            \overset{\eqref{eq:contres}}{\Rightarrow } 
+            \abs{f(x_{n}) - f(x_{0})} < \varepsilon $ 
+
+        \item [($ \Leftarrow $)]
+            Έστω ότι γιά κάθε ακολουθία $ (x_{n})_{n \in \mathbb{N}} $ 
+            $ x_{n} \in A $ και $ x_{n} \xrightarrow{n \to \infty} x_{0} $ 
+            έχουμε ότι $ f(x_{n}) \xrightarrow{n \to \infty} f(x_{0}) $.
+
+            Θα δείξουμε ότι η $f$ είναι συνεχής στο $ x_{0} $. (Με άτοπο)
+
+            Έστω ότι $f$ όχι συνεχής στο $ x_{0} $. Οπότε 
+            \[
+                \exists \varepsilon >0 \; : \; \exists x \in A \quad 
+                \abs{x_{\delta} - x_{0}} < \delta \; \text{και} \; 
+                \abs{f(x_{\delta})- f(x_{0})} \geq \varepsilon 
+            \] 
+            Άρα για 
+            \begin{myitemize}
+            \item $ \delta =1 \; \exists x_{1} \in A \; : \; \abs{x_{1}- x_{0}} < 1 
+                $ και $ \abs{f(x_{1}) - f(x_{0})} \geq \varepsilon $
+            \item $ \delta =2 \; \exists x_{2} \in A \; : \; \abs{x_{2}- x_{0}} < 
+                \frac{1}{2}$ και $ \abs{f(x_{2}) - f(x_{0})} \geq \varepsilon $ 
+
+                \hspace{0.2\textwidth} \vdots 
+            \end{myitemize}
+            Γενικά για κάθε $ n \in \mathbb{N} $ επιλέγουμε $ x_{n} \in A $ 
+            τέτοιο ώστε $ \abs{x_{n}- x_{0}} < \frac{1}{n} $ και 
+            $ \abs{f(x_{n}) - f(x_{0})} \geq \varepsilon  $
+
+            Οπότε έχουμε
+            \begin{myitemize}
+            \item $ x_{n} \in A, \forall n \in \mathbb{N} $ 
+            \item $ - \frac{1}{n} < x_{n} - x_{0} < \frac{1}{n}, \; 
+                \forall n \in \mathbb{N} 
+                \Leftrightarrow x_{0}- \frac{1}{n} < x_{n} < x_{0}+ \frac{1}{n} $ 
+            \end{myitemize}
+            και $ \lim_{n \to \infty} (x_{0}- \frac{1}{n}) = 
+            \lim_{n \to \infty} (x_{0}+ \frac{1}{n}) = x_{0} $ άρα από Κριτήριο 
+            Παρεμβολής και $ \lim_{n \to \infty} x_{n} = x_{0} $ και από υπόθεση 
+            έχουμε ότι $ \lim_{n \to \infty} f(x_{n}) = f(x_{0}) $.
+
+            Άτοπο γιατι $ \abs{f(x_{n})- f(x_{0})} \geq \delta, 
+            \; \forall n \in \mathbb{N}$
+    \end{description}
+\end{proof}
+
+\begin{prop}
+    Έστω $ f,g \colon A \to \mathbb{R} $ συνεχείς στο $ x_{0} \in A $ και έστω 
+    $ \lambda \in \mathbb{R} $. Τότε:
+    \begin{enumerate}[i)]
+        \item $ f+g $ συνεχής στο $ x_{0} $.
+        \item $ f\cdot g $ συνεχής στο $ x_{0} $.
+        \item $ \lambda f $ συνεχής στο $ x_{0} $.
+        \item $ \frac{f}{g} $ συνεχής στο $ x_{0} $, αν $g \neq 0$ ($g$ δεν έχει
+            ρίζες) 
+    \end{enumerate}
+\end{prop}
+
+\begin{proof}
+
+\end{proof}
+
+\begin{prop}
+    Η συνάρτηση $ f(x)=x^{2}, \; x \in \mathbb{R} $ είναι συνεχής.
+\end{prop}
+
+\begin{proof}
+    Από προηγούμενη πρόταση, για $ f(x)=g(x) = x $, συνεχείς, έχουμε ότι     
+    $ f\cdot g = x\cdot x = x^{2} $ θα είναι συνεχής.
+\end{proof}
+
+\begin{prop}
+    Όλες οι πολυωνυμικές συναρτήσεις είναι συνεχείς.
+\end{prop}
+
+\begin{proof}
+
+\end{proof}
+
+\begin{prop}
+    Όλες οι συναρτήσεις της μορφής $ f(x)= x^{n}, \; \forall n \in \mathbb{N} $
+    είναι συνεχείς.
+\end{prop}
+
+\begin{proof}
+    Με Μαθηματική Επαγωγή 
+\end{proof}
+
+\begin{thm}
+    Έστω $ f \colon [a,b] \to \mathbb{R} $ συνεχής. Τότε $ \exists m,M \in \mathbb{R} $ 
+    τέτοια ώστε $ m \leq f(x) \leq M, \; \forall x \in [a,b] $. Δηλαδή το $ f([a,b]) $ 
+    είναι φραγμένο ή ισοδύναμα η $f$ είναι φραγμένη.
+\end{thm}
+
+\begin{proof}
+    
+\end{proof}
+
+\begin{prop}
+    Έστω $ f \colon A \to \mathbb{R} $ συνεχής σ᾽ ένα σημείο $ x_{0} \in A $ και 
+    $ g \colon f(A) \to \mathbb{R} $ συνεχής στο $ f(x_{0}) \in f(A) $. Τότε η 
+    συνάρτηση $ g \circ f $ είναι συνεχής στο $ x_{0} \in A $.
+\end{prop}
+
+\begin{proof}
+    Εύκολη με Αρχή Μεταφοράς
+\end{proof}
+
+\begin{prop}
+    Η συνάρτηση $ \cos{} \colon \mathbb{R} \to \mathbb{R} $ είναι συνεχής.
+\end{prop}
+
+\begin{proof}
+    
+\end{proof}
+
+\begin{prop}
+    Η συνάρτηση $ f(x) = a^{x}, \; x \in \mathbb{R}, \; a>0 $ είναι συνεχής.
+\end{prop}
+
+\begin{proof}
+    
+\end{proof}
+
+\begin{prop}
+    Η συνάρτηση $ f(x) = x^{a}, \; x>0 $ είναι συνεχής $ \forall a \in \mathbb{R} $.
+\end{prop}
+
+\begin{proof}
+    
+\end{proof}
+
+\begin{thm}
+    Έστω $ f \colon [a,b] \to \mathbb{R} $ συνεχής. Τότε $ \exists x_{1}, x_{2} \in 
+    [a,b] \; : \; f(x_{1}) \leq f(x) \leq f(x_{2}), \; \forall x \in [a,b]$.
+\end{thm}
+
+\begin{proof}
+    
+\end{proof}
+
+\begin{thm}[Bolzano]
+    Έστω $ f \colon [a,b] \to \mathbb{R} $ συνεχής, με $ f(a) \cdot f(b) <0 $. 
+    Τότε $ \exists \xi \in (a,b) \; : \; f(\xi) = 0 $.
+\end{thm}
+
+\begin{proof}
+    Έστω $ f \colon [a,b] \to \mathbb{R} $ συνεχής. Αν επιλέξουμε έναν αριθμό $ \rho $ 
+    τέτοιο ώστε $ f(a) < q \rho < f(b) $ ή $ f(b) < \rho < f(a) $, τότε $ \rho \in 
+    f([a,b]) $.
+\end{proof}
+
+\begin{proof}
+    
+\end{proof}
+
+\begin{dfn}
+    Ένα υποσύνολο $I$ των πραγματικών αριθμών, ονομάζεται διάστημα, αν 
+    $ [x,y] \subseteq I, \; \forall x,y \in I $ με $ x<y $.
+\end{dfn}
+
+\begin{example}
+    Το σύνολο $ A = (0,2) \cup (3,4) $ δεν είναι διάστημα, γιατί $ 1 \in A $ και 
+    $ \frac{7}{2} \in A $, όμως το $ \left[1, \frac{7}{2}\right] \not\subseteq A $.
+\end{example}
+
+\begin{thm}
+    Συνεχής εικόνα διαστήματος είναι διάστημα. (ΘΜΤ με άλλα λόγια)
+\end{thm}
+
+\begin{prop}
+   Η εικόνα κλειστού διαστήματος είναι διάστημα. 
+\end{prop}
+
+\begin{proof}
+    
+\end{proof}
+
+\begin{thm}[Σταθερού Σημείου]
+    Έστω $ f \colon [0,1] \to [0,1] $ συνεχής. Τότε $ \exists x_{0} \in [0,1] \; 
+    : \; f(x_{0}) = x_{0} $.
+\end{thm}
+
+\begin{proof}
+    
+\end{proof}
+
+\begin{thm}
+    Έστω $ f \colon I \to \mathbb{R} $ συνεχής και $ 1 - 1 $. Τότε η $f$ είναι 
+    γνησίως αύξουσα ή γνησίως φθίνουσα.
+\end{thm}
+
+\begin{thm}
+    Έστω $ f \colon I \to \mathbb{R} $ συνεχής και $ 1 - 1 $. Τότε η $f$ αντιστρέφεται.
+\end{thm}
+
+\begin{proof}
+    
+\end{proof}
+
+\begin{dfn}
+    Ορίζουμε $ \log{} \colon (0,+ \infty) \to \mathbb{R} $ με τύπο $ \log{y} = x $, 
+    για το μοναδικό $ x \; : \; e^{x} = y $.
+\end{dfn}
+
+\section{Όριο Συνάρτησης}
+
+\begin{dfn}
+    Έστω $ A \subseteq \mathbb{R} $. Το $ x_{0} $ ονομάζεται σημείο συσσώρευσης του 
+    συνόλου $A$, αν υπάρχει ακολουθία $ (x_{n})_{n \in \mathbb{N}} $ τέτοια ώστε 
+    \begin{myitemize}
+    \item $ x_{n} \in A \setminus \{ x_{0} \} $
+    \item $ \lim_{n \to \infty} x_{n} = x_{0} $
+    \end{myitemize}
+\end{dfn}
+
+\begin{examples}
+\end{examples}
+
+\begin{dfn}
+    Έστω $ f \colon A \to \mathbb{R} $ και $ x_{0} $ σημείο συσσώρευσης του $A$. 
+    \begin{myitemize}
+    \item Το όριο $ \lim_{x \to x_{0}} f(x) $ υπάρχει και είναι ο αριθμός 
+        $ l \in \mathbb{R} $ αν 
+        \[
+            \forall \varepsilon >0, \; \exists \delta >0 \; : \; \forall x \in A \quad 
+            \abs{x-x0} < \delta \Rightarrow \abs{f(x)-l} < \varepsilon
+        \] 
+
+    \item Το όριο $ \lim_{x \to x_{0}} f(x) $ υπάρχει και είναι $ + \infty $, αν
+        \[
+            \forall M>0, \; \exists \delta >0 \; : \; \forall x \in A 
+            \quad \abs{x - x_{0}} < \delta \Rightarrow f(x) > M
+        \] 
+
+    \item Το όριο $ \lim_{x \to x_{0}} f(x) $ υπάρχει και είναι $ - \infty $, αν
+        \[
+            \forall M>0, \; \exists \delta >0 \; : \; \forall x \in A 
+            \quad \abs{x - x_{0}} < \delta \Rightarrow f(x) < -M
+        \] 
+    \end{myitemize}
+\end{dfn}
+
+\begin{dfn}
+    Έστω $ f \colon A \to \mathbb{R} $ με $A$ όχι άνω φραγμένο.
+    \begin{myitemize}
+    \item $ \lim_{x \to +\infty} f(x) = l \in \mathbb{R} \Leftrightarrow \forall 
+        \varepsilon > 0, \; \exists M>0 \; : \; \forall x > M \quad 
+        \abs{f(x)-l} < \varepsilon $ 
+    \item $ \lim_{x \to +\infty} f(x) = + \infty \in \mathbb{R} \Leftrightarrow \forall 
+        M > 0, \; \exists \overline{M} >0 \; : \; \forall x > \overline{M} \quad 
+        f(x) > M $ 
+    \end{myitemize}
+\end{dfn}
+
+\begin{prop}
+    Να αποδείξετε ότι $ \lim_{x \to 0} \frac{\sin{x}}{x} = 1 $.
+\end{prop}
+
+\begin{examples}
+\end{examples}
+
+\begin{prop}
+    Το όριο $ \lim_{x \to \infty} \sin{x} $ δεν υπάρχει.
+\end{prop}
+
+\section{Παράγωγος Συνάρτησης}
+
+\begin{dfn}
+    Έστω $ f \colon (a,b) \to \mathbb{R} $ συνάρτηση και $ x_{0} \in (a,b) $. Αν 
+    υπάρχει το $ \lim_{x \to x_{0}} \frac{f(x) - f(x_{0})}{x - x_{0}}$, τότε λέμε ότι 
+    η $f$ είναι παραγωγίσιμη στο $ x_{0} $ και $ f'(x_{0}) = \lim_{x \to x_{0}} 
+    \frac{f(x)-f(x_{0})}{x- x_{0}} $.
+\end{dfn}
+
+\begin{prop}
+    Έστω $ f \colon \mathbb{R} \to \mathbb{R} $ με τύπο $ f(x)=c $, σταθερή. Τότε 
+    $ f'(x) = 0, \; \forall x \in \mathbb{R} $. 
+\end{prop}
+
+\begin{proof}
+    
+\end{proof}
+
+\begin{prop}
+    Έστω $ f \colon \mathbb{R} \to \mathbb{R} $ με τύπο $ f(x)=x $. Τότε 
+    $ f'(x) = 1, \; \forall x \in \mathbb{R} $. 
+\end{prop}
+
+\begin{proof}
+    
+\end{proof}
+
+\begin{prop}
+    Έστω $ f \colon \mathbb{R} \to \mathbb{R} $ με τύπο $ f(x)=x^{2} $. Τότε 
+    $ f'(x) = 2x, \; \forall x \in \mathbb{R} $. 
+\end{prop}
+
+\begin{prop}
+    Έστω $ f \colon \mathbb{R} \to \mathbb{R} $ με τύπο $ f(x) = \abs{x}, \; 
+    x \in \mathbb{R}$. Τότε 
+    \[
+        f'(x) = \begin{cases} \phantom{-}1, & x>0 \\ -1, & x<0 \end{cases} 
+    \] 
+    και δεν υπάρχει η παράγωγος στο $0$.
+\end{prop}
+
+\begin{proof}
+    
+\end{proof}
+
+\begin{examples}
+\end{examples}
+
+\begin{thm}
+    Έστω $ f,g \colon (a,b) \to \mathbb{R} $ και $ x_{0} \in (a,b) $. Αν οι $ f,g $ 
+    είναι παραγωγίσιμες στο $ x_{0} $, τότε:
+    \begin{myitemize}
+    \item $ (f+g)'(x_{0}) = f'(x_{0}) + g'(x_{0})$
+    \item $ (f\cdot g)'(x_{0}) = f'(x_{0}) \cdot g(x_{0}) + g'(x_{0})\cdot f(x_{0}) $
+    \item $ \left(\frac{f}{g}\right)'(x_{0}) = \frac{f'(x_{0})
+            \cdot g(x_{0}) - g'(x_{0})\cdot f(x_{0})}{g^{2}(x_{0})} $,
+            με την προυπόθεση ότι η $ \frac{f}{g} $ ορίζεται.
+    \end{myitemize}
+\end{thm}
+
+\begin{proof}
+    
+\end{proof}
+
+\begin{prop}
+    Έστω $ f \colon (a,b) \to \mathbb{R} $ και $ x_{0} \in (a,b) $. Αν η $f$ είναι 
+    παραγωγίσιμη στο $ x_{0} $, τότε η $f$ είναι συνεχής στο $ x_{0} $.
+\end{prop}
+
+\begin{proof}
+    
+\end{proof}
+
+\begin{prop}
+    Έστω $ f(x) = a_{n}x^{n} + \cdots + a_{1}x + a_{0} $ πολυώνυμο. Τότε 
+    $ f'(x) = n a_{n}x^{n-1} + \cdots a_{1} $.
+\end{prop}
+
+\begin{proof}
+    Εύκολη (Γ᾽ Λυκείου)
+\end{proof}
+
+\begin{prop}
+    Έστω $ f \colon \mathbb{R} \to (-1,1)$, με τύπο, $ f(x) = \sin{x} $. Τότε 
+    $ f'(x) = \cos{x} $.
+\end{prop}
+
+\begin{proof}
+    
+\end{proof}
+
+\begin{prop}
+    Η εκθετική συνάρτηση $ f \colon \mathbb{R} \to (0,+ \infty) $, με τύπο 
+    $ f(x) = e^{x} $ είναι παραγωγίσιμη και ισχύει $ f'(x) = e^{x} $.
+\end{prop}
+
+\begin{proof}
+    
+\end{proof}
+
+\section{Ακρότατα Συνάρτησης}
+
+\begin{dfn}
+    Έστω $I$ διάστημα των πραγματικών αριθμών και $ f \colon I \to \mathbb{R} $. 
+    Ένα εσωτερικό σημείο $ x_{0} $ του $I$ λέγεται κρίσιμο σημείο για την $f$, αν 
+    $ f'(x_{0} ) = 0 $.
+\end{dfn}
+
+\begin{rem}
+    Έστω $ f \colon [a,b] \to \mathbb{R} $ συνεχής συνάρτηση. Γνωρίζουμε ότι η $f$ 
+    παίρνει μέγιστη και ελάχιστη τιμή στο $ [a,b] $. Αν $ x_{0} \in [a,b] $ και 
+    $ f(x_{0}) = \max f $ ή $ f(x_{0}) = \min f $ τότε συμβαίνει αναγκαστικά 
+    κάτι από τα παρακάτω:
+    \begin{myitemize}
+    \item $ x_{0} = a $ ή $ x_{0} =b $ (άκρα του διαστήματος)
+    \item $ x_{0} \in (a,b) $ και $ f'(x_{0} ) = 0 $ (κρίσιμο σημείο)
+    \item $ x_{0} \in (a,b) $ και η $f$ δεν είναι παραγωγίσιμη στο $ x_{0} $.
+    \end{myitemize}
+\end{rem}
+
+\begin{examples}
+\end{examples}
+
+\begin{thm}[Rolle]
+    Έστω $ f \colon [a,b] \to \mathbb{R} $. Υποθέτουμε ότι η $ f $ είναι συνεχής 
+    στο $ [a,b] $ και παραγωγίσιμη στο $ (a,b) $. Έστω ότι $ f(a)=f(b) $. Τότε
+    $ \exists x_{0} \in (a,b) \; : \; f'(x_{0}) = 0 $.
+\end{thm}
+
+\begin{proof}
+
+\end{proof}
+
+\begin{thm}[Μέσης Τιμής]
+    Έστω $ f \colon [a,b] \to \mathbb{R} $ συνεχής στο $ [a,b] $ και παραγωγίσιμη 
+    στο $ (a,b) $. Τότε $ \exists x_{0} \in (a,b) \; : \; f'(x_{0}) = 
+    \frac{f(b)-f(a)}{b-a} $
+\end{thm}
+
+\begin{proof}
+ \begin{rem}
+    Η υπόθεση ότι η $f$ είναι συνεχής στο κλειστό διάστημα $ [a,b] $ είναι 
+    απαραίτητη για να μπορώ να ισχυριστώ ότι $ f(a), f(b) $ επίσης μέγιστα της $f$.
+\end{rem}   
+\end{proof}
+
+\begin{thm}
+    Έστω $ f \colon (a,b) \to \mathbb{R} $ παραγωγίσιμη συνάρτηση. Τότε:
+    \begin{myitemize}
+    \item $ f'(x_{0}) \geq 0, \; x \in (a,b) \Rightarrow f $ αύξουσα στο $ (a,b) $.
+    \item $ f'(x_{0}) > 0, \; x \in (a,b) \Rightarrow f $ γνησίως αύξουσα στο $ (a,b) $.
+    \item $ f'(x_{0}) \leq 0, \; x \in (a,b) \Rightarrow f $ φθίνουσα στο $ (a,b) $.
+    \item $ f'(x_{0}) < 0, \; x \in (a,b) \Rightarrow f$ γνησίως φθίνουσα στο $ (a,b) $.
+    \item $ f'(x_{0}) = 0, \; x \in (a,b) \Rightarrow f $ σταθερή στο $ (a,b) $.
+    \end{myitemize}
+\end{thm}
+
+
 \end{document}
