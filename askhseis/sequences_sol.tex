@@ -1,12 +1,14 @@
-\input{preamble/preamble_ask.tex}
-\input{preamble/definitions_ask.tex}
+\input{preamble_ask.tex}
+\input{definitions_ask.tex}
 
+\pagestyle{askhseis}
 \everymath{\displaystyle}
 
 \begin{document}
 
 \begin{center}
-    \minibox[frame,c,pad=5pt]{\large \bfseries Ακολουθίες\\ \large Ασκήσεις}
+  \minibox[c]{\large \bfseries \textcolor{Col1}{Ακολουθίες} \\ \large
+  \textcolor{Col1}{Ασκήσεις}}
 \end{center}
 
 \vspace{\baselineskip}
@@ -702,14 +704,16 @@
             \item $ \lim_{n \to \infty} \left(\frac{2n+3}{2n} \right)^{3n+2} $
                 \begin{proof}
                 \item {}
-                    \[
-                        a_{n}= \left(\frac{2n+3}{2n} \right)^{3n+2} = \left(1+ 
+                    \begin{align*}
+                      a_{n}= \left(\frac{2n+3}{2n} \right)^{3n+2} &= \left(1+ 
                         \frac{3}{2n} \right)^{3n+2} = 
-                        \underbrace{\left(1+ \frac{3}{2n} \right)^{3n}}
-                        _{\tilde{a}_{3n}} \cdot \left(1+ 
-                        \frac{3}{2n} \right)^{2} \xrightarrow{n \to \infty}
+                        \left(1+ \frac{3}{2n} \right)^{3n} \cdot \left(1+ 
+                          \frac{3}{2n} \right)^{2} = \left[\underbrace{\left(1+
+                        \frac{3}{2n}\right)^{2n}}_{a_{2n}}\right]^{\frac{3}{2}} 
+                          \cdot \left(1+ \frac{3}{2n} \right)^{2} \\ 
+                    &\xrightarrow{n \to \infty}
                         (e^{3})^{\frac{3}{2}} \cdot 1  = e^{4}\cdot \sqrt{e} 
-                    \] 
+                    \end{align*} 
                     γιατί 
                     \[
                         \lim_{n \to \infty} \tilde{a} _{n} = \lim_{n \to \infty} 
