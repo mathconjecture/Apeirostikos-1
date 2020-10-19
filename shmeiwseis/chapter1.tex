@@ -1,15 +1,14 @@
 \documentclass[main.tex]{subfiles}
 
 
-\renewcommand{\qedsymbol}{$\blacksquare$}
 
 \begin{document}
 
 \section{Μαθηματική Επαγωγή}
 
 \mythm{Έστω $ S \subseteq \mathbb{N} $ τέτοιο ώστε:
-  \begin{minipage}[t]{0.3\textwidth}
-    \begin{enumerate}[i)]
+  \begin{minipage}[t]{0.25\textwidth}
+    \begin{enumerate}[(i)]
       \item  $ 1 \in S $ \hfill \tikzmark{a}
       \item  $ n \in S \Rightarrow n + 1 \in S $ \hfill \tikzmark{b}
     \end{enumerate} 
@@ -44,12 +43,12 @@
       ισχύει.
     \item Έστω ότι η ανισότητα ισχύει για $n$, δηλ. 
       $\inlineequation[eq:epagex2]{2^{n} \geq n^{3}}$.
-    \item Θα δέιξουμε ότι ισχύει και για $ n+1 $. Πράγματι:
+    \item Θα δείξουμε ότι ισχύει και για $ n+1 $. Πράγματι:
       \begin{align*}
         2^{n+1} = 2^{n} \cdot 2 \overset{\eqref{eq:epagex2}}{\geq} n^{3} 
         \cdot 2 = 2n^{3} = n^{3} + n^{3} = n^{3} + nn^{2} \overset{n\geq 10}
         {\geq} n^{3}+10n^{2} > n^{3}+7n^{2} &= n^{3} + 3n^{2} + 3n^{2} + n^{2} \\ 
-                                            &> n^{3} + 3n^{2} + 3n + 1 \\ 
+                                            &\geq  n^{3} + 3n^{2} + 3n + 1 \\ 
                                             &= (n+1)^{3}
       \end{align*} 
   \end{myitemize}
@@ -66,7 +65,7 @@
     \item Για $ n=1 $, έχω: $ (1+a)^{1} = 1+a \geq 1+a = 1 + 1 \cdot a $, ισχύει.
     \item Έστω ότι η ανισότητα ισχύει, για $ n $, δηλ. $\inlineequation[eq:bern]
       {(1+a)^{n} \geq 1 + na}$
-    \item Θα δείξουμε ότι ισχύει και για $ n+1 $. Πράγματι:
+    \item Θα δείξουμε ότι ισχύει και για $ n+1 $. Πράγματι
       \begin{align*}
         (1+a)^{n+1} = (1+a)^{n}(1+a) \overset{\eqref{eq:bern}}
         {\underset{a \geq -1}{\geq}} (1+na)(1+a) &= 1 + a + na + na^{2} 
@@ -75,10 +74,30 @@
   \end{myitemize}
 \end{proof}
 
+\begin{rem}
+  Αν $ n=2,3,4,\ldots $ και $ a>-1 $, τότε ισχύει $ (1+a)^{n}>1+na $.
+\end{rem}
+
 \section{Αθροίσματα}
 
 \mydfn{Έστω $ a_{1}, a_{2}, \ldots, a_{N} \in \mathbb{R} $. Ορίζουμε 
 \[ \sum_{n=1}^{N} a_{n} = a_{1} + a_{2} + \cdots + a_{N} \]}
+
+Το σύμβολο του αθροίσματος έχει τις παρακάτω ιδιότητες.
+{
+  \everymath{\displaystyle}
+\begin{myitemize}
+  \item $ \sum_{n=k}^{N} a_{n} = \sum_{n=k- \rho }^{N- \rho } a_{n+ \rho} $ ή  
+$ \sum_{n=k}^{N} a_{n} = \sum_{n=k+ \rho }^{N+ \rho } a_{n- \rho} $
+  \item $ \sum_{n=k}^{N} \lambda a_{n} = \lambda \sum_{n=k}^{N} a_{n} $ 
+  \item $ \sum_{n=k}^{N} (a_{n}+b_{n}) = \sum_{n=k}^{N} a_{n} + \sum_{n=k}^{N} b_{n} $ 
+\end{myitemize}
+}
+
+\begin{rem}
+  Αν ένα από τα όρια του συμβόλου του αθροίσματος είναι $ - \infty $ ή $ + \infty $, 
+  τότε ή τρίτη ιδιότητα δεν ισχύει πάντα.
+\end{rem}
 
 Τα παρακάτω παραδείγματα, περιγράφουν μερικές από τις πιο βασικές ιδιότητες που 
 έχουν τα αθροίσματα.
@@ -183,9 +202,9 @@
 \item {} 
   Έχουμε $ n+1 > n $ , $ \forall n \in \mathbb{N} $, οπότε
   \[
-    \frac{1}{n+1} \leq \frac{1}{n} \overset{\cdot \frac{1}{n} >0}{\Rightarrow}
-    \frac{1}{n(n+1)} \leq \frac{1}{n^{2}} \Rightarrow \sum_{n=1}^{100} 
-    \frac{1}{n(n+1)} \leq \sum_{n=1}^{100} \frac{1}{n^{2}} 
+    \frac{1}{n+1} < \frac{1}{n} \overset{\cdot \frac{1}{n} >0}{\Rightarrow}
+    \frac{1}{n(n+1)} < \frac{1}{n^{2}} \Rightarrow \sum_{n=1}^{100} 
+    \frac{1}{n(n+1)} \geq \sum_{n=1}^{100} \frac{1}{n^{2}} 
   \] 
 \end{proof}
 
@@ -213,9 +232,13 @@
 \begin{example}
   Με Μαθηματική Επαγωγή, αποδεικνύονται εύκολα τα παρακάτω αθροίσματα.
   \begin{enumerate}[wide,labelindent=0pt]
-    \item $ \sum_{n=1}^{N} n = \frac{N(N+1)}{2}, \quad \forall N \in \mathbb{N}  $
-    \item $ \sum_{n=1}^{N} n^{2} = \frac{N(N+1)(2N+1)}{6}, \quad \forall N \in 
-      \mathbb{N} $
+    \item $ \sum_{n=1}^{N} n = 1+2+3+\cdots+N = \frac{N(N+1)}{2}, 
+      \quad \forall N \in \mathbb{N}  $
+    \item $ \sum_{n=1}^{N} n^{2} =1^{2}+2^{2}+3^{2}+\cdots+N^{2} = 
+      \frac{N(N+1)(2N+1)}{6}, \quad \forall N \in \mathbb{N} $
+    \item $ \sum_{n=1}^{N} n^{3} = 1^{3}+2^{3}+3^{3}+\cdots +N^{3} =
+      \left(\frac{N(N+1)}{2}
+      \right)^{2}, \; \forall n \in \mathbb{N}$
   \end{enumerate}
 \end{example}
 
@@ -276,13 +299,13 @@
 \]}
 
 \myprop{Για κάθε $ a, b \in \mathbb{R} $, ισχύει:
-  \begin{enumerate}[i)]\label{prop:trig_ineq}
+  \begin{enumerate}[(i)]\label{prop:trig_ineq}
     \item $ \abs{a+b} \leq \abs{a} + \abs{b}   $
     \item $ \abs{a} - \abs{b} \leq \abs{a+b}  $
 \end{enumerate}}
 \begin{proof}
 \item {}
-  \begin{enumerate}[i)]
+  \begin{enumerate}[(i)]
     \item Έχουμε ότι 
       \[ 
         a \leq \abs{a} \Rightarrow - \abs{a} \leq a \leq \abs{a}
@@ -292,9 +315,9 @@
       \] 
       Με πρόσθεση, προκύπτει
       \[
-        - (\abs{a} + \abs{b} ) \leq a + b \leq ( \abs{a} + \abs{b}) 
+        - (\abs{a} + \abs{b} ) \leq a + b \leq \abs{a} + \abs{b} 
       \] 
-      Οπότε από την προηγούμενη πρόταση, ισχύει:
+      Οπότε από την πρόταση~\ref{prop:absprop1}, ισχύει:
       $ \abs{a+b} \leq \abs{a} + \abs{b} $
     \item Θέτω $ x = a+b $ και $ y = -b $. Για τους $ x,y $ από το $ \rm{i}) $ 
       ερώτημα, έχουμε:
@@ -403,7 +426,7 @@ x, \; \forall x \in A$).}
 
 \begin{example}
 \item {}
-  \begin{enumerate}[i)]
+  \begin{enumerate}[(i)]
     \item Το  σύνολο $ A = (0,3) $  έχει ως άνω φράγματα τους αριθμούς 
       $ 3, 4, 144, \ldots$ και κάτω φράγματα τους αριθμούς
       $ 0, -1, -2, -128, \ldots $ 
@@ -469,13 +492,13 @@ x, \; \forall x \in A$).}
 του $A$, τότε το $ -M $ είναι κάτω φράγμα του συνόλου $ -A $.}
 
 \begin{proof}
-  Έστω $M$ α.φ. του $A$. Τότε 
+  Έστω $M$ α.φ.\ του $A$. Τότε 
   \begin{align*}
     a &\leq M, \; \forall a \in A \Rightarrow  \\
     -a &\geq -M, \; \forall a \in A \xRightarrow{x= -a, a \in A} \\
     x &\geq -M, \; \forall x \in -A
   \end{align*}
-  οπότε $ -M $  κ.φ. του $ -A $.
+  οπότε $ -M $  κ.φ.\ του $ -A $.
 \end{proof}
 
 \section{Supremum και Infimum}
@@ -506,12 +529,12 @@ x, \; \forall x \in A$).}
 
 \begin{example}
   Έστω $ A = (0,3) $. Θα δείξουμε ότι $ \sup A = 3 $. Πράγματι, 
-  το $ 3 $ προφανώς είναι α.φ. του $A$. Θα δείξουμε ότι είναι το
+  το $ 3 $ προφανώς είναι α.φ.\ του $A$. Θα δείξουμε ότι είναι το
   ελάχιστο από τα άνω φράγματα του $A$. Έστω ότι δεν είναι, δηλαδή 
-  $ \exists M $ α.φ. του $A$, ώστε $ M < 3 \Rightarrow (M,3) \neq 
+  $ \exists M $ α.φ.\ του $A$, ώστε $ M < 3 \Rightarrow (M,3) \neq 
   \emptyset \Rightarrow (M,3) \cap A \neq \emptyset \Rightarrow \exists 
   a \in (M,3) \cap A $. Τότε, έχουμε ότι $ a \in A $ και $ a > M $, 
-  άτοπο, γιατί $M$ είναι ά.φ. του $A$. Ομοίως αποδεικνύουμε ότι $ 
+  άτοπο, γιατί $M$ είναι ά.φ.\ του $A$. Ομοίως αποδεικνύουμε ότι $ 
   \inf A = 0$.
 \end{example}
 
@@ -541,7 +564,7 @@ supremum, δηλαδή έχει ελάχιστο άνω φράγμα.
   \vspace{\baselineskip}
 
   \begin{minipage}{0.3\textwidth}
-    \begin{enumerate}[i)]
+    \begin{enumerate}[(i)]
       \item $ 0 \leq a < a_{n}, \; \forall n \in \mathbb{N} $ \hfill \tikzmark{a}
       \item $ \lim_{n \to +\infty} a_{n} = 0 $ \hfill \tikzmark{b}
     \end{enumerate}
@@ -551,7 +574,7 @@ supremum, δηλαδή έχει ελάχιστο άνω φράγμα.
 
 
 \myprop{
-  \begin{enumerate}[i)]
+  \begin{enumerate}[(i)]
     \item Το $ \mathbb{N} $ δεν είναι άνω φραγμένο.
     \item $ \forall y > 0, \; \exists n \in \mathbb{N} \; ; \; 
       n > y$
@@ -561,7 +584,7 @@ supremum, δηλαδή έχει ελάχιστο άνω φράγμα.
 
 \begin{proof}
 \item {}
-  \begin{enumerate}[i)]
+  \begin{enumerate}[(i)]
     \item Έστω ότι το $ \mathbb{N} $ είναι άνω φραγμένο. Λόγω ότι 
       είναι και μη κενό ($ 1 \in \mathbb{N} $), από το αξίωμα 
       Πληρότητας, έχουμε ότι υπάρχει το $ \sup \mathbb{N} $. 
@@ -572,13 +595,13 @@ supremum, δηλαδή έχει ελάχιστο άνω φράγμα.
 
     \item Έστω ότι δεν ισχύει η πρόταση. Τότε  $ \exists y >0, \; 
       \forall n \in \mathbb{N} \; : \; n \leq y$. Δηλαδή
-      το  $y$  είναι ά.φ. του $\mathbb{N}$, άτοπο.
+      το  $y$  είναι α.φ.\ του $\mathbb{N}$, άτοπο.
 
     \item Έστω ότι δεν ισχύει η πρόταση. Τότε $ \exists 
       \varepsilon >0 , \; \forall n \in \mathbb{N} \; : \; 
       \frac{1}{n} \geq \varepsilon  \Leftrightarrow \ n \leq 
       \frac{1}{\varepsilon} $, δηλαδή $ \frac{1}{\varepsilon} $ 
-      α.φ. του $ \mathbb{N} $, άτοπο. 
+      α.φ.\ του $ \mathbb{N} $, άτοπο. 
   \end{enumerate}
 \end{proof}
 
@@ -587,12 +610,12 @@ supremum, δηλαδή έχει ελάχιστο άνω φράγμα.
 
 \begin{proof}
 \item {}
-  $ x_{0} = \max A \Rightarrow a \leq x_{0}, \; \forall a \in A $, άρα $ x_{0} $ α.φ. 
+  $ x_{0} = \max A \Rightarrow a \leq x_{0}, \; \forall a \in A $, άρα $ x_{0} $ α.φ.\
   του $A$. Άρα το $A$ είναι άνω φραγμένο και επειδή $ A \neq \emptyset $ υπάρχει 
   το $ \sup A $. 
 
-  Ισχύει $ x_{0} \leq \sup A $, γιατι $ \sup A $ α.φ. του $A$.
-  Όμως $ x_{0} $ επίσης α.φ. του $A$, άρα $ \sup A \leq x_{0} $.
+  Ισχύει $ x_{0} \leq \sup A $, γιατί $ \sup A $ α.φ.\ του $A$.
+  Όμως $ x_{0} $ επίσης α.φ.\ του $A$, άρα $ \sup A \leq x_{0} $.
 
   Άρα $ x_{0}= \sup A $.
 \end{proof}
@@ -607,7 +630,7 @@ supremum, δηλαδή έχει ελάχιστο άνω φράγμα.
 \section{Χαρακτηριστική Ιδιότητα του Supremum}
 
 \myprop{Έστω $ A \subseteq \mathbb{R} $, $ A \neq \emptyset $ και άνω φραγμένο. 
-  Έστω $ s $ α.φ. του $A$. Τότε 
+  Έστω $ s $ α.φ.\ του $A$. Τότε 
   \[
     s= \sup A \Leftrightarrow \forall \varepsilon >0, \; \exists a \in A \; 
     : \; s - \varepsilon < a
@@ -619,7 +642,7 @@ supremum, δηλαδή έχει ελάχιστο άνω φράγμα.
     \item[$ (\Rightarrow) $] 
       Έστω $ s = \sup A $. Έστω $ \varepsilon >0 $. Έχουμε $ 
       s - \varepsilon < s $ άρα το $ s- \varepsilon $ δεν είναι 
-      α.φ. του $A$, άρα $ \exists a \in A $ τέτοιο ώστε $ 
+      α.φ.\ του $A$, άρα $ \exists a \in A $ τέτοιο ώστε $ 
       a > s- \varepsilon$. 
 
     \item [$ (\Leftarrow) $] 
@@ -636,27 +659,27 @@ supremum, δηλαδή έχει ελάχιστο άνω φράγμα.
 
       \mybrace{a}{b}[$ \exists $ το $ \sup A $]
 
-      Έστω ότι $ s \neq \sup A $, και λόγω ότι $ s $ α.φ. του $A$ 
-      εχουμε ότι $sup A < s $. 
+      Έστω ότι $ s \neq \sup A $, και λόγω ότι $ s $ α.φ.\ του $A$ 
+      έχουμε ότι $sup A < s $. 
 
       Επιλέγουμε $ \varepsilon = s - \sup A > 0 $
 
       Τότε από την υπόθεση έχουμε ότι 
       υπάρχει $ a \in A \; : \; s - \varepsilon < a \Rightarrow s 
       - s + \sup A < a \Rightarrow \sup A < a $, άτοπο, γιατί 
-      $ \sup A $ α.φ. του $A$.  
+      $ \sup A $ α.φ.\ του $A$.  
   \end{description} 
 \end{proof}
 
 \myprop{Έστω $ A \subseteq \mathbb{R} $, $ A \neq \emptyset $ και άνω φραγμένο. 
-  Έστω $ s $ α.φ. του $A$. Τότε 
+  Έστω $ s $ α.φ.\ του $A$. Τότε 
   \[
     s = \sup A \Leftrightarrow \forall n \in \mathbb{N} \; \exists a_{n} \in A
     \; : \; s - \frac{1}{n} < a_{n} 
 \]}
 
 \mythm{Έστω $ A \subseteq \mathbb{R} $, $ A \neq \emptyset $ και άνω φραγμένο. 
-  Έστω $ s $ α.φ. του $A$. Τότε 
+  Έστω $ s $ α.φ.\ του $A$. Τότε 
   \[
     s = \sup A \Leftrightarrow \text{υπάρχει ακολουθία στοιχείων του $A$ με όριο το $s$} 
 \]}
@@ -682,16 +705,16 @@ supremum, δηλαδή έχει ελάχιστο άνω φράγμα.
       το ζητούμενο.
 
     \item [$ (\Rightarrow) $]
-      Έστω $ s $ α.φ. του $A$ και έστω ότι υπάρχει ακολουθία $ (a_{n})_{n \in \mathbb{N}} $ 
+      Έστω $ s $ α.φ.\ του $A$ και έστω ότι υπάρχει ακολουθία $ (a_{n})_{n \in \mathbb{N}} $ 
       στοιχείων του $A$ ώστε $ \lim_{n \to +\infty} a_{n}= s$. Θ.δ.ο. $ s = \sup A $. 
       Πράγματι, 
 
       Έστω ότι $ s \neq \sup A $. Τότε $ \sup A < s \Rightarrow s - \sup A > 0 > 0 $. 
 
-      Επιλέγω $ \varepsilon = s - \sup A >0 $. Οπότε από τον ορισμό του οριου, έχουμε ότι 
+      Επιλέγω $ \varepsilon = s - \sup A >0 $. Οπότε από τον ορισμό του ορίου, έχουμε ότι 
       $ \exists n_{0} \in \mathbb{N} \; : \; \forall n \geq n_{0} \quad \abs{a_{n} - a} < 
       s - \sup A \Leftrightarrow \underbrace{-(s - \sup A) < a_{n} - s} < s - \sup A 
-      \Leftrightarrow a_{n} > \sup A$, άτοπο, γιατι $ \sup A $ α.φ. του $A$.
+      \Leftrightarrow a_{n} > \sup A$, άτοπο, γιατί $ \sup A $ α.φ.\ του $A$.
   \end{description}
 \end{proof}
 
@@ -703,16 +726,16 @@ B$ τότε $ \sup A \leq \sup B $.}
 
 \begin{proof}
 \item {}
-  Αρκεί να δείξω ότι $ \sup B $ είναι α.φ. του $A$. Πράγματι:
+  Αρκεί να δείξω ότι $ \sup B $ είναι α.φ.\ του $A$. Πράγματι:
 
   Έστω $ x \in A \overset{A \subseteq B}{\Rightarrow } x \in B \Rightarrow 
-  x \leq \sup B, \forall x \in A$. Άρα το $ \sup B $ είναι α.φ. του $A$.
+  x \leq \sup B, \forall x \in A$. Άρα το $ \sup B $ είναι α.φ.\ του $A$.
 \end{proof}
 
 \myprop{Έστω $ A \subseteq \mathbb{R}, A \neq \emptyset $ και έστω $ \lambda A = 
   \{ x \in \mathbb{R} \; : \; x = \lambda a, \; a \in A \} = \{ \lambda a \; : \; 
   a \in A\} $. Τότε
-  \begin{enumerate}[i)]
+  \begin{enumerate}[(i)]
     \item $ A $ άνω φραγμένο και $ \lambda >0 \Rightarrow \exists $ το $ \sup A $
       και $ \sup (\lambda A) = \lambda \sup A $
     \item $ A $ κάτω φραγμένο και $ \lambda <0 \Rightarrow \exists $ το $ \sup A $
@@ -721,14 +744,14 @@ B$ τότε $ \sup A \leq \sup B $.}
 
 \begin{proof}
 \item {}
-  \begin{enumerate}[i)]
+  \begin{enumerate}[(i)]
     \item $A$ άνω φραγμένο $ \Rightarrow \exists M \in \mathbb{R} $ τέτοιο ώστε
       \begin{align*}
         a \leq M, \; \forall a \in A
                 &\Rightarrow \lambda a \leq \lambda M, \; \forall a \in A \\
                 & \Rightarrow x \leq \lambda M, \; \forall x \in \lambda A 
       \end{align*}
-      δηλαδή, το  $ \lambda M $ είναι α.φ. του $ \lambda A $.
+      δηλαδή, το  $ \lambda M $ είναι α.φ.\ του $ \lambda A $.
 
       Άρα το $ \lambda A $ είναι άνω φραγμένο και μη-κενό, γιατί $ A \neq 
       \emptyset $, άρα υπάρχει το $ \sup (\lambda A) $.
@@ -737,29 +760,29 @@ B$ τότε $ \sup A \leq \sup B $.}
       και $A$ άνω φραγμένο. 
 
       \begin{myitemize}
-        \item Αποδεικνύουμε ότι $ \lambda s $ είναι α.φ. του $ \lambda A $. 
+        \item Αποδεικνύουμε ότι $ \lambda s $ είναι α.φ.\ του $ \lambda A $. 
           Πράγματι
           \begin{align*}
             a \leq s, \; \forall a \in A 
                         & \Rightarrow \lambda a \leq \lambda s, \; \forall a \in A \\
                         & \Rightarrow x \leq \lambda s, \; \forall x \in \lambda A
           \end{align*}
-          άρα το $ \lambda s $ είναι α.φ. του $ \lambda A $.
+          άρα το $ \lambda s $ είναι α.φ.\ του $ \lambda A $.
 
         \item Αποδεικνύουμε ότι $ \lambda s $ είναι το ελάχιστο άνω φράγμα 
           του $ \lambda A$.  Πράγματι 
 
           Έστω $M$ άνω φράγμα του $ \lambda A $ με $ M < \lambda s 
           \overset{\lambda >0} {\Rightarrow} \frac{M}{\lambda} < s  $, 
-          άτοπο, γιατί $ \frac{ M}{\lambda} $ α.φ. του $A$ και $ s= \sup A $.
+          άτοπο, γιατί $ \frac{ M}{\lambda} $ α.φ.\ του $A$ και $ s= \sup A $.
 
-          Πράγματι, αφού $ M $ ά.φ. του $ \lambda A $, τότε
+          Πράγματι, αφού $ M $ α.φ.\ του $ \lambda A $, τότε
           \begin{align*}
             x \leq M, \; \forall x \in \lambda A 
             &\Rightarrow \lambda a \leq M, \; \forall a \in A \\
             &\Rightarrow a \leq \frac{M}{\lambda}, \; \forall a \in A
           \end{align*} 
-          άρα $ \frac{M}{\lambda} $ είναι α.φ. του Α.
+          άρα $ \frac{M}{\lambda} $ είναι α.φ.\ του Α.
       \end{myitemize}
 
     \item Ομοίως
@@ -777,18 +800,18 @@ B$ τότε $ \sup A \leq \sup B $.}
   \end{cases} $  
   Άρα $ A \cup B $ είναι άνω φραγμένο.
 
-  Επίσης $ A \cup B \neq emtpy $, γιατί $ A, B \neq \emptyset $. 
+  Επίσης $ A \cup B \neq \emptyset $, γιατί $ A, B \neq \emptyset $. 
 
   Άρα υπάρχει το $ \sup (A \cup B) $.
 
   $ A,B $ μη-κενά και άνω φραγμένα, άρα υπάρχουν τα $ \sup A, \sup B $ 
-  και έστω χ.β.γ.  ότι $ \sup A \leq \sup B $. Τότε:
+  και έστω χ.β.γ\.  ότι $ \sup A \leq \sup B $. Τότε:
   \begin{gather*}
     a \leq \sup A \leq \sup B, \; \forall a \in A \\
     b \leq \sup B, \; \forall b \in B 
   \end{gather*}
   άρα $ x \leq \sup B, \; \forall x \in A \cup B  $, δηλαδή το $ \sup B $ 
-  είναι α.φ. του $ A \cup B $, άρα $ \inlineequation[eq:1steq]{\sup (A \cup B) 
+  είναι α.φ.\ του $ A \cup B $, άρα $ \inlineequation[eq:1steq]{\sup (A \cup B) 
   \leq \sup B} $.
 
   Όμως $ B \subseteq A \cup B \Rightarrow \inlineequation[eq:2ndeq]{\sup B \leq 
@@ -807,7 +830,7 @@ B$ τότε $ \sup A \leq \sup B $.}
 
 \begin{lem}\label{lem:ineqs}
   Έστω $ x,y >0 $ και $ n \in \mathbb{N} $. Τότε
-  \begin{enumerate}[i)]
+  \begin{enumerate}[(i)]
     \item $ x \leq y \Leftrightarrow x^{n} \leq y^{n} $
     \item $ x < y \Leftrightarrow x^{n} < y^{n} $ \label{lem:ineqreal2}
     \item $ x = y \Leftrightarrow x^{n} = y^{n} $ \label{lem:ineqreal3}
@@ -827,7 +850,7 @@ B$ τότε $ \sup A \leq \sup B $.}
 
   Θα δείξουμε ότι $ x > 0 $ και $ x^{2} = 2 $
 
-  Πράγματι, $ 1 \in A \Rightarrow 1 \leq x $, γιατί $x$ α.φ. του $A$, οπότε $ x >0 $.
+  Πράγματι, $ 1 \in A \Rightarrow 1 \leq x $, γιατί $x$ α.φ.\ του $A$, οπότε $ x >0 $.
 
   Θα δείξουμε ότι $ x^{2} = 2 $ αποκλείοντας τις περιπτώσεις $ x^{2} <2 $ και 
   $ x^{2} > 2 $.
@@ -849,7 +872,7 @@ B$ τότε $ \sup A \leq \sup B $.}
       Έστω $ a \in A \Rightarrow a^{2} <2 \Rightarrow a^{2}<2< 
       (x- \varepsilon )^{2} \Rightarrow a^{2}< (x- \varepsilon )^{2} 
       \Rightarrow a < x- \varepsilon, \; \forall a \in A$, 
-      άρα $ x - \varepsilon $ α.φ. του $A$, άτοπο, γιατί $ x= \sup A $.
+      άρα $ x - \varepsilon $ α.φ.\ του $A$, άτοπο, γιατί $ x= \sup A $.
 
     \item Έστω $ x^{2}<2 $. Ομοίως.
 
@@ -864,11 +887,11 @@ B$ τότε $ \sup A \leq \sup B $.}
 \end{proof}
 
 \mythm{Για κάθε $ x_{0} >0 $ και για κάθε $ n \in \mathbb{N} $ υπάρχει μοναδικός, θετικός 
-πραγμτικός αριθμός $ p $, τέτοιος ώστε $ p^{n}= x_{0} $.}
+πραγματικός αριθμός $ p $, τέτοιος ώστε $ p^{n}= x_{0} $.}
 
 \begin{cor}\label{cor:ineqs}
   Έστω $ x,y >0 $ και $ n \in \mathbb{N} $. Τότε
-  \begin{enumerate}[i)]
+  \begin{enumerate}[(i)]
     \item $ x \leq y \Leftrightarrow x^{\frac{1}{n}} \leq y^{\frac{1}{n}} $
     \item $ x <y \Leftrightarrow x^{\frac{1}{n}} < y^{\frac{1}{n}} $
     \item $ x =y \Leftrightarrow x^{\frac{1}{n}} = y^{\frac{1}{n}} $
@@ -901,7 +924,7 @@ B$ τότε $ \sup A \leq \sup B $.}
 
 \begin{lem}
   Έστω $ a > 0 $ και $ q_{1}, q_{2} \in \mathbb{Q} $ με $ q_{1} < q_{2} $. 
-  \begin{enumerate}[i)]
+  \begin{enumerate}[(i)]
     \item $ a>1 \Rightarrow a^{q_{1}} < a^{q_{2}} $
     \item $ a<1 \Rightarrow a^{q_{1}} > a^{q_{2}} $
   \end{enumerate}
@@ -909,7 +932,7 @@ B$ τότε $ \sup A \leq \sup B $.}
 
 \begin{proof}
 \item {}
-  \begin{enumerate}[i)]
+  \begin{enumerate}[(i)]
     \item \label{q1q2} $ a>1 \overset{\text{Λημ.~\ref{lem:ineqq}}}{\Rightarrow} 
       a^{q_{2}- q_{1}} > 1^{q_{2} - q_{1}} \overset{a^{q_{1}}>0}{\Rightarrow} 
       a^{q_{2}} > a^{q_{1} } $
@@ -942,9 +965,23 @@ $ m \in \mathbb{Z} $ τέτοιος ώστε $\inlineequation[eq:akermer]{m \leq
 \mydfn{Έστω $ x \in \mathbb{R} $. Ο μοναδικός ακέραιος που ικανοποιεί την 
 σχέση~\eqref{eq:akermer} ονομάζεται ακέραιο μέρος του $x$ και συμβολίζεται $ [x] $.}
 
+Ουσιαστικά, το ακέραιο μέρος ενός πραγματικού αριθμού $ x $ είναι ο \textbf{μεγαλύτερος} ακέραιος που δεν υπερβαίνει τον $x$, ή που είναι ίσος με τον $x$,
+αν ο $x$ είναι ακέραιος.
+
+Το ακέραιο μέρος ενός πραγματικού αριθμού ικανοποιεί τις παρακάτω ιδιότητες.
+\begin{myitemize}
+  \item $ x = [x]+ \theta, \quad x \in \mathbb{R}, \; \theta \in \left[0,1\right) $
+  \item $ [x+a]= [x] + a, \quad x \in \mathbb{R}, \; a \in \mathbb{Z} $
+  \item $ [x]+[-x] = 
+    \begin{cases} 
+      0, & x \in \mathbb{Z} \\
+      -1, & x \not \in \mathbb{Z}
+    \end{cases}$
+\end{myitemize}
+
 \begin{example}
 \item {}
-  \begin{enumerate}[i)]
+  \begin{enumerate}[(i)]
     \item $ [3]=3 $
     \item $ [3,14] = 3  $
     \item $ [-3,14] =-4 $
@@ -955,7 +992,7 @@ $ m \in \mathbb{Z} $ τέτοιος ώστε $\inlineequation[eq:akermer]{m \leq
 
 \begin{lem}
 \item {}
-  \begin{enumerate}[i)]
+  \begin{enumerate}[(i)]
     \item $n$ άρτιος $ \Leftrightarrow n^{2} $ άρτιος.
     \item $ n $ περιττός $ \Leftrightarrow n^{2} $ περιττός.
   \end{enumerate}
@@ -963,7 +1000,7 @@ $ m \in \mathbb{Z} $ τέτοιος ώστε $\inlineequation[eq:akermer]{m \leq
 
 \begin{proof}
 \item {}
-  \begin{enumerate}[i)]
+  \begin{enumerate}[(i)]
     \item 
       \begin{description}
         \item [($ \Rightarrow $ )] 
@@ -979,9 +1016,9 @@ $ m \in \mathbb{Z} $ τέτοιος ώστε $\inlineequation[eq:akermer]{m \leq
 
 \begin{rem}
   Στις αποδείξεις τους παραπάνω λήμματος, χρησιμοποιήσαμε ότι 
-  \begin{enumerate}[i)]
+  \begin{enumerate}[(i)]
     \item άρτιος $ \cdot $ άρτιος = άρτιος
-    \item περιττός $ \cdot $ περιτός = περιττός
+    \item περιττός $ \cdot $ περιττός = περιττός
     \item άρτιος $ \cdot $ περιττός = άρτιος
   \end{enumerate}
 \end{rem}
@@ -1005,7 +1042,7 @@ $ m \in \mathbb{Z} $ τέτοιος ώστε $\inlineequation[eq:akermer]{m \leq
 \end{example}
 
 \begin{proof}
-  Ναί, ο $ a= \sqrt[4]{2} $. Πράγματι, $ a^{2} = \sqrt{2} $ άρρητος, και $ 
+  Ναι, ο $ a= \sqrt[4]{2} $. Πράγματι, $ a^{2} = \sqrt{2} $ άρρητος, και $ 
   a^{4} = 2$ ρητός.
 \end{proof}
 
@@ -1031,7 +1068,7 @@ $ m \in \mathbb{Z} $ τέτοιος ώστε $\inlineequation[eq:akermer]{m \leq
   \Rightarrow m = 3k, \; k \in \mathbb{Z}$. 
 
   Άρα $ (3k)^{2} = 3n^{2} \Rightarrow 9k^{2}=3n^{2} \Rightarrow n^{2} = 3k^{2} 
-  \Rightarrow 3 \mid n^{2} \Rightarrow  3 \mid n$,  ατοπο, γιατί $ (m,n)=1 $.
+  \Rightarrow 3 \mid n^{2} \Rightarrow  3 \mid n$,  άτοπο, γιατί $ (m,n)=1 $.
 \end{proof}
 
 \begin{lem}
@@ -1063,7 +1100,7 @@ $ m \in \mathbb{Z} $ τέτοιος ώστε $\inlineequation[eq:akermer]{m \leq
   m^{3} = 2n^{3} \Rightarrow m^{3} $ άρτιος $ \Rightarrow m $ άρτιος. 
 
   Άρα $ (2k)^{3} = 2n^{3} \Rightarrow 2k^{3}=2n^{3} \Rightarrow n^{3} = 4k^{3} 
-  \Rightarrow n $ άρτιος,  ατοπο, γιατί $ (m,n)=1 $.
+  \Rightarrow n $ άρτιος,  άτοπο, γιατί $ (m,n)=1 $.
 \end{proof}
 
 \begin{example}

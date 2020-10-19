@@ -97,26 +97,37 @@ $ \{ a_{1}, a_{2}, \ldots, a_{n} \} $ το οποίο μπορεί να είνα
   \end{enumerate}
 \end{rems}
 
-\begin{dfn}\label{dfn:isodmono}(Ισοδύναμος ορισμός της μονοτονίας)
+\begin{rem}\label{dfn:isodmono}
 \item {}
-  Αν μια ακολουθία $ (a_{n})_{n \in \mathbb{N}} $ \textcolor{Col1}
-  {διατηρεί πρόσημο}
-  $ \forall n \in \mathbb{N} $, τότε λέγεται:
+  Αν μια ακολουθία $ (a_{n})_{n \in \mathbb{N}} $ \textbf{διατηρεί σταθερό πρόσημο}, 
+  τότε έχουμε:
   \begin{enumerate}[i)]
-    \item \textcolor{Col\thechapter}{γνησίως αύξουσα} 
-      $ \overset{\text{ορ.}}{\Leftrightarrow} 
-      \frac{a_{n+1}}{a_{n}} > 1, \; \forall n \in \mathbb{N}$
-    \item \textcolor{Col\thechapter}{γνησίως φθίνουσα} 
-      $ \overset{\text{ορ.}}{\Leftrightarrow} 
-      \frac{a_{n+1}}{a_{n}} < 1, \; \forall n \in \mathbb{N}$
-    \item  \textcolor{Col\thechapter}{αύξουσα} 
-      $ \overset{\text{ορ.}}{\Leftrightarrow} 
-      \frac{a_{n+1}}{a_{n}} \geq 1, \; \forall n \in \mathbb{N} $
-    \item  \textcolor{Col\thechapter}{φθίνουσα}
-      $ \overset{\text{ορ.}}{\Leftrightarrow} 
-      \frac{a_{n+1}}{a_{n}} \leq 1, \; \forall n \in \mathbb{N} $
+    \item αν $ \frac{a_{n+1}}{a_{n}} > 1, \; \forall n \in \mathbb{N} $ τότε η $a_{n}$ 
+      είναι \textcolor{Col\thechapter}{γνησίως αύξουσα} , 
+    αν $ \bm {a_{n}>0}, \; \forall n \in \mathbb{N} $  
+    \item αν $ \frac{a_{n+1}}{a_{n}} > 1, \; \forall n \in \mathbb{N} $ τότε η $a_{n}$ 
+      είναι \textcolor{Col\thechapter}{γνησίως φθίνουσα} , 
+    αν $ \bm {a_{n}<0}, \; \forall n \in \mathbb{N} $  
+    \item αν $ \frac{a_{n+1}}{a_{n}} < 1, \; \forall n \in \mathbb{N} $ τότε η $a_{n}$ 
+      είναι \textcolor{Col\thechapter}{γνησίως φθίνουσα} , 
+    αν $ \bm {a_{n}>0}, \; \forall n \in \mathbb{N} $  
+    \item αν $ \frac{a_{n+1}}{a_{n}} < 1, \; \forall n \in \mathbb{N} $ τότε η $a_{n}$ 
+      είναι \textcolor{Col\thechapter}{γνησίως αύξουσα} , 
+    αν $ \bm {a_{n}<0}, \; \forall n \in \mathbb{N} $  
+    \item αν $ \frac{a_{n+1}}{a_{n}} \geq 1, \; \forall n \in \mathbb{N} $ 
+      τότε η $a_{n}$ είναι \textcolor{Col\thechapter}{αύξουσα} , 
+    αν $ \bm {a_{n}>0}, \; \forall n \in \mathbb{N} $  
+    \item αν $ \frac{a_{n+1}}{a_{n}} \geq 1, \; \forall n \in \mathbb{N} $ 
+      τότε η $a_{n}$ είναι \textcolor{Col\thechapter}{φθίνουσα} , 
+    αν $ \bm {a_{n}<0}, \; \forall n \in \mathbb{N} $  
+    \item αν $ \frac{a_{n+1}}{a_{n}} \leq 1, \; \forall n \in \mathbb{N} $ 
+      τότε η $a_{n}$ είναι \textcolor{Col\thechapter}{φθίνουσα} , 
+    αν $ \bm {a_{n}>0}, \; \forall n \in \mathbb{N} $  
+    \item αν $ \frac{a_{n+1}}{a_{n}} \leq 1, \; \forall n \in \mathbb{N} $ 
+      τότε η $a_{n}$ είναι \textcolor{Col\thechapter}{αύξουσα} , 
+    αν $ \bm {a_{n}<0}, \; \forall n \in \mathbb{N} $  
   \end{enumerate}
-\end{dfn}
+\end{rem}
 
 \section{Μεθοδολογία εύρεσης μονοτονίας μιας ακολουθίας}
 \begin{itemize}
@@ -129,7 +140,7 @@ $ \{ a_{1}, a_{2}, \ldots, a_{n} \} $ το οποίο μπορεί να είνα
   \item Αν οι όροι της ακολουϑίας διατηρούν πρόσημο, $ \; \forall n \in
     \mathbb{N} $ τότε συγκρίνουμε το πηλίκο δυο διαδοχικών όρων της 
     ακολουθίας με τη μονάδα, και βγάζουμε τα συμπεράσματά μας 
-    σύμφωνα με τον ορισμό~\ref{dfn:isodmono}
+    σύμφωνα με την παρατήρηση~\ref{dfn:isodmono}
   \item Αν η ακολουθία δίνεται με μη-αναδρομικό τύπο, και είναι 
     (αρκετά) σύνθετη, τότε μετατρέπω την ακολουθία στην αντίστοιχη 
     συνάρτηση και μελετάμε τη μονοτονία της αντίστοιχης συνάρτησης, 
@@ -822,7 +833,7 @@ $ \{ a_{1}, a_{2}, \ldots, a_{n} \} $ το οποίο μπορεί να είνα
 
 \begin{rem}
   Προσοχή, το αντίστροφο της παραπάνω πρότασης, δεν ισχύει. Πράγματι, 
-  για την  ακολουθία $ (a_{n})_{n \in \mathbb{N}} = (-1)^{n}, \; 
+  για την  ακολουθία $ a_{n} = (-1)^{n}, \; 
   \forall n \in \mathbb{N} $ έχουμε ότι είναι φραγμένη, όχι όμως και 
   συγκλίνουσα.
 \end{rem}
@@ -1642,8 +1653,8 @@ supremum του συνόλου των όρων της.}
 \end{proof}
 
 
-\mythm{Bolzano-Weierstrass}{Κάθε φραγμένη ακολουθία πραγματικών αριθμών 
-έχει συγκλίνουσα υπακολουθία.}
+\mythmm{Bolzano-Weierstrass}{Κάθε φραγμένη ακολουθία πραγματικών αριθμών 
+έχει συγκλίνουσα υπακολουθία}
 
 
 \begin{proof}[Χωρίς Απόδειξη]
